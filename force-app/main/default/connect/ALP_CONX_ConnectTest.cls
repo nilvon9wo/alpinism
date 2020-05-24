@@ -1,11 +1,7 @@
 @IsTest
-private class ConnectTest {
+private class ALP_CONX_ConnectTest {
 	private static final User TEST_USER = TEST_DummyUserFactoryOutlet.TEST_ADMIN_USER;
-	private static final Connect CONNECT_UNDER_TEST = new Connect();
-
-	private static final StoneColour EXPECTED_WINNER_NONE = StoneColour.None;
-	private static final StoneColour EXPECTED_WINNER_BLACK = StoneColour.Black;
-	private static final StoneColour EXPECTED_WINNER_WHITE = StoneColour.White;
+	private static final ALP_CONX_Connect CONNECT_UNDER_TEST = new ALP_CONX_Connect();
 
 	@IsTest
 	public static void testResultForEmptyBoardShouldHaveNoWinner() {
@@ -16,7 +12,7 @@ private class ConnectTest {
 				'   . . . . .',
 				'    . . . . .'
 		});
-		testResultFor(board, EXPECTED_WINNER_NONE);
+		testResultFor(board, ALP_CONX_Colour.None);
 	}
 
 	@IsTest
@@ -24,7 +20,7 @@ private class ConnectTest {
 		List<String> board = new List<String>{
 				'X'
 		};
-		testResultFor(board, EXPECTED_WINNER_BLACK);
+		testResultFor(board, ALP_CONX_Colour.Black);
 	}
 
 	@IsTest
@@ -32,11 +28,11 @@ private class ConnectTest {
 		List<String> board = new List<String>{
 				'O'
 		};
-		testResultFor(board, EXPECTED_WINNER_WHITE);
+		testResultFor(board, ALP_CONX_Colour.White);
 	}
 
 	@IsTest
-	public static void testResultForThisConvolutedPathShouldHaveBlackWinner() {
+	public static void testResultForHorizontalConnectionThroughConvolutedPathShouldHaveBlackWinner() {
 		List<String> board = removeSpaces(new List<String>{
 				'. X X . .',
 				' X . X . X',
@@ -44,11 +40,11 @@ private class ConnectTest {
 				'   . X X . .',
 				'    O O O O O'
 		});
-		testResultFor(board, EXPECTED_WINNER_BLACK);
+		testResultFor(board, ALP_CONX_Colour.Black);
 	}
 
 	@IsTest
-	public static void testResultForThisRectangleShouldHaveBlackWinner() {
+	public static void testResultForHorizontalConnectionThroughRectangleShouldHaveBlackWinner() {
 		List<String> board = removeSpaces(new List<String>{
 				'. O . .',
 				' O X X X',
@@ -56,11 +52,11 @@ private class ConnectTest {
 				'   X X O X',
 				'    . O X .'
 		});
-		testResultFor(board, EXPECTED_WINNER_BLACK);
+		testResultFor(board, ALP_CONX_Colour.Black);
 	}
 
 	@IsTest
-	public static void testResultForThisRectangleShouldHaveWhiteWinner() {
+	public static void testResultForVerticalConnectionThroughRectangleShouldHaveWhiteWinner() {
 		List<String> board = removeSpaces(new List<String>{
 				'. O . .',
 				' O X X X',
@@ -68,11 +64,11 @@ private class ConnectTest {
 				'   X X O X',
 				'    . O X .'
 		});
-		testResultFor(board, EXPECTED_WINNER_WHITE);
+		testResultFor(board, ALP_CONX_Colour.White);
 	}
 
 	@IsTest
-	public static void testResultForThisSpiralShouldHaveBlackWinner() {
+	public static void testResultForHorizontalConnectionThroughSpiralShouldHaveBlackWinner() {
 		List<String> board = new List<String>{
 				'OXXXXXXXX',
 				'OXOOOOOOO',
@@ -84,11 +80,11 @@ private class ConnectTest {
 				'OOOOOOOXO',
 				'XXXXXXXXO'
 		};
-		testResultFor(board, EXPECTED_WINNER_BLACK);
+		testResultFor(board, ALP_CONX_Colour.Black);
 	}
 
 	@IsTest
-	public static void testResultForThisSpiralShouldHaveNoWinner() {
+	public static void testResultForNoConnectionThroughSpiralShouldHaveNoWinner() {
 		List<String> board = new List<String>{
 				'OXXXXXXXX',
 				'OXOOOOOOO',
@@ -100,20 +96,20 @@ private class ConnectTest {
 				'OOOOOOOXO',
 				'XXXXXXXXO'
 		};
-		testResultFor(board, EXPECTED_WINNER_BLACK);
+		testResultFor(board, ALP_CONX_Colour.Black);
 	}
 
-	private static void testResultFor(List<String> board, StoneColour expectedResult) {
+	private static void testResultFor(List<String> board, ALP_CONX_Colour expectedResult) {
 		// Act
-		StoneColour result;
+		ALP_CONX_Colour actualResult;
 		Test.startTest();
 		System.runAs(TEST_USER) {
-			result = CONNECT_UNDER_TEST.resultFor(board);
+			actualResult = CONNECT_UNDER_TEST.resultFor(board);
 		}
 		Test.stopTest();
 
 		// Assert
-		System.assertEquals(result, expectedResult);
+		System.assertEquals(expectedResult, actualResult);
 	}
 
 	private static List<String> removeSpaces(List<String> rows) {

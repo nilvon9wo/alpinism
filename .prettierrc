@@ -2,8 +2,8 @@
   "trailingComma": "none",
   "overrides": [
     {
-      "files": "**/lwc/**/*.html",
-      "options": { "parser": "lwc" }
+      "files": "**/typical.lwc/**/*.html",
+      "options": { "parser": "typical.lwc" }
     },
     {
       "files": "*.{cmp,page,component}",

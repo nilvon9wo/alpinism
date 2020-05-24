@@ -1,0 +1,166 @@
+// @see: https://www.redblobgames.com/grids/hexagons/
+public with sharing class ALP_CONX_HexGrid {
+	private ALP_CONX_HexCellFactory cellFactory;
+
+	private List<ALP_CONX_HexCell> cells;
+	private Integer rowMaximum;
+	private Integer columnMaximum;
+
+	private ALP_CONX_HexCellListDecorator cellsDecorator {
+		get {
+			return new ALP_CONX_HexCellListDecorator(this.cells);
+		}
+	}
+
+	private ALP_CONX_HexGrid(
+			List<ALP_CONX_HexCell> cells,
+			ALP_CONX_HexCellFactory cellFactory
+	) {
+		this.cellFactory = cellFactory;
+
+		this.cells = cells;
+		this.rowMaximum = cells.size() - 1;
+		this.columnMaximum = findMaxColumn(cells);
+		System.debug('########### THIS: ' + this);
+	}
+
+	public ALP_CONX_HexGrid(List<String> board) {
+		this(board, ALP_CONX_HexCellFactory.getInstance());
+	}
+
+	private ALP_CONX_HexGrid(List<String> board, ALP_CONX_HexCellFactory cellFactory) {
+		this(cellFactory.fromStringList(board), cellFactory);
+	}
+
+	private Integer findMaxColumn(List<ALP_CONX_HexCell> cells) {
+		Integer maxColumn = 0;
+		for (ALP_CONX_HexCell cell : cells) {
+			if (cell.y > maxColumn) {
+				maxColumn = cell.y;
+			}
+		}
+		return maxColumn;
+	}
+
+	public Boolean isConnected(ALP_CONX_Colour colour, ALP_CONX_Orientation orientation) {
+		System.debug('########### colour: ' + colour);
+		System.debug('########### orientation: ' + orientation);
+
+		System.debug('########### this.cells: ' + this.cells);
+		System.debug('########### this.cellsDecorator: ' + this.cellsDecorator);
+
+		List<ALP_CONX_HexCell> occupiedCellList = this.cellsDecorator.filter(new ALP_CONX_MatchingColourFilter(colour));
+		System.debug('########### occupiedCellList: ' + occupiedCellList);
+		List<ALP_CONX_HexCell> connectedStartCellList = this.findStartCellList(occupiedCellList, orientation);
+		System.debug('########### connectedStartCellList: ' + connectedStartCellList);
+		List<ALP_CONX_HexCell> connectedEndCellList = this.findEndCellList(occupiedCellList, orientation);
+		System.debug('########### connectedEndCellList: ' + connectedEndCellList);
+
+		return !connectedStartCellList.isEmpty()
+				&& !connectedEndCellList.isEmpty()
+				&& (
+				this.isOverlapping(connectedStartCellList, connectedEndCellList)
+						|| this.hasMoreConnections(occupiedCellList, connectedStartCellList, connectedEndCellList)
+		);
+	}
+
+	private List<ALP_CONX_HexCell> findStartCellList(
+			List<ALP_CONX_HexCell> occupiedCellList,
+			ALP_CONX_Orientation orientation
+	) {
+		Integer maximum = this.getMaximumFor(orientation);
+		List<ALP_CONX_HexCell> startCellList = this.cellFactory.generateStartCellList(orientation, maximum);
+		return this.findMatchedLocations(occupiedCellList, startCellList);
+	}
+
+	private List<ALP_CONX_HexCell> findEndCellList(
+			List<ALP_CONX_HexCell> occupiedCellList,
+			ALP_CONX_Orientation orientation
+	) {
+		Integer maximum = this.getMaximumFor(orientation);
+		List<ALP_CONX_HexCell> endCellList = this.cellFactory.generateEndCellList(orientation, maximum);
+		return this.findMatchedLocations(occupiedCellList, endCellList);
+	}
+
+	private Integer getMaximumFor(ALP_CONX_Orientation orient) {
+		return (ALP_CONX_Orientation.HORIZONTAL.equals(orient))
+				? columnMaximum
+				: rowMaximum;
+	}
+
+	private List<ALP_CONX_HexCell> findMatchedLocations(
+			List<ALP_CONX_HexCell> occupiedCellList,
+			List<ALP_CONX_HexCell> requiredCellList
+	) {
+		return this.findMatchedLocations(occupiedCellList, this.createLocationStringSet(requiredCellList));
+	}
+
+	private List<ALP_CONX_HexCell> findMatchedLocations(
+			List<ALP_CONX_HexCell> occupiedCellList,
+			Set<String> requiredLocationStringSet
+	) {
+		List<ALP_CONX_HexCell> matchedCellList = new List<ALP_CONX_HexCell>();
+		for (ALP_CONX_HexCell occupiedCell : occupiedCellList) {
+			if (requiredLocationStringSet.contains(occupiedCell.toLocationString())) {
+				matchedCellList.add(occupiedCell);
+			}
+		}
+		return matchedCellList;
+	}
+
+	private Set<String> createLocationStringSet(List<ALP_CONX_HexCell> hexCellList) {
+		Set<String> locationStringSet = new Set<String>();
+		for (ALP_CONX_HexCell cell : hexCellList) {
+			locationStringSet.add(cell.toLocationString());
+		}
+		return locationStringSet;
+	}
+
+	private Boolean isOverlapping(
+			List<ALP_CONX_HexCell> connectedStartCellList,
+			List<ALP_CONX_HexCell> connectedEndCellList
+	) {
+		return !this.findMatchedLocations(connectedStartCellList, connectedEndCellList).isEmpty();
+	}
+
+	private Boolean hasMoreConnections(
+			List<ALP_CONX_HexCell> disconnectedCellList,
+			List<ALP_CONX_HexCell> connectedStartCellList,
+			List<ALP_CONX_HexCell> connectedEndCellList
+	) {
+		if (disconnectedCellList.isEmpty()) {
+			return false;
+		}
+
+		connectedStartCellList.addAll(this.findNeighbours(disconnectedCellList, connectedStartCellList));
+		connectedEndCellList.addAll(this.findNeighbours(disconnectedCellList, connectedEndCellList));
+		List<ALP_CONX_HexCell> remainingDisconnectedCellList
+				= findDisconnectedCells(disconnectedCellList, connectedStartCellList, connectedEndCellList);
+
+		return this.isOverlapping(connectedStartCellList, connectedEndCellList)
+				|| (
+				(disconnectedCellList.size() != remainingDisconnectedCellList.size())
+						&& this.hasMoreConnections(remainingDisconnectedCellList, connectedStartCellList, connectedEndCellList)
+		);
+	}
+
+	private List<ALP_CONX_HexCell> findNeighbours(
+			List<ALP_CONX_HexCell> disconnectedCellList,
+			List<ALP_CONX_HexCell> connectedCellList
+	) {
+		return new ALP_CONX_HexCellListDecorator(disconnectedCellList)
+				.filter(new ALP_CONX_CellNeighbourFilter(connectedCellList));
+	}
+
+	private List<ALP_CONX_HexCell> findDisconnectedCells(
+			List<ALP_CONX_HexCell> previouslyDisconnectedCellList,
+			List<ALP_CONX_HexCell> connectedStartCellList,
+			List<ALP_CONX_HexCell> connectedEndCellList
+	) {
+		List<ALP_CONX_HexCell> allConnectedCellList = connectedStartCellList;
+		allConnectedCellList.addAll(connectedEndCellList);
+
+		return new ALP_CONX_HexCellListDecorator(previouslyDisconnectedCellList)
+				.filter(new ALP_CONX_CellDisconnectedFilter(allConnectedCellList));
+	}
+}
