@@ -35,12 +35,17 @@ public with sharing class ALP_CONX_HexCell {
 		this(rowIndex, columnIndex, COLOUR_BY_OCCUPANT_MAP.get(occupant));
 	}
 
+	public Integer get(ALP_CONX_Axis axis) {
+		return this.locationMap.get(axis);
+	}
+
 	public Boolean isNeighbourTo(List<ALP_CONX_HexCell> those) {
 		for (ALP_CONX_HexCell that : those) {
 			if (this.isNeighbourTo(that)) {
 				return true;
 			}
 		}
+		System.debug('## NO NEIGHBOR to : ' + this.toString() + ' in ' + those);
 		return false;
 	}
 
