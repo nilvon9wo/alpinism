@@ -12,7 +12,7 @@ private class ALP_CONX_ConnectTest {
 				'   . . . . .',
 				'    . . . . .'
 		});
-		testResultFor(board, ALP_CONX_Colour.None);
+		testResultFor(board, ALP_CONX_Colour.NONE);
 	}
 
 	@IsTest
@@ -20,7 +20,7 @@ private class ALP_CONX_ConnectTest {
 		List<String> board = new List<String>{
 				'X'
 		};
-		testResultFor(board, ALP_CONX_Colour.Black);
+		testResultFor(board, ALP_CONX_Colour.BLACK);
 	}
 
 	@IsTest
@@ -28,7 +28,7 @@ private class ALP_CONX_ConnectTest {
 		List<String> board = new List<String>{
 				'O'
 		};
-		testResultFor(board, ALP_CONX_Colour.White);
+		testResultFor(board, ALP_CONX_Colour.WHITE);
 	}
 
 	@IsTest
@@ -40,7 +40,7 @@ private class ALP_CONX_ConnectTest {
 				'   . X X . .',
 				'    O O O O O'
 		});
-		testResultFor(board, ALP_CONX_Colour.Black);
+		testResultFor(board, ALP_CONX_Colour.BLACK);
 	}
 
 	@IsTest
@@ -52,7 +52,7 @@ private class ALP_CONX_ConnectTest {
 				'   X X O X',
 				'    . O X .'
 		});
-		testResultFor(board, ALP_CONX_Colour.Black);
+		testResultFor(board, ALP_CONX_Colour.BLACK);
 	}
 
 	@IsTest
@@ -64,7 +64,7 @@ private class ALP_CONX_ConnectTest {
 				'   X X O X',
 				'    . O X .'
 		});
-		testResultFor(board, ALP_CONX_Colour.White);
+		testResultFor(board, ALP_CONX_Colour.WHITE);
 	}
 
 	@IsTest
@@ -80,7 +80,7 @@ private class ALP_CONX_ConnectTest {
 				'OOOOOOOXO',
 				'XXXXXXXXO'
 		};
-		testResultFor(board, ALP_CONX_Colour.Black);
+		testResultFor(board, ALP_CONX_Colour.BLACK);
 	}
 
 	@IsTest
