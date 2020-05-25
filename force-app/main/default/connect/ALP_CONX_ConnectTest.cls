@@ -96,7 +96,7 @@ private class ALP_CONX_ConnectTest {
 				'OOOOOOOXO',
 				'XXXXXXXXO'
 		};
-		testResultFor(board, ALP_CONX_Colour.Black);
+		testResultFor(board, ALP_CONX_Colour.NONE);
 	}
 
 	private static void testResultFor(List<String> board, ALP_CONX_Colour expectedResult) {

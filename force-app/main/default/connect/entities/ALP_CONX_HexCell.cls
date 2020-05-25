@@ -1,8 +1,8 @@
 public with sharing class ALP_CONX_HexCell {
 	private static final Map<String, ALP_CONX_Colour> COLOUR_BY_OCCUPANT_MAP = new Map<String, ALP_CONX_Colour>{
-			'X' => ALP_CONX_Colour.Black,
-			'O' => ALP_CONX_Colour.White,
-			'.' => ALP_CONX_Colour.None
+			'X' => ALP_CONX_Colour.BLACK,
+			'O' => ALP_CONX_Colour.WHITE,
+			'.' => ALP_CONX_Colour.NONE
 	};
 
 	public Integer x { get; private set; }
@@ -28,7 +28,7 @@ public with sharing class ALP_CONX_HexCell {
 	}
 
 	public ALP_CONX_HexCell(Integer rowIndex, Integer columnIndex) {
-		this(rowIndex, columnIndex, ALP_CONX_Colour.None);
+		this(rowIndex, columnIndex, ALP_CONX_Colour.NONE);
 	}
 
 	public ALP_CONX_HexCell(Integer rowIndex, Integer columnIndex, String occupant) {
@@ -45,7 +45,6 @@ public with sharing class ALP_CONX_HexCell {
 				return true;
 			}
 		}
-		System.debug('## NO NEIGHBOR to : ' + this.toString() + ' in ' + those);
 		return false;
 	}
 
