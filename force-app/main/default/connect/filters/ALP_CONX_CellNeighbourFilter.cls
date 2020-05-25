@@ -5,10 +5,6 @@ public with sharing class ALP_CONX_CellNeighbourFilter implements ALP_CONX_HexCe
 		this.connectedCellList = connectedCellList;
 	}
 
-	public Boolean isTrueFor(Object obj) {
-		return this.isTrueFor((ALP_CONX_HexCell) obj);
-	}
-
 	public Boolean isTrueFor(ALP_CONX_HexCell cell) {
 		return cell.isNeighbourTo(connectedCellList);
 	}

@@ -5,10 +5,6 @@ public with sharing class ALP_CONX_CellDisconnectedFilter implements ALP_CONX_He
 		this.connectedCellSet = new Set<ALP_CONX_HexCell>(connectedCellList);
 	}
 
-	public Boolean isTrueFor(Object obj) {
-		return this.isTrueFor((ALP_CONX_HexCell) obj);
-	}
-
 	public Boolean isTrueFor(ALP_CONX_HexCell cell) {
 		return !connectedCellSet.contains(cell);
 	}
