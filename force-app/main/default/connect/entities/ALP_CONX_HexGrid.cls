@@ -2,17 +2,17 @@
 public with sharing class ALP_CONX_HexGrid {
 	private ALP_CONX_HexCellFactory cellFactory;
 
-	private List<ALP_CONX_HexCell> cells;
+	private List<ALP_CONX_HexCell> cellList;
 	private Integer rowMaximum;
 	private Integer columnMaximum;
 
 	private ALP_CONX_HexGrid(
-			List<ALP_CONX_HexCell> cells,
+			List<ALP_CONX_HexCell> cellList,
 			ALP_CONX_HexCellFactory cellFactory
 	) {
 		this.cellFactory = cellFactory;
 
-		this.cells = cells;
+		this.cellList = cellList;
 		this.rowMaximum = this.findMaxRow();
 		this.columnMaximum = this.findMaxColumn();
 	}
@@ -35,9 +35,9 @@ public with sharing class ALP_CONX_HexGrid {
 
 	private Integer findMaximum(ALP_CONX_Axis axis) {
 		Integer maximum = 0;
-		for (ALP_CONX_HexCell cell : cells) {
+		for (ALP_CONX_HexCell cell : cellList) {
 			Integer value = cell.get(axis);
-			if (cell.get(axis) > maximum) {
+			if (value > maximum) {
 				maximum = value;
 			}
 		}
@@ -45,8 +45,9 @@ public with sharing class ALP_CONX_HexGrid {
 	}
 
 	public Boolean isConnected(ALP_CONX_Colour colour, ALP_CONX_Orientation orientation) {
-		List<ALP_CONX_HexCell> occupiedCellList = new ALP_CONX_HexCellListDecorator(this.cells)
-				.filter(new ALP_CONX_MatchingColourFilter(colour));
+		List<ALP_CONX_HexCell> occupiedCellList = new ALP_CONX_HexCellList(this.cellList)
+				.filter(new ALP_CONX_MatchingColourFilter(colour))
+				.toList();
 
 		List<ALP_CONX_HexCell> connectedStartCellList = this.findStartCellList(occupiedCellList, orientation);
 		List<ALP_CONX_HexCell> connectedEndCellList = this.findEndCellList(occupiedCellList, orientation);
@@ -122,7 +123,8 @@ public with sharing class ALP_CONX_HexGrid {
 			List<ALP_CONX_HexCell> connectedStartCellList,
 			List<ALP_CONX_HexCell> connectedEndCellList
 	) {
-		return !this.findMatchedLocations(connectedStartCellList, connectedEndCellList).isEmpty();
+		return !this.findMatchedLocations(connectedStartCellList, connectedEndCellList)
+				.isEmpty();
 	}
 
 	private Boolean hasMoreConnections(
@@ -151,8 +153,9 @@ public with sharing class ALP_CONX_HexGrid {
 			List<ALP_CONX_HexCell> disconnectedCellList,
 			List<ALP_CONX_HexCell> connectedCellList
 	) {
-		return new ALP_CONX_HexCellListDecorator(disconnectedCellList)
-				.filter(new ALP_CONX_CellNeighbourFilter(connectedCellList));
+		return new ALP_CONX_HexCellList(disconnectedCellList)
+				.filter(new ALP_CONX_CellNeighbourFilter(connectedCellList))
+				.toList();
 	}
 
 	private List<ALP_CONX_HexCell> findDisconnectedCells(
@@ -160,10 +163,12 @@ public with sharing class ALP_CONX_HexGrid {
 			List<ALP_CONX_HexCell> connectedStartCellList,
 			List<ALP_CONX_HexCell> connectedEndCellList
 	) {
-		List<ALP_CONX_HexCell> allConnectedCellList = connectedStartCellList.clone();
-		allConnectedCellList.addAll(connectedEndCellList.clone());
+		List<ALP_CONX_HexCell> allConnectedCellList = new ALP_CONX_HexCellList(connectedStartCellList)
+				.add(connectedEndCellList)
+				.toList();
 
-		return new ALP_CONX_HexCellListDecorator(previouslyDisconnectedCellList)
-				.filter(new ALP_CONX_CellDisconnectedFilter(allConnectedCellList));
+		return new ALP_CONX_HexCellList(previouslyDisconnectedCellList)
+				.filter(new ALP_CONX_CellDisconnectedFilter(allConnectedCellList))
+				.toList();
 	}
 }
