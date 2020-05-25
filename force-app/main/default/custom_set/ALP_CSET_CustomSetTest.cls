@@ -1,287 +1,749 @@
 @IsTest
-private class ALP_CSET_CustomSetTest {
+public class ALP_CSET_CustomSetTest {
+	private static final User TEST_USER = TEST_DummyUserFactoryOutlet.TEST_ADMIN_USER;
+
+	// Constructor Tests -----------------------------------------------------------
+
 	@IsTest
-	static void testBehavior() {
+	public static void testConstructorReturnsACustomSet() {
+		// Arrange
+		List<Integer> numberList = new List<Integer>();
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = new ALP_CSET_CustomSet(numberList);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(), result);
 	}
-	/**
-defmodule CustomSetTest do
-  use ExUnit.Case
 
-  describe "new" do
-    #
-    test "returns a CustomSet struct" do
-      assert CustomSet.new([]) == %CustomSet{}
-    end
+	@IsTest
+	public static void testConstructorRemovesDuplicatesInTheGivenEnumerable() {
+		// Arrange
+		List<Integer> numberList = new List<Integer>{1, 1, 2, 3};
 
-    test "removes duplicates in the given enumerable" do
-      actual = CustomSet.new([1, 1, 2, 3])
-      expected = CustomSet.new([1, 2, 3])
-      assert actual == expected
-    end
-  end
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = new ALP_CSET_CustomSet(numberList);
+		}
+		Test.stopTest();
 
-  describe "empty?" do
-    test "sets with no elements are empty" do
-      custom_set = CustomSet.new([])
-      assert CustomSet.empty?(custom_set) == true
-    end
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(new List<Integer>{1, 2, 3}), result);
+	}
 
-    test "sets with elements are not empty" do
-      custom_set = CustomSet.new([1])
-      assert CustomSet.empty?(custom_set) == false
-    end
-  end
+	// isEmpty Tests -----------------------------------------------------------
 
-  describe "contains?" do
-    test "nothing is contained in an empty set" do
-      custom_set = CustomSet.new([])
-      assert CustomSet.contains?(custom_set, 1) == false
-    end
+	@IsTest
+	public static void testIsEmptyReturnsTrueForSetsWithNoElements() {
+		// Arrange
+		ALP_CSET_CustomSet setUnderTest = new ALP_CSET_CustomSet();
 
-    test "when the element is in the set" do
-      custom_set = CustomSet.new([1, 2, 3])
-      assert CustomSet.contains?(custom_set, 1) == true
-    end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = setUnderTest.isEmpty();
+		}
+		Test.stopTest();
 
-    test "when the element is not in the set" do
-      custom_set = CustomSet.new([1, 2, 3])
-      assert CustomSet.contains?(custom_set, 4) == false
-    end
-  end
+		// Assert
+		System.assert(result);
+	}
 
-  describe "subset?" do
-    test "empty set is a subset of another empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([])
-      assert CustomSet.subset?(custom_set_1, custom_set_2) == true
-    end
+	@IsTest
+	public static void testIsEmptyReturnsFalseForSetsWithElements() {
+		// Arrange
+		ALP_CSET_CustomSet setUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1});
 
-    test "empty set is a subset of non-empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([1])
-      assert CustomSet.subset?(custom_set_1, custom_set_2) == true
-    end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = setUnderTest.isEmpty();
+		}
+		Test.stopTest();
 
-    test "non-empty set is not a subset of empty set" do
-      custom_set_1 = CustomSet.new([1])
-      custom_set_2 = CustomSet.new([])
-      assert CustomSet.subset?(custom_set_1, custom_set_2) == false
-    end
+		// Assert
+		System.assert(!result);
+	}
 
-    test "set is a subset of set with exact same elements" do
-      custom_set_1 = CustomSet.new([1, 2, 3])
-      custom_set_2 = CustomSet.new([1, 2, 3])
-      assert CustomSet.subset?(custom_set_1, custom_set_2) == true
-    end
+	// contains Tests -----------------------------------------------------------
 
-    test "set is a subset of larger set with same elements" do
-      custom_set_1 = CustomSet.new([1, 2, 3])
-      custom_set_2 = CustomSet.new([4, 1, 2, 3])
-      assert CustomSet.subset?(custom_set_1, custom_set_2) == true
-    end
+	@IsTest
+	public static void testContainsReturnsFalseWhenSetIsEmpty() {
+		// Arrange
+		ALP_CSET_CustomSet setUnderTest = new ALP_CSET_CustomSet();
+		Integer testValue = 1;
 
-    test "set is not a subset of set that does not contain its elements" do
-      custom_set_1 = CustomSet.new([1, 2, 3])
-      custom_set_2 = CustomSet.new([4, 1, 3])
-      assert CustomSet.subset?(custom_set_1, custom_set_2) == false
-    end
-  end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = setUnderTest.contains(testValue);
+		}
+		Test.stopTest();
 
-  describe "disjoint?" do
-    test "the empty set is disjoint with itself" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([])
-      assert CustomSet.disjoint?(custom_set_1, custom_set_2) == true
-    end
+		// Assert
+		System.assert(!result);
+	}
 
-    test "empty set is disjoint with non-empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([1])
-      assert CustomSet.disjoint?(custom_set_1, custom_set_2) == true
-    end
+	@IsTest
+	public static void testContainsReturnsTrueWhenElementIsInTheSet() {
+		// Arrange
+		Integer testValue = 1;
+		ALP_CSET_CustomSet setUnderTest = new ALP_CSET_CustomSet(new List<Integer>{testValue, 2, 3});
 
-    test "non-empty set is disjoint with empty set" do
-      custom_set_1 = CustomSet.new([1])
-      custom_set_2 = CustomSet.new([])
-      assert CustomSet.disjoint?(custom_set_1, custom_set_2) == true
-    end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = setUnderTest.contains(testValue);
+		}
+		Test.stopTest();
 
-    test "sets are not disjoint if they share an element" do
-      custom_set_1 = CustomSet.new([1, 2])
-      custom_set_2 = CustomSet.new([2, 3])
-      assert CustomSet.disjoint?(custom_set_1, custom_set_2) == false
-    end
+		// Assert
+		System.assert(result);
+	}
 
-    test "sets are disjoint if they share no elements" do
-      custom_set_1 = CustomSet.new([1, 2])
-      custom_set_2 = CustomSet.new([3, 4])
-      assert CustomSet.disjoint?(custom_set_1, custom_set_2) == true
-    end
-  end
+	@IsTest
+	public static void testContainsReturnsFalseWhenElementIsNotInTheSet() {
+		// Arrange
+		Integer testValue = 4;
+		ALP_CSET_CustomSet setUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, 2, 3});
 
-  describe "equal?" do
-    test "empty sets are equal" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([])
-      assert CustomSet.equal?(custom_set_1, custom_set_2) == true
-    end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = setUnderTest.contains(testValue);
+		}
+		Test.stopTest();
 
-    test "empty set is not equal to non-empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([1, 2, 3])
-      assert CustomSet.equal?(custom_set_1, custom_set_2) == false
-    end
+		// Assert
+		System.assert(!result);
+	}
 
-    test "non-empty set is not equal to empty set" do
-      custom_set_1 = CustomSet.new([1, 2, 3])
-      custom_set_2 = CustomSet.new([])
-      assert CustomSet.equal?(custom_set_1, custom_set_2) == false
-    end
+	// isSubsetOf Tests -----------------------------------------------------------
 
-    test "sets with the same elements are equal" do
-      custom_set_1 = CustomSet.new([1, 2])
-      custom_set_2 = CustomSet.new([2, 1])
-      assert CustomSet.equal?(custom_set_1, custom_set_2) == true
-    end
+	@IsTest
+	public static void testIsSubsetOfReturnsTrueWhenBothEmpty() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
 
-    test "sets with different elements are not equal" do
-      custom_set_1 = CustomSet.new([1, 2, 3])
-      custom_set_2 = CustomSet.new([1, 2, 4])
-      assert CustomSet.equal?(custom_set_1, custom_set_2) == false
-    end
-  end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isSubsetOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
 
-  describe "add" do
-    test "add to empty set" do
-      custom_set = CustomSet.new([])
-      actual = CustomSet.add(custom_set, 3)
-      expected = CustomSet.new([3])
-      assert CustomSet.equal?(actual, expected)
-    end
+		// Assert
+		System.assert(result);
+	}
 
-    test "add to non-empty set" do
-      custom_set = CustomSet.new([1, 2, 4])
-      actual = CustomSet.add(custom_set, 3)
-      expected = CustomSet.new([1, 2, 3, 4])
-      assert CustomSet.equal?(actual, expected)
-    end
+	@IsTest
+	public static void testIsSubsetOfReturnsTrueWhenParameterIsEmpty() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1});
 
-    test "adding an existing element does not change the set" do
-      expected = CustomSet.new([1, 2, 3])
-      actual = CustomSet.add(expected, 3)
-      assert CustomSet.equal?(expected, actual)
-    end
-  end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isSubsetOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
 
-  describe "intersection" do
-    test "intersection of two empty sets is an empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([])
-      actual = CustomSet.intersection(custom_set_1, custom_set_2)
-      expected = CustomSet.new([])
-      assert CustomSet.equal?(actual, expected)
-    end
+		// Assert
+		System.assert(result);
+	}
 
-    test "intersection of an empty set and non-empty set is an empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([3, 2, 5])
-      actual = CustomSet.intersection(custom_set_1, custom_set_2)
-      expected = CustomSet.new([])
-      assert CustomSet.equal?(actual, expected)
-    end
+	@IsTest
+	public static void testIsSubsetOfReturnsFalseWhenRootIsEmptyButParameterHasValues() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
 
-    test "intersection of a non-empty set and an empty set is an empty set" do
-      custom_set_1 = CustomSet.new([1, 2, 3, 4])
-      custom_set_2 = CustomSet.new([])
-      actual = CustomSet.intersection(custom_set_1, custom_set_2)
-      expected = CustomSet.new([])
-      assert CustomSet.equal?(actual, expected)
-    end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isSubsetOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
 
-    test "intersection of two sets with no shared elements is an empty set" do
-      custom_set_1 = CustomSet.new([1, 2, 3])
-      custom_set_2 = CustomSet.new([4, 5, 6])
-      actual = CustomSet.intersection(custom_set_1, custom_set_2)
-      expected = CustomSet.new([])
-      assert CustomSet.equal?(actual, expected)
-    end
+		// Assert
+		System.assert(!result);
+	}
 
-    test "intersection of two sets with shared elements is a set of the shared elements" do
-      custom_set_1 = CustomSet.new([1, 2, 3, 4])
-      custom_set_2 = CustomSet.new([3, 2, 5])
-      actual = CustomSet.intersection(custom_set_1, custom_set_2)
-      expected = CustomSet.new([2, 3])
-      assert CustomSet.equal?(actual, expected)
-    end
-  end
+	@IsTest
+	public static void testIsSubsetOfReturnsTrueWhenSetsHaveExactSameElements() {
+		// Arrange
+		List<Integer> memberList = new List<Integer>{1, 2, 3};
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(memberList);
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(memberList);
 
-  describe "difference" do
-    test "difference of two empty sets is an empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([])
-      actual = CustomSet.difference(custom_set_1, custom_set_2)
-      expected = CustomSet.new([])
-      assert CustomSet.equal?(actual, expected)
-    end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isSubsetOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
 
-    test "difference of empty set and non-empty set is an empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([3, 2, 5])
-      actual = CustomSet.difference(custom_set_1, custom_set_2)
-      expected = CustomSet.new([])
-      assert CustomSet.equal?(actual, expected)
-    end
+		// Assert
+		System.assert(result);
+	}
 
-    test "difference of a non-empty set and an empty set is the non-empty set" do
-      custom_set_1 = CustomSet.new([1, 2, 3, 4])
-      custom_set_2 = CustomSet.new([])
-      actual = CustomSet.difference(custom_set_1, custom_set_2)
-      expected = CustomSet.new([1, 2, 3, 4])
-      assert CustomSet.equal?(actual, expected)
-    end
+	@IsTest
+	public static void testIsSubsetOfReturnsTrueWhenParameterIsLargerAndHasAllRootElements() {
+		// Arrange
+		List<Integer> memberList = new List<Integer>{1, 2, 3};
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(memberList);
 
-    test "difference of two non-empty sets is a set of elements that are only in the first set" do
-      custom_set_1 = CustomSet.new([3, 2, 1])
-      custom_set_2 = CustomSet.new([2, 4])
-      actual = CustomSet.difference(custom_set_1, custom_set_2)
-      expected = CustomSet.new([1, 3])
-      assert CustomSet.equal?(actual, expected)
-    end
-  end
+		memberList.add(4);
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(memberList);
 
-  describe "union" do
-    test "union of empty sets is an empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([])
-      actual = CustomSet.union(custom_set_1, custom_set_2)
-      expected = CustomSet.new([])
-      assert CustomSet.equal?(actual, expected)
-    end
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isSubsetOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
 
-    test "union of an empty set and non-empty set is the non-empty set" do
-      custom_set_1 = CustomSet.new([])
-      custom_set_2 = CustomSet.new([2])
-      actual = CustomSet.union(custom_set_1, custom_set_2)
-      expected = CustomSet.new([2])
-      assert CustomSet.equal?(actual, expected)
-    end
+		// Assert
+		System.assert(result);
+	}
 
-    test "union of a non-empty set and empty set is the non-empty set" do
-      custom_set_1 = CustomSet.new([1, 3])
-      custom_set_2 = CustomSet.new([])
-      actual = CustomSet.union(custom_set_1, custom_set_2)
-      expected = CustomSet.new([1, 3])
-      assert CustomSet.equal?(actual, expected)
-    end
+	@IsTest
+	public static void testIsSubsetOfReturnsFalseWhenParameterDoesNotContainRootElements() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, 2, 3});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{4, 1, 3});
 
-    test "union of non-empty sets contains all unique elements" do
-      custom_set_1 = CustomSet.new([1, 3])
-      custom_set_2 = CustomSet.new([2, 3])
-      actual = CustomSet.union(custom_set_1, custom_set_2)
-      expected = CustomSet.new([1, 2, 3])
-      assert CustomSet.equal?(actual, expected)
-    end
-  end
-end
-	 */
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isSubsetOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(!result);
+	}
+
+	// isDisjointedFrom Tests -----------------------------------------------------------
+
+	@IsTest
+	public static void testIsDisjointedFromReturnsTrueWhenBothEmpty() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isDisjointedFrom(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(result);
+	}
+
+	@IsTest
+	public static void testIsDisjointedFromReturnsTrueWhenRootIsEmpty() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1});
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isDisjointedFrom(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(result);
+	}
+
+	@IsTest
+	public static void testIsDisjointedFromReturnsTrueWhenParameterIsEmpty() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isDisjointedFrom(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(result);
+	}
+
+	@IsTest
+	public static void testIsDisjointedFromReturnsFalseWhenSetsShareAnElement() {
+		// Arrange
+		Integer sharedElement = 2;
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, sharedElement});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{sharedElement, 3});
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isDisjointedFrom(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(!result);
+	}
+
+	@IsTest
+	public static void testIsDisjointedFromReturnsTrueWhenSetsShareNoElement() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, 2});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{3, 4});
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.isDisjointedFrom(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(result);
+	}
+
+	// equals Tests -----------------------------------------------------------
+
+	@IsTest
+	public static void testEqualsReturnsTrueWhenBothEmpty() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.equals(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(result);
+	}
+
+	@IsTest
+	public static void testEqualsReturnsFalseWhenRootEmptyButParameterHasValues() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, 2, 3});
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.equals(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(!result);
+	}
+
+	@IsTest
+	public static void testEqualsReturnsFalseWhenParameterEmptyButRootHasValues() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, 2, 3});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.equals(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(!result);
+	}
+
+	@IsTest
+	public static void testEqualsReturnsTrueWhenElementsAreEqual() {
+		// Arrange
+		Integer element1 = 1;
+		Integer element2 = 2;
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{element1, element2});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{element2, element1});
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.equals(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(result);
+	}
+
+	@IsTest
+	public static void testEqualsReturnsFalseWhenElementsAreNotEqual() {
+		// Arrange
+		Integer element1 = 1;
+		Integer element2 = 2;
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{element1, element2, 3});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{element1, element2, 4});
+
+		// Act
+		Boolean result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.equals(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assert(!result);
+	}
+
+	// add Tests -----------------------------------------------------------
+
+	@IsTest
+	public static void testAddElementToEmptySetShouldResultInSetOnlyWithAddedElement() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		Integer value = 3;
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.add(value);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(new List<Integer>{3}), result);
+	}
+
+	@IsTest
+	public static void testAddElementToSetShouldResultInSetOnlyWithAllOldAndNewElements() {
+		// Arrange
+		List<Integer> originalValueList = new List<Integer>{1, 2, 4};
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(originalValueList);
+		Integer value = 3;
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.add(value);
+		}
+		Test.stopTest();
+
+		// Assert
+		originalValueList.add(value);
+		System.assertEquals(new ALP_CSET_CustomSet(originalValueList), result);
+	}
+
+	@IsTest
+	public static void testAddExistingElementDoesNotChangeTheSet() {
+		// Arrange
+		Integer value = 3;
+		List<Integer> originalValueList = new List<Integer>{1, 2, value};
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(originalValueList);
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.add(value);
+		}
+		Test.stopTest();
+
+		// Assert
+		originalValueList.add(value);
+		System.assertEquals(new ALP_CSET_CustomSet(originalValueList), result);
+	}
+
+	// equals Tests -----------------------------------------------------------
+
+	@IsTest
+	public static void testIntersectionOfTwoEmptySetsShouldBeAnEmptySet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.intersectionOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(), result);
+	}
+
+	@IsTest
+	public static void testIntersectionWithEmptyRootSetShouldBeAnEmptySet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{3, 2, 5});
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.intersectionOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(), result);
+	}
+
+	@IsTest
+	public static void testIntersectionWithEmptyParameterSetShouldBeAnEmptySet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, 2, 3, 4});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.intersectionOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(), result);
+	}
+
+	@IsTest
+	public static void testIntersectionWithNoSharedElementsIsAnEmptySet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, 2, 3});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{4, 5, 6});
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.intersectionOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(), result);
+	}
+
+	@IsTest
+	public static void testIntersectionWithSharedElementsIsASetOfTheSharedElements() {
+		// Arrange
+		Integer sharedElement1 = 2;
+		Integer sharedElement2 = 3;
+		ALP_CSET_CustomSet rootSetUnderTest
+				= new ALP_CSET_CustomSet(new List<Integer>{1, sharedElement1, sharedElement2, 4});
+		ALP_CSET_CustomSet parameterSetUnderTest
+				= new ALP_CSET_CustomSet(new List<Integer>{sharedElement2, sharedElement1, 5});
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.intersectionOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(new List<Integer>{sharedElement1, sharedElement2}), result);
+	}
+
+	// differenceOf Tests -----------------------------------------------------------
+
+	@IsTest
+	public static void testDifferenceOfTwoEmptySetsIsAnEmptySet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.differenceOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(), result);
+	}
+
+	@IsTest
+	public static void testDifferenceOfEmptyRootSetAndAParameterWithValuesIsAnEmptySet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{3, 2, 5});
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.differenceOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(), result);
+	}
+
+	@IsTest
+	public static void testDifferenceOfNonEmptyRootSetAndAnEmptyParameterSetIsAnEmptySet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, 2, 3, 4});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.differenceOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(rootSetUnderTest, result);
+	}
+
+	@IsTest
+	public static void testDifferenceTwoNonEmptySetsIsASetOfElementsThatAreOnlyInTheRootSet() {
+		// Arrange
+		Integer uncommonElement1 = 3;
+		Integer uncommonElement2 = 1;
+		Integer commonElement = 2;
+		ALP_CSET_CustomSet rootSetUnderTest
+				= new ALP_CSET_CustomSet(new List<Integer>{uncommonElement1, commonElement, uncommonElement2});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{commonElement, 4});
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.differenceOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(new List<Integer>{uncommonElement1, uncommonElement2}), result);
+	}
+
+	// unionOf Tests -----------------------------------------------------------
+
+	@IsTest
+	public static void testUnionOfTwoEmptySetsIsAnEmptySet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.unionOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(new ALP_CSET_CustomSet(), result);
+	}
+
+	@IsTest
+	public static void testUnionOfEmptySetWithParameterWithValuesIsAParameterSet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet();
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{2});
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.unionOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(parameterSetUnderTest, result);
+	}
+
+	@IsTest
+	public static void testUnionOfRootWithValuesWithEmptyParameterSetIsTheRootSet() {
+		// Arrange
+		ALP_CSET_CustomSet rootSetUnderTest = new ALP_CSET_CustomSet(new List<Integer>{1, 3});
+		ALP_CSET_CustomSet parameterSetUnderTest = new ALP_CSET_CustomSet();
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.unionOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		System.assertEquals(rootSetUnderTest, result);
+	}
+
+	@IsTest
+	public static void testUnionOfTwoNonEmptySetsContainsAllUniqueElements() {
+		// Arrange
+		Integer uncommonElement1 = 1;
+		Integer uncommonElement2 = 2;
+		Integer commonElement = 3;
+		ALP_CSET_CustomSet rootSetUnderTest
+				= new ALP_CSET_CustomSet(new List<Integer>{uncommonElement1, commonElement});
+		ALP_CSET_CustomSet parameterSetUnderTest
+				= new ALP_CSET_CustomSet(new List<Integer>{uncommonElement2, commonElement});
+
+		// Act
+		ALP_CSET_CustomSet result;
+		Test.startTest();
+		System.runAs(TEST_USER) {
+			result = rootSetUnderTest.unionOf(parameterSetUnderTest);
+		}
+		Test.stopTest();
+
+		// Assert
+		List<Integer> uniqueElementList = new List<Integer>{uncommonElement1, uncommonElement2, commonElement};
+		System.assertEquals(new ALP_CSET_CustomSet(uniqueElementList), result);
+	}
 }

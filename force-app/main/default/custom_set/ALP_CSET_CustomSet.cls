@@ -1,170 +1,77 @@
 public with sharing class ALP_CSET_CustomSet {
-	/**
-defmodule CustomSet do
-  defstruct [:map]
-  @opaque t :: %__MODULE__{map: map}
+	public Set<Integer> numberSet { get; private set; }
 
-  @spec new(Enum.t()) :: t
-  def new([] = _enumerable),
-    do: %CustomSet{}
+	public ALP_CSET_CustomSet(Set<Integer> numberSet) {
+		this.numberSet = numberSet;
+	}
 
-  def new(enumerable),
-    do: %CustomSet{map: Enum.uniq(enumerable)}
+	public ALP_CSET_CustomSet(List<Integer> numberList) {
+		this(new Set<Integer>(numberList));
+	}
 
-  @spec empty?(t) :: boolean
-  def empty?(%CustomSet{map: nil}),
-    do: true
+	public ALP_CSET_CustomSet() {
+		this(new Set<Integer>());
+	}
 
-  @spec empty?(t) :: boolean
-  def empty?(_),
-    do: false
+	public ALP_CSET_CustomSet add(Integer i) {
+		this.numberSet.add(i);
+		return this;
+	}
 
-  @spec contains?(t, any) :: boolean
-  def contains?(%CustomSet{map: nil}, _element),
-    do: false
+	public ALP_CSET_CustomSet add(Set<Integer> integerSet) {
+		this.numberSet.addAll(integerSet);
+		return this;
+	}
 
-  def contains?(%CustomSet{map: map}, element),
-    do: Enum.member?(map, element)
+	public Boolean contains(Integer value) {
+		return this.numberSet.contains(value);
+	}
 
-  @spec subset?(t, t) :: boolean
-  def subset?(
-        %CustomSet{map: nil} = _custom_set_1,
-        _custom_set_2
-      ),
-      do: true
+	public ALP_CSET_CustomSet differenceOf(ALP_CSET_CustomSet that) {
+		return this.filter(new ALP_CSET_ExcludedNumberFilter(that));
+	}
 
-  def subset?(
-        %CustomSet{map: _map} = _custom_set_1,
-        %CustomSet{map: nil} = _custom_set_2
-      ),
-      do: false
+	public Boolean equals(Object obj) {
+		if (obj instanceof ALP_CSET_CustomSet) {
+			return this.equals((ALP_CSET_CustomSet) obj);
+		}
+		return false;
+	}
 
-  def subset?(
-        %CustomSet{map: map_1} = _custom_set_1,
-        %CustomSet{map: map_2} = _custom_set_2
-      ),
-      do: Enum.all?(map_1, &Enum.member?(map_2, &1))
+	public Boolean equals(ALP_CSET_CustomSet that) {
+		return this.numberSet.equals(that.numberSet);
+	}
 
-  @spec disjoint?(t, t) :: boolean
-  def disjoint?(
-        %CustomSet{} = custom_set_1,
-        %CustomSet{} = custom_set_2
-      ),
-      do:
-        empty?(custom_set_1) ||
-          empty?(custom_set_2) ||
-          has_no_common_elements(custom_set_1, custom_set_2)
+	public ALP_CSET_CustomSet filter(ALP_CSET_CustomSetPredicateIntf predicate) {
+		Set<Integer> filteredSet = new Set<Integer>();
+		for (Integer value : this.numberSet) {
+			if (predicate.isTrueFor(value)) {
+				filteredSet.add(value);
+			}
+		}
+		return new ALP_CSET_CustomSet(filteredSet);
+	}
 
-  defp has_no_common_elements(
-         %CustomSet{map: map_1} = _custom_set_1,
-         %CustomSet{map: map_2} = _custom_set_2
-       ),
-       do: Enum.all?(map_1, &(!Enum.member?(map_2, &1)))
+	public Boolean isDisjointedFrom(ALP_CSET_CustomSet that) {
+		return this.numberSet.isEmpty()
+				|| that.numberSet.isEmpty()
+				|| this.intersectionOf(that)
+				.isEmpty();
+	}
 
-  @spec equal?(t, t) :: boolean
-  def equal?(
-        %CustomSet{map: nil} = _custom_set_1,
-        %CustomSet{map: nil} = _custom_set_2
-      ),
-      do: true
+	public Boolean isEmpty() {
+		return this.numberSet.isEmpty();
+	}
 
-  def equal?(
-        %CustomSet{map: _map_1} = _custom_set_1,
-        %CustomSet{map: nil} = _custom_set_2
-      ),
-      do: false
+	public ALP_CSET_CustomSet intersectionOf(ALP_CSET_CustomSet that) {
+		return this.filter(new ALP_CSET_IncludedNumberFilter(that));
+	}
 
-  def equal?(
-        %CustomSet{map: nil} = _custom_set_1,
-        %CustomSet{map: _map_2} = _custom_set_2
-      ),
-      do: false
+	public Boolean isSubsetOf(ALP_CSET_CustomSet that) {
+		return that.numberSet.containsAll(this.numberSet);
+	}
 
-  def equal?(
-        %CustomSet{map: map_1} = _custom_set_1,
-        %CustomSet{map: map_2} = _custom_set_2
-      ),
-      do: Enum.sort(map_1) == Enum.sort(map_2)
-
-  @spec add(t, any) :: t
-  def add(%CustomSet{map: nil}, element),
-    do: %CustomSet{map: [element]}
-
-  def add(%CustomSet{map: map} = custom_set, element) do
-    if Enum.member?(map, element),
-      do: custom_set,
-      else: %CustomSet{map: [element | map]}
-  end
-
-  @spec intersection(t, t) :: t
-  def intersection(
-        %CustomSet{map: nil} = _custom_set_1,
-        %CustomSet{} = _custom_set_2
-      ),
-      do: %CustomSet{map: nil}
-
-  def intersection(
-        %CustomSet{} = _custom_set_1,
-        %CustomSet{map: nil} = _custom_set_2
-      ),
-      do: %CustomSet{map: nil}
-
-  def intersection(
-        %CustomSet{} = custom_set_1,
-        %CustomSet{} = custom_set_2
-      ) do
-    sublist_1 = find_common_members(custom_set_1, custom_set_2)
-    sublist_2 = find_common_members(custom_set_2, custom_set_1)
-    new(sublist_1 ++ sublist_2)
-  end
-
-  defp find_common_members(
-         %CustomSet{map: map_1} = _custom_set_1,
-         %CustomSet{map: map_2} = _custom_set_2
-       ),
-       do: Enum.filter(map_1, &Enum.member?(map_2, &1))
-
-  @spec difference(t, t) :: t
-  def difference(
-        %CustomSet{map: nil} = _custom_set_1,
-        %CustomSet{} = _custom_set_2
-      ),
-      do: %CustomSet{map: nil}
-
-  def difference(
-        %CustomSet{} = custom_set_1,
-        %CustomSet{map: nil} = _custom_set_2
-      ),
-      do: custom_set_1
-
-  def difference(
-        %CustomSet{map: map_1} = _custom_set_1,
-        %CustomSet{map: map_2} = _custom_set_2
-      ),
-      do: %CustomSet{
-        map: Enum.filter(map_1, &(!Enum.member?(map_2, &1)))
-      }
-
-  @spec union(t, t) :: t
-  def union(
-        %CustomSet{map: nil} = _custom_set_1,
-        %CustomSet{} = custom_set_2
-      ),
-      do: custom_set_2
-
-  def union(
-        %CustomSet{} = custom_set_1,
-        %CustomSet{map: nil} = _custom_set_2
-      ),
-      do: custom_set_1
-
-  def union(
-        %CustomSet{map: map_1} = _custom_set_1,
-        %CustomSet{map: map_2} = _custom_set_2
-      ),
-      do: new(map_1 ++ map_2)
-end
-	 */
-
-
+	public ALP_CSET_CustomSet unionOf(ALP_CSET_CustomSet that) {
+		return new ALP_CSET_CustomSet(this.add(that.numberSet).numberSet);
+	}
 }
