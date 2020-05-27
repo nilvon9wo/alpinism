@@ -70,19 +70,21 @@ public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf
 	}
 
 	private ALP_SMTX_SquareGrid fillOtherCells() {
-		if (this.finalValue != this.lastPopulatedCell.value) {
-			ALP_SMTX_SquareCell targetCell = this.nextCellLookup.getNextCell(this);
+		return (this.finalValue == this.lastPopulatedCell.value)
+				? this
+				: this.fillOtherCells(this.nextCellLookup.getNextCell(this));
+	}
 
-			if (targetCell.value == null) {
-				targetCell.fill(this, this.lastPopulatedCell.value + 1);
-			}
-			else {
-				this.nextDirection
-						= ALP_SMTX_DirectionHelper.NEXT_DIRECTION_BY_LAST_DIRECTION_MAP.get(this.nextDirection);
-			}
-			this.fillOtherCells();
+	private ALP_SMTX_SquareGrid fillOtherCells(ALP_SMTX_SquareCell targetCell) {
+		if (targetCell.value == null) {
+			targetCell.fill(this, this.lastPopulatedCell.value + 1);
 		}
-		return this;
+		else {
+			this.nextDirection
+					= ALP_SMTX_DirectionHelper.NEXT_DIRECTION_BY_LAST_DIRECTION_MAP.get(this.nextDirection);
+		}
+
+		return this.fillOtherCells();
 	}
 
 	public List<List<Integer>> toRowValueListList() {
