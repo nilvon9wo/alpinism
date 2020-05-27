@@ -1,8 +1,14 @@
 public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf {
 	private Integer dimension;
+	private ALP_SMTX_NextCellLookup nextCellLookup;
+
+	public ALP_SMTX_SquareGrid(Integer dimension, ALP_SMTX_NextCellLookup nextCellLookup) {
+		this.dimension = dimension;
+		this.nextCellLookup = nextCellLookup;
+	}
 
 	public ALP_SMTX_SquareGrid(Integer dimension) {
-		this.dimension = dimension;
+		this(dimension, ALP_SMTX_NextCellLookup.getIntance());
 	}
 
 	private Map<Integer, Map<Integer, ALP_SMTX_SquareCell>> cellByColumnByRowMap
@@ -21,6 +27,9 @@ public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf
 	}
 
 	private ALP_SMTX_Direction nextDirection;
+	public ALP_SMTX_Direction getNextDirection() {
+		return this.nextDirection;
+	}
 
 	private Double finalValue {
 		get {
@@ -97,9 +106,7 @@ public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf
 
 	private ALP_SMTX_SquareGrid fillOtherCells() {
 		if (this.finalValue != this.lastPopulatedCell.value) {
-			ALP_SMTX_SquareCell targetCell
-					= ALP_SMTX_DirectionHelper.NEXT_CELL_SUPPLIER_BY_DIRECTION_MAP.get(this.nextDirection)
-							.getNextCell(this);
+			ALP_SMTX_SquareCell targetCell = this.nextCellLookup.getNextCell(this);
 
 			if (targetCell.value == null) {
 				targetCell.fill(this, this.lastPopulatedCell.value + 1);
