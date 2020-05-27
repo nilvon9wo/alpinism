@@ -1,7 +1,10 @@
-defmodule SpiralTest do
-  use ExUnit.Case
+@IsTest
+private class ALP_SMTX_SpiralTest {
+	@IsTest
+	static void testBehavior() {
+	}
 
-  #
+	/*
   test "empty spiral" do
     assert Spiral.matrix(0) == []
   end
@@ -43,4 +46,6 @@ defmodule SpiralTest do
              [13, 12, 11, 10, 9]
            ]
   end
-end
+
+	 */
+}

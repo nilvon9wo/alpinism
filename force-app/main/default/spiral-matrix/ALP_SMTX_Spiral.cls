@@ -1,3 +1,5 @@
+public with sharing class ALP_SMTX_Spiral {
+/*
 defmodule Cell do
   defstruct [:row, :column, :value]
 
@@ -173,3 +175,6 @@ defmodule Spiral do
       else: fill(Grid.update(grid, target_cell, next_value))
   end
 end
+
+ */
+}
