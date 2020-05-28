@@ -2,7 +2,7 @@ public with sharing class ALP_CONX_ColourHelper {
 	XAP_ENUM_EnumConverter converter;
 	private ALP_CONX_ColourHelper(XAP_ENUM_EnumConverter converter) {
 		this.converter = converter;
-		this.converter.put(ALP_CONX_ColourHelper.class, new XAP_ENUM_EnumWrapper(ALP_CONX_Colour.values()));
+		this.converter.put(ALP_CONX_Colour.class, new XAP_ENUM_EnumWrapper(ALP_CONX_Colour.values()));
 	}
 
 	private ALP_CONX_ColourHelper() {
@@ -24,7 +24,7 @@ public with sharing class ALP_CONX_ColourHelper {
 	};
 
 	public ALP_CONX_Colour fromNameToEnum(String colourString) {
-		return (ALP_CONX_Colour) this.converter.getEnumeration(ALP_CONX_ColourHelper.class, colourString);
+		return (ALP_CONX_Colour) this.converter.getEnumeration(ALP_CONX_Colour.class, colourString);
 	}
 
 	public ALP_CONX_Colour fromMarkerToEnum(String marker) {
