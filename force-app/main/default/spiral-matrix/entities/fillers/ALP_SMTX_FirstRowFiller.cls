@@ -3,9 +3,7 @@ public with sharing class ALP_SMTX_FirstRowFiller implements ALP_SMTX_RowFillerI
 		Map<Integer, ALP_SMTX_SquareCell> cellByColumnMap = new Map<Integer, ALP_SMTX_SquareCell>();
 		Integer dimension = grid.getDimension();
 		for (Integer column = 1; column <= dimension; column++) {
-			ALP_SMTX_SquareCell cell = new ALP_SMTX_SquareCell(column);
-			cellByColumnMap.put(column, cell);
-			grid.setLastPopulatedCell(cell);
+			cellByColumnMap.put(column, new ALP_SMTX_SquareCell(grid, column));
 		}
 		return grid.fill(1, cellByColumnMap);
 	}

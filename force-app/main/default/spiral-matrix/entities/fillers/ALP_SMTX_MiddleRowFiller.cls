@@ -6,9 +6,7 @@ public with sharing class ALP_SMTX_MiddleRowFiller implements ALP_SMTX_RowFiller
 			Integer value = (dimension == column)
 					? dimension + row - 1
 					: null;
-			ALP_SMTX_SquareCell cell = new ALP_SMTX_SquareCell(row, column, value);
-			cellByColumnMap.put(column, cell);
-			grid.setLastPopulatedCell(cell);
+			cellByColumnMap.put(column, new ALP_SMTX_SquareCell(grid, row, column, value));
 		}
 		return grid.fill(row, cellByColumnMap);
 	}
