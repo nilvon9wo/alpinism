@@ -21,7 +21,7 @@ public with sharing class ALP_SMTX_NextCellLookup implements ALP_SMTX_NextCellSu
 	public static final Map<ALP_SMTX_Direction, ALP_SMTX_NextCellSupplierIntf> NEXT_CELL_SUPPLIER_INSTANCE_BY_DIRECTION_MAP
 			= new Map<ALP_SMTX_Direction, ALP_SMTX_NextCellSupplierIntf>();
 
-	public ALP_SMTX_SpiralCell getNextCell(ALP_SMTX_SpiralGridIntf grid) {
+	public ALP_Cell__c getNextCell(ALP_SMTX_SpiralGridIntf grid) {
 		ALP_SMTX_Direction nextDirection = grid.getNextDirection();
 
 		ALP_SMTX_NextCellSupplierIntf cellSupplier = NEXT_CELL_SUPPLIER_INSTANCE_BY_DIRECTION_MAP.get(nextDirection);

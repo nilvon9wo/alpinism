@@ -6,7 +6,7 @@ Usually this will be as pure Apex code, but as the exercise may merit, some solu
 Lightning Web Components, or other Salesforce technologies.
 
 When possible SObjects have been preferred over "pure" Apex objects because SObjects allow for named parameters,
-getting by SObjectField, and may also have other properties and methods which may prove desirable.
+accessing by SObjectField, and potentially other properties and methods which may prove desirable.
 
 
 ## Exercises
