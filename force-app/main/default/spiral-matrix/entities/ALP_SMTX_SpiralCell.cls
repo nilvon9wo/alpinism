@@ -4,7 +4,6 @@ public with sharing class ALP_SMTX_SpiralCell {
 	public Integer value {get; set;}
 
 	public ALP_SMTX_SpiralCell(
-			ALP_SMTX_SpiralGridIntf grid,
 			Integer row,
 			Integer column,
 			Integer value
@@ -12,16 +11,16 @@ public with sharing class ALP_SMTX_SpiralCell {
 		this.row = row;
 		this.column = column;
 		this.value = value;
-
-		grid.setLastPopulatedCell(this);
 	}
 
-	public ALP_SMTX_SpiralCell(ALP_SMTX_SpiralGridIntf grid, Integer value) {
-		this(grid, 1, value - 1, value);
+	public ALP_SMTX_SpiralCell(
+			Integer row,
+			Integer column
+	) {
+		this(row, column, null);
 	}
 
-	public ALP_SMTX_SpiralCell fill(ALP_SMTX_SpiralGridIntf grid, Integer nextValue) {
-		this.value = nextValue;
-		return grid.setLastPopulatedCell(this);
+	public ALP_SMTX_SpiralCell(Integer value) {
+		this(1, value, value);
 	}
 }

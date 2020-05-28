@@ -18,22 +18,15 @@ public with sharing class ALP_SMTX_SpiralGrid implements ALP_SMTX_SpiralGridIntf
 	}
 
 	public ALP_SMTX_SpiralGrid(Integer dimension) {
-		this(dimension, ALP_SMTX_NextCellLookup.getIntance(), ALP_SMTX_RowFillerLookup.getIntance());
+		this(dimension, ALP_SMTX_NextCellLookup.getInstance(), ALP_SMTX_RowFillerLookup.getInstance());
 	}
 
 	private Map<Integer, Map<Integer, ALP_SMTX_SpiralCell>> cellByColumnByRowMap
 			= new Map<Integer, Map<Integer, ALP_SMTX_SpiralCell>>();
-	public Map<Integer, Map<Integer, ALP_SMTX_SpiralCell>> getCellByColumnByRowMap() {
-		return this.cellByColumnByRowMap;
-	}
 
 	private ALP_SMTX_SpiralCell lastPopulatedCell;
 	public ALP_SMTX_SpiralCell getLastPopulatedCell() {
 		return this.lastPopulatedCell;
-	}
-	public ALP_SMTX_SpiralCell setLastPopulatedCell(ALP_SMTX_SpiralCell cell) {
-		this.lastPopulatedCell = cell;
-		return cell;
 	}
 
 	private ALP_SMTX_Direction nextDirection;
@@ -64,11 +57,6 @@ public with sharing class ALP_SMTX_SpiralGrid implements ALP_SMTX_SpiralGridIntf
 		return this;
 	}
 
-	public ALP_SMTX_SpiralGrid fill(Integer row, Map<Integer, ALP_SMTX_SpiralCell> cellByColumnMap) {
-		this.cellByColumnByRowMap.put(row, cellByColumnMap);
-		return this;
-	}
-
 	private ALP_SMTX_SpiralGrid fillOtherCells() {
 		return (this.finalValue == this.lastPopulatedCell.value)
 				? this
@@ -77,7 +65,8 @@ public with sharing class ALP_SMTX_SpiralGrid implements ALP_SMTX_SpiralGridIntf
 
 	private ALP_SMTX_SpiralGrid fillOtherCells(ALP_SMTX_SpiralCell targetCell) {
 		if (targetCell.value == null) {
-			targetCell.fill(this, this.lastPopulatedCell.value + 1);
+			targetCell.value = this.lastPopulatedCell.value + 1;
+			this.lastPopulatedCell = targetCell;
 		}
 		else {
 			this.nextDirection
@@ -105,5 +94,24 @@ public with sharing class ALP_SMTX_SpiralGrid implements ALP_SMTX_SpiralGridIntf
 			rowList.add(cellByColumnMap.get(column).value);
 		}
 		return rowList;
+	}
+
+	public ALP_SMTX_SpiralCell get(ALP_SMTX_SpiralCell cell) {
+		return this.cellByColumnByRowMap.get(cell.row)
+				.get(cell.column);
+	}
+
+	public ALP_SMTX_SpiralGridIntf put(ALP_SMTX_SpiralCell cell) {
+		Integer row = cell.row;
+		Map<Integer, ALP_SMTX_SpiralCell> cellByColumnMap = this.cellByColumnByRowMap.get(row);
+		if (cellByColumnMap == null) {
+			cellByColumnMap = new Map<Integer, ALP_SMTX_SpiralCell>();
+			this.cellByColumnByRowMap.put(row, cellByColumnMap);
+		}
+
+		cellByColumnMap.put(cell.column, cell);
+		this.lastPopulatedCell = cell;
+
+		return this;
 	}
 }

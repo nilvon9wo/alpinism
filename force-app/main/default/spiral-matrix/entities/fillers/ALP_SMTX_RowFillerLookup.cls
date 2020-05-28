@@ -3,7 +3,7 @@ public with sharing class ALP_SMTX_RowFillerLookup implements ALP_SMTX_RowFiller
 	}
 
 	private static ALP_SMTX_RowFillerLookup instance;
-	public static ALP_SMTX_RowFillerLookup getIntance() {
+	public static ALP_SMTX_RowFillerLookup getInstance() {
 		if (instance == null) {
 			instance = new ALP_SMTX_RowFillerLookup();
 		}

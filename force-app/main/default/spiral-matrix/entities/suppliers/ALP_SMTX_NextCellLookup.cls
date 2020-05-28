@@ -3,7 +3,7 @@ public with sharing class ALP_SMTX_NextCellLookup implements ALP_SMTX_NextCellSu
 	}
 
 	private static ALP_SMTX_NextCellLookup instance;
-	public static ALP_SMTX_NextCellLookup getIntance() {
+	public static ALP_SMTX_NextCellLookup getInstance() {
 		if (instance == null) {
 			instance = new ALP_SMTX_NextCellLookup();
 		}
