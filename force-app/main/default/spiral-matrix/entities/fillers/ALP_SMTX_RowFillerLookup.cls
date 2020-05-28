@@ -13,7 +13,7 @@ public with sharing class ALP_SMTX_RowFillerLookup implements ALP_SMTX_RowFiller
 	private static final Map<Type, ALP_SMTX_RowFillerIntf> FILLER_INSTANCE_BY_TYPE_MAP
 			= new Map<Type, ALP_SMTX_RowFillerIntf>{};
 
-	public ALP_SMTX_SquareGridIntf fillRow(ALP_SMTX_SquareGridIntf grid, Integer row) {
+	public ALP_SMTX_SpiralGridIntf fillRow(ALP_SMTX_SpiralGridIntf grid, Integer row) {
 		Type fillerNeeded = this.determineFillerNeeded(grid, row);
 		ALP_SMTX_RowFillerIntf filler = FILLER_INSTANCE_BY_TYPE_MAP.get(fillerNeeded);
 		if (filler == null) {
@@ -23,7 +23,7 @@ public with sharing class ALP_SMTX_RowFillerLookup implements ALP_SMTX_RowFiller
 		return filler.fillRow(grid, row);
 	}
 
-	private Type determineFillerNeeded(ALP_SMTX_SquareGridIntf grid, Integer row) {
+	private Type determineFillerNeeded(ALP_SMTX_SpiralGridIntf grid, Integer row) {
 		return (row == 1)
 				? ALP_SMTX_FirstRowFiller.class
 				: (row == grid.getDimension())

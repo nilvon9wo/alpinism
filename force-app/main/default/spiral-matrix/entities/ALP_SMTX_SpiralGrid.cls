@@ -1,4 +1,4 @@
-public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf {
+public with sharing class ALP_SMTX_SpiralGrid implements ALP_SMTX_SpiralGridIntf {
 	private Integer dimension;
 	public Integer getDimension() {
 		return dimension;
@@ -7,7 +7,7 @@ public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf
 	private ALP_SMTX_NextCellLookup nextCellLookup;
 	private ALP_SMTX_RowFillerLookup rowFillerLookup;
 
-	public ALP_SMTX_SquareGrid(
+	public ALP_SMTX_SpiralGrid(
 			Integer dimension,
 			ALP_SMTX_NextCellLookup nextCellLookup,
 			ALP_SMTX_RowFillerLookup rowFillerLookup
@@ -17,21 +17,21 @@ public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf
 		this.rowFillerLookup = rowFillerLookup;
 	}
 
-	public ALP_SMTX_SquareGrid(Integer dimension) {
+	public ALP_SMTX_SpiralGrid(Integer dimension) {
 		this(dimension, ALP_SMTX_NextCellLookup.getIntance(), ALP_SMTX_RowFillerLookup.getIntance());
 	}
 
-	private Map<Integer, Map<Integer, ALP_SMTX_SquareCell>> cellByColumnByRowMap
-			= new Map<Integer, Map<Integer, ALP_SMTX_SquareCell>>();
-	public Map<Integer, Map<Integer, ALP_SMTX_SquareCell>> getCellByColumnByRowMap() {
+	private Map<Integer, Map<Integer, ALP_SMTX_SpiralCell>> cellByColumnByRowMap
+			= new Map<Integer, Map<Integer, ALP_SMTX_SpiralCell>>();
+	public Map<Integer, Map<Integer, ALP_SMTX_SpiralCell>> getCellByColumnByRowMap() {
 		return this.cellByColumnByRowMap;
 	}
 
-	private ALP_SMTX_SquareCell lastPopulatedCell;
-	public ALP_SMTX_SquareCell getLastPopulatedCell() {
+	private ALP_SMTX_SpiralCell lastPopulatedCell;
+	public ALP_SMTX_SpiralCell getLastPopulatedCell() {
 		return this.lastPopulatedCell;
 	}
-	public ALP_SMTX_SquareCell setLastPopulatedCell(ALP_SMTX_SquareCell cell) {
+	public ALP_SMTX_SpiralCell setLastPopulatedCell(ALP_SMTX_SpiralCell cell) {
 		this.lastPopulatedCell = cell;
 		return cell;
 	}
@@ -51,12 +51,12 @@ public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf
 		set;
 	}
 
-	public ALP_SMTX_SquareGrid populate() {
+	public ALP_SMTX_SpiralGrid populate() {
 		return this.populateBorderCells()
 				.fillOtherCells();
 	}
 
-	private ALP_SMTX_SquareGrid populateBorderCells() {
+	private ALP_SMTX_SpiralGrid populateBorderCells() {
 		for (Integer row = 1; row <= this.dimension; row++) {
 			this.rowFillerLookup.fillRow(this, row);
 		}
@@ -64,18 +64,18 @@ public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf
 		return this;
 	}
 
-	public ALP_SMTX_SquareGrid fill(Integer row, Map<Integer, ALP_SMTX_SquareCell> cellByColumnMap) {
+	public ALP_SMTX_SpiralGrid fill(Integer row, Map<Integer, ALP_SMTX_SpiralCell> cellByColumnMap) {
 		this.cellByColumnByRowMap.put(row, cellByColumnMap);
 		return this;
 	}
 
-	private ALP_SMTX_SquareGrid fillOtherCells() {
+	private ALP_SMTX_SpiralGrid fillOtherCells() {
 		return (this.finalValue == this.lastPopulatedCell.value)
 				? this
 				: this.fillOtherCells(this.nextCellLookup.getNextCell(this));
 	}
 
-	private ALP_SMTX_SquareGrid fillOtherCells(ALP_SMTX_SquareCell targetCell) {
+	private ALP_SMTX_SpiralGrid fillOtherCells(ALP_SMTX_SpiralCell targetCell) {
 		if (targetCell.value == null) {
 			targetCell.fill(this, this.lastPopulatedCell.value + 1);
 		}
@@ -99,7 +99,7 @@ public with sharing class ALP_SMTX_SquareGrid implements ALP_SMTX_SquareGridIntf
 		return rowValueListList;
 	}
 
-	private List<Integer> toRowValueList(Map<Integer, ALP_SMTX_SquareCell> cellByColumnMap) {
+	private List<Integer> toRowValueList(Map<Integer, ALP_SMTX_SpiralCell> cellByColumnMap) {
 		List<Integer> rowList = new List<Integer>();
 		for (Integer column = 1; column <= this.dimension; column++) {
 			rowList.add(cellByColumnMap.get(column).value);

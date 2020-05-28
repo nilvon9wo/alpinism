@@ -1,3 +1,3 @@
 public interface ALP_SMTX_NextCellSupplierIntf {
-	ALP_SMTX_SquareCell getNextCell(ALP_SMTX_SquareGridIntf grid);
+	ALP_SMTX_SpiralCell getNextCell(ALP_SMTX_SpiralGridIntf grid);
 }
