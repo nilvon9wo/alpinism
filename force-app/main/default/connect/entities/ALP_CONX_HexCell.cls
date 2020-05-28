@@ -1,19 +1,19 @@
 public with sharing class ALP_CONX_HexCell {
-	private static final Map<String, ALP_CONX_Colour> COLOUR_BY_OCCUPANT_MAP = new Map<String, ALP_CONX_Colour>{
-			'X' => ALP_CONX_Colour.BLACK,
-			'O' => ALP_CONX_Colour.WHITE,
-			'.' => ALP_CONX_Colour.NONE
-	};
+	private ALP_Cell__c cell;
+	private ALP_CONX_ColourHelper colourHelper;
 
-	public ALP_Cell__c cell { get; private set; }
-
-	private ALP_CONX_HexCell(Integer row, Integer column, ALP_CONX_Colour colour) {
+	private ALP_CONX_HexCell(Integer row, Integer column, ALP_CONX_Colour colour, ALP_CONX_ColourHelper colourHelper) {
 		this.cell = new ALP_Cell__c(
 				Row__c = row,
 				Column__c = column,
 				Z__c = -row - column,
-				Stone_Colour__c = String.valueOf(colour)
+				Stone_Colour__c = colourHelper.fromEnumToName(colour)
 		);
+		this.colourHelper = colourHelper;
+	}
+
+	private ALP_CONX_HexCell(Integer row, Integer column, ALP_CONX_Colour colour) {
+		this(row, column, colour, ALP_CONX_ColourHelper.getInstance());
 	}
 
 	public ALP_CONX_HexCell(Integer rowIndex, Integer columnIndex) {
@@ -21,12 +21,12 @@ public with sharing class ALP_CONX_HexCell {
 	}
 
 	public ALP_CONX_HexCell(Integer rowIndex, Integer columnIndex, String occupant) {
-		this(rowIndex, columnIndex, COLOUR_BY_OCCUPANT_MAP.get(occupant));
+		this(rowIndex, columnIndex, ALP_CONX_ColourHelper.getInstance().fromMarkerToEnum(occupant));
 	}
 
-	public String stone {
+	public ALP_CONX_Colour stone {
 		get {
-			return this.cell.Stone_Colour__c;
+			return this.colourHelper.fromNameToEnum(this.cell.Stone_Colour__c);
 		}
 	}
 

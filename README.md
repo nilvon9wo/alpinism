@@ -5,7 +5,7 @@ This project is a collection of programming exercises from [Exercism](https://ex
 Usually this will be as pure Apex code, but as the exercise may merit, some solutions may also include SObjects,
 Lightning Web Components, or other Salesforce technologies.
 
-When possible SObjects have been preferred over "pure" Apex objects because SObjects allow for named parameters,
+When possible SObjects have been preferred over "pure" Apex _metadata.objects because SObjects allow for named parameters,
 accessing by SObjectField, and potentially other properties and methods which may prove desirable.
 
 

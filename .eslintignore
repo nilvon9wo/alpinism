@@ -1,6 +1,6 @@
-**/lwc/**/*.css
-**/lwc/**/*.html
-**/lwc/**/*.json
-**/lwc/**/*.svg
-**/lwc/**/*.xml
+**/_metadata.lwc/**/*.css
+**/_metadata.lwc/**/*.html
+**/_metadata.lwc/**/*.json
+**/_metadata.lwc/**/*.svg
+**/_metadata.lwc/**/*.xml
 .sfdx
