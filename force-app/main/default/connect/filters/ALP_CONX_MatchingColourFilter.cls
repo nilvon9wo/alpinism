@@ -6,6 +6,7 @@ public with sharing class ALP_CONX_MatchingColourFilter implements ALP_CONX_HexC
 	}
 
 	public Boolean isTrueFor(ALP_CONX_HexCell cell) {
-		return this.targetColour.equals(cell.stone);
+		return String.valueOf(this.targetColour)
+				.equals(cell.stone);
 	}
 }

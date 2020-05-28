@@ -26,14 +26,14 @@ public with sharing class ALP_CONX_HexGrid {
 	}
 
 	private Integer findMaxRow() {
-		return this.findMaximum(ALP_CONX_Axis.X);
+		return this.findMaximum(ALP_Cell__c.Row__c);
 	}
 
 	private Integer findMaxColumn() {
-		return this.findMaximum(ALP_CONX_Axis.Y);
+		return this.findMaximum(ALP_Cell__c.Column__c);
 	}
 
-	private Integer findMaximum(ALP_CONX_Axis axis) {
+	private Integer findMaximum(SObjectField axis) {
 		Integer maximum = 0;
 		for (ALP_CONX_HexCell cell : cellList) {
 			Integer value = cell.get(axis);

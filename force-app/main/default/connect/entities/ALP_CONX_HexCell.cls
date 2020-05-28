@@ -5,26 +5,15 @@ public with sharing class ALP_CONX_HexCell {
 			'.' => ALP_CONX_Colour.NONE
 	};
 
-	public Integer x { get; private set; }
-	public Integer y { get; private set; }
-	public Integer z { get; private set; }
-	public ALP_CONX_Colour stone { get; private set; }
+	public ALP_Cell__c cell { get; private set; }
 
-	private Map<ALP_CONX_Axis, Integer> locationMap {
-		get {
-			if (this.locationMap == null) {
-				this.locationMap = this.toLocationMap(this);
-			}
-			return this.locationMap;
-		}
-		set;
-	}
-
-	private ALP_CONX_HexCell(Integer x, Integer y, ALP_CONX_Colour colour) {
-		this.x = x;
-		this.y = y;
-		this.z = -x - y;
-		this.stone = colour;
+	private ALP_CONX_HexCell(Integer row, Integer column, ALP_CONX_Colour colour) {
+		this.cell = new ALP_Cell__c(
+				Row__c = row,
+				Column__c = column,
+				Z__c = -row - column,
+				Stone_Colour__c = String.valueOf(colour)
+		);
 	}
 
 	public ALP_CONX_HexCell(Integer rowIndex, Integer columnIndex) {
@@ -35,8 +24,15 @@ public with sharing class ALP_CONX_HexCell {
 		this(rowIndex, columnIndex, COLOUR_BY_OCCUPANT_MAP.get(occupant));
 	}
 
-	public Integer get(ALP_CONX_Axis axis) {
-		return this.locationMap.get(axis);
+	public String stone {
+		get {
+			return this.cell.Stone_Colour__c;
+		}
+	}
+
+	public Integer get(SObjectField axis) {
+		return ((Decimal) this.cell.get(axis))
+				.intValue();
 	}
 
 	public Boolean isNeighbourTo(List<ALP_CONX_HexCell> those) {
@@ -49,30 +45,25 @@ public with sharing class ALP_CONX_HexCell {
 	}
 
 	private Boolean isNeighbourTo(ALP_CONX_HexCell that) {
-		Map<ALP_CONX_Axis, Integer> thatLocationMap = this.toLocationMap(that);
-		return this.isNeighbourTo(thatLocationMap, ALP_CONX_Axis.X, ALP_CONX_Axis.Y, ALP_CONX_Axis.Z)
-				|| this.isNeighbourTo(thatLocationMap, ALP_CONX_Axis.X, ALP_CONX_Axis.Z, ALP_CONX_Axis.Y)
-				|| this.isNeighbourTo(thatLocationMap, ALP_CONX_Axis.Y, ALP_CONX_Axis.X, ALP_CONX_Axis.Z)
-				|| this.isNeighbourTo(thatLocationMap, ALP_CONX_Axis.Y, ALP_CONX_Axis.Z, ALP_CONX_Axis.X)
-				|| this.isNeighbourTo(thatLocationMap, ALP_CONX_Axis.Z, ALP_CONX_Axis.X, ALP_CONX_Axis.Y)
-				|| this.isNeighbourTo(thatLocationMap, ALP_CONX_Axis.Z, ALP_CONX_Axis.Y, ALP_CONX_Axis.X);
+		return this.isNeighbourTo(that, ALP_Cell__c.Row__c, ALP_Cell__c.Column__c, ALP_Cell__c.Z__c)
+				|| this.isNeighbourTo(that, ALP_Cell__c.Row__c, ALP_Cell__c.Z__c, ALP_Cell__c.Column__c)
+				|| this.isNeighbourTo(that, ALP_Cell__c.Column__c, ALP_Cell__c.Row__c, ALP_Cell__c.Z__c)
+				|| this.isNeighbourTo(that, ALP_Cell__c.Column__c, ALP_Cell__c.Z__c, ALP_Cell__c.Row__c)
+				|| this.isNeighbourTo(that, ALP_Cell__c.Z__c, ALP_Cell__c.Row__c, ALP_Cell__c.Column__c)
+				|| this.isNeighbourTo(that, ALP_Cell__c.Z__c, ALP_Cell__c.Column__c, ALP_Cell__c.Row__c);
 	}
 
-	private Boolean isNeighbourTo(Map<ALP_CONX_Axis, Integer> thatLocationMap, ALP_CONX_Axis same, ALP_CONX_Axis oneDown, ALP_CONX_Axis oneUp) {
-		return (this.locationMap.get(same) == (thatLocationMap.get(same)))
-				&& (this.locationMap.get(oneDown) == (thatLocationMap.get(oneDown) - 1))
-				&& (this.locationMap.get(oneUp) == (thatLocationMap.get(oneUp) + 1));
+	private Boolean isNeighbourTo(ALP_CONX_HexCell that, SObjectField same, SObjectField oneDown, SObjectField oneUp) {
+		return (this.get(same) == (that.get(same)))
+				&& (this.get(oneDown) == (that.get(oneDown) - 1))
+				&& (this.get(oneUp) == (that.get(oneUp) + 1));
 	}
 
 	public String toLocationString() {
-		return this.locationMap.toString();
-	}
-
-	private Map<ALP_CONX_Axis, Integer> toLocationMap(ALP_CONX_HexCell cell) {
-		return new Map<ALP_CONX_Axis, Integer>{
-				ALP_CONX_Axis.X => cell.x,
-				ALP_CONX_Axis.Y => cell.y,
-				ALP_CONX_Axis.Z => cell.z
-		};
+		return '('
+				+ this.cell.Row__c + ','
+				+ this.cell.Column__c + ','
+				+ this.cell.Z__c
+				+ ')' ;
 	}
 }
