@@ -1,215 +1,378 @@
+@IsTest
 public with sharing class ALP_BOWL_BowlingTest {
-    /*
-    defmodule BowlingTest do
-  use ExUnit.Case
+    private static final User TEST_USER = TEST_DummyUserFactoryOutlet.TEST_ADMIN_USER;
 
-  defp roll_reduce(game, rolls) do
-    Enum.reduce(rolls, game, fn roll, game -> Bowling.roll(game, roll) end)
-  end
+    // Roll Exception Tests ---------------------------------------------------------------------
 
-  test "should be able to score a game with all zeros" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 0
-  end
+    @IsTest
+    public static void testRollShouldThrowExceptionForNegativePoints() {
+        // Arrange
+        ALP_BOWL_Bowling bowlingUnderTest = new ALP_BOWL_Bowling();
+        Integer invalidPinsKnockedDown = -1;
 
-  test "should be able to score a game with no strikes or spares" do
-    game = Bowling.start()
-    rolls = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 90
-  end
+        // Act
+        testRollException(bowlingUnderTest, invalidPinsKnockedDown, 'Negative roll is invalid');
+    }
 
-  test "a spare followed by zeros is worth ten points" do
-    game = Bowling.start()
-    rolls = [6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 10
-  end
+    @IsTest
+    public static void testRollShouldThrowExceptionForRollScoreMoreThan10Points() {
+        // Arrange
+        ALP_BOWL_Bowling bowlingUnderTest = new ALP_BOWL_Bowling();
+        Integer invalidPinsKnockedDown = 11;
 
-  test "points scored in the roll after a spare are counted twice" do
-    game = Bowling.start()
-    rolls = [6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 16
-  end
+        // Act
+        testRollException(bowlingUnderTest, invalidPinsKnockedDown, 'Pin count exceeds pins on the lane');
+    }
 
-  test "consecutive spares each get a one roll bonus" do
-    game = Bowling.start()
-    rolls = [5, 5, 3, 7, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 31
-  end
+    @IsTest
+    public static void testRollShouldThrowExceptionForTwoRollsInSameFrameMoreThan10Points() {
+        // Arrange
+        ALP_BOWL_Bowling bowlingUnderTest = new ALP_BOWL_Bowling();
+        bowlingUnderTest.roll(5);
+        Integer invalidPinsKnockedDown = 6;
 
-  test "a spare in the last frame gets a one roll bonus that is counted once" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 7]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 17
-  end
+        // Act
+        testRollException(bowlingUnderTest, invalidPinsKnockedDown, 'Pin count exceeds pins on the lane');
+    }
 
-  test "a strike earns ten points in a frame with a single roll" do
-    game = Bowling.start()
-    rolls = [10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 10
-  end
+    @IsTest
+    public static void testRollShouldThrowExceptionForBonusRollAfterStrikeMoreThanTenPoints() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+        Integer invalidPinsKnockedDown = 11;
 
-  test "points scored in the two rolls after a strike are counted twice as a bonus" do
-    game = Bowling.start()
-    rolls = [10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 26
-  end
+        // Act
+        testRollException(bowlingUnderTest, invalidPinsKnockedDown, 'Pin count exceeds pins on the lane');
+    }
 
-  test "consecutive strikes each get the two roll bonus" do
-    game = Bowling.start()
-    rolls = [10, 10, 10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 81
-  end
+    @IsTest
+    public static void testRollShouldThrowExceptionForSecondBonusRollStrikeWithoutFirstBonusRollStrike() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 6
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+        Integer invalidPinsKnockedDown = 10;
 
-  test "a strike in the last frame gets a two roll bonus that is counted once" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 1]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 18
-  end
+        // Act
+        testRollException(bowlingUnderTest, invalidPinsKnockedDown, 'Pin count exceeds pins on the lane');
+    }
 
-  test "rolling a spare with the two roll bonus does not get a bonus roll" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 3]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 20
-  end
+    @IsTest
+    public static void testRollShouldThrowExceptionForSecondBonusRollCannotScoreMoreThan10Points() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+        Integer invalidPinsKnockedDown = 11;
 
-  test "strikes with the two roll bonus do not get bonus rolls" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 30
-  end
+        // Act
+        testRollException(bowlingUnderTest, invalidPinsKnockedDown, 'Pin count exceeds pins on the lane');
+    }
 
-  test "a strike with the one roll bonus after a spare in the last frame does not get a bonus" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 10]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 20
-  end
+    @IsTest
+    public static void testRollShouldThrowExceptionGameAlreadyHasTenFrames() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+        Integer invalidPinsKnockedDown = 0;
 
-  test "all strikes is a perfect game" do
-    game = Bowling.start()
-    rolls = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 300
-  end
+        // Act
+        testRollException(bowlingUnderTest, invalidPinsKnockedDown, 'Cannot roll after game is over');
+    }
 
-  test "rolls cannot score negative points" do
-    game = Bowling.start()
-    assert Bowling.roll(game, -1) == {:error, "Negative roll is invalid"}
-  end
+    @IsTest
+    public static void testRollShouldThrowExceptionSpareAlreadyHasBonus() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 2
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+        Integer invalidPinsKnockedDown = 2;
 
-  test "a roll cannot score more than 10 points" do
-    game = Bowling.start()
-    assert Bowling.roll(game, 11) == {:error, "Pin count exceeds pins on the lane"}
-  end
+        // Act
+        testRollException(bowlingUnderTest, invalidPinsKnockedDown, 'Cannot roll after game is over');
+    }
 
-  test "two rolls in a frame cannot score more than 10 points" do
-    game = Bowling.start()
-    game = Bowling.roll(game, 5)
-    assert Bowling.roll(game, 6) == {:error, "Pin count exceeds pins on the lane"}
-  end
+    @IsTest
+    public static void testRollShouldThrowExceptionStrikeAlreadyHasBonus() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 3, 2
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+        Integer invalidPinsKnockedDown = 2;
 
-  test "bonus roll after a strike in the last frame cannot score more than 10 points" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10]
-    game = roll_reduce(game, rolls)
-    assert Bowling.roll(game, 11) == {:error, "Pin count exceeds pins on the lane"}
-  end
+        // Act
+        testRollException(bowlingUnderTest, invalidPinsKnockedDown, 'Cannot roll after game is over');
+    }
 
-  test "two bonus rolls after a strike in the last frame cannot score more than 10 points" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5]
-    game = roll_reduce(game, rolls)
-    assert Bowling.roll(game, 6) == {:error, "Pin count exceeds pins on the lane"}
-  end
+    private static void testRollException(
+            ALP_BOWL_Bowling bowlingUnderTest,
+            Integer nextPinsKnockedDown,
+            String expectedMessage
+    ) {
+        // Act
+        ALP_BOWL_RollException resultException;
+        Test.startTest();
+        System.runAs(TEST_USER) {
+            try {
+                bowlingUnderTest.roll(nextPinsKnockedDown);
+            }
+            catch (ALP_BOWL_RollException ex) {
+                resultException = ex;
+            }
+        }
+        Test.stopTest();
 
-  test "two bonus rolls after a strike in the last frame can score more than 10 points if one is a strike" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 6]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == 26
-  end
+        // Assert
+        System.assertNotEquals(null, resultException);
+        System.assertEquals(expectedMessage, resultException.getMessage());
+    }
 
-  test "the second bonus rolls after a strike in the last frame cannot be a strike if the first one is not a strike" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 6]
-    game = roll_reduce(game, rolls)
-    assert Bowling.roll(game, 10) == {:error, "Pin count exceeds pins on the lane"}
-  end
+    // Score Tests ---------------------------------------------------------------------
 
-  test "second bonus roll after a strike in the last frame cannot score more than 10 points" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10]
-    game = roll_reduce(game, rolls)
-    assert Bowling.roll(game, 11) == {:error, "Pin count exceeds pins on the lane"}
-  end
+    @IsTest
+    public static void testScoreShouldBeAbleToScoreAGameWithAllZeros() {
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        };
+        Integer expectedResult = 0;
+        testScore(rollList, expectedResult);
+    }
 
-  test "an unstarted game cannot be scored" do
-    game = Bowling.start()
-    assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
-  end
+    @IsTest
+    public static void testScoreShouldBeAbleToScoreAGameWithNoStrikesOrSpares() {
+        List<Integer> rollList = new List<Integer>{
+                3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6
+        };
+        Integer expectedResult = 90;
+        testScore(rollList, expectedResult);
+    }
 
-  test "an incomplete game cannot be scored" do
-    game = Bowling.start()
-    rolls = [0, 0]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
-  end
+    @IsTest
+    public static void testScoreShouldAssign10PointsToASpareFollowedByZeros() {
+        List<Integer> rollList = new List<Integer>{
+                6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        };
+        Integer expectedResult = 10;
+        testScore(rollList, expectedResult);
+    }
 
-  test "cannot roll if game already has ten frames" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    game = roll_reduce(game, rolls)
-    assert Bowling.roll(game, 0) == {:error, "Cannot roll after game is over"}
-  end
+    @IsTest
+    public static void testScoreShouldCountPointsInTheRollAfterASpareTwice() {
+        List<Integer> rollList = new List<Integer>{
+                6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        };
+        Integer expectedResult = 16;
+        testScore(rollList, expectedResult);
+    }
 
-  test "bonus rolls for a strike in the last frame must be rolled before score can be calculated" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
-  end
+    @IsTest
+    public static void testScoreShouldCountABonusRollForEachConsecutiveSpare() {
+        List<Integer> rollList = new List<Integer>{
+                5, 5, 3, 7, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        };
+        Integer expectedResult = 31;
+        testScore(rollList, expectedResult);
+    }
 
-  test "both bonus rolls for a strike in the last frame must be rolled before score can be calculated" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
-  end
+    @IsTest
+    public static void testScoreShouldCountABonusRollOnceForASpareInTheLastFrame() {
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 7
+        };
+        Integer expectedResult = 17;
+        testScore(rollList, expectedResult);
+    }
 
-  test "bonus roll for a spare in the last frame must be rolled before score can be calculated" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3]
-    game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
-  end
+    @IsTest
+    public static void testScoreShouldCountTenPointsForAStrike() {
+        List<Integer> rollList = new List<Integer>{
+                10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        };
+        Integer expectedResult = 10;
+        testScore(rollList, expectedResult);
+    }
 
-  test "cannot roll after bonus roll for spare" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 2]
-    game = roll_reduce(game, rolls)
-    assert Bowling.roll(game, 2) == {:error, "Cannot roll after game is over"}
-  end
+    @IsTest
+    public static void testScoreShouldCountTheTwoRollsAfterAStrikeTwiceAsABonus() {
+        List<Integer> rollList = new List<Integer>{
+                10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        };
+        Integer expectedResult = 26;
+        testScore(rollList, expectedResult);
+    }
 
-  test "cannot roll after bonus roll for strike" do
-    game = Bowling.start()
-    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 3, 2]
-    game = roll_reduce(game, rolls)
-    assert Bowling.roll(game, 2) == {:error, "Cannot roll after game is over"}
-  end
-end
+    @IsTest
+    public static void testScoreShouldCountTwoBonusRollsForEachConsecutiveStrike() {
+        List<Integer> rollList = new List<Integer>{
+                10, 10, 10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        };
+        Integer expectedResult = 81;
+        testScore(rollList, expectedResult);
+    }
 
-     */
+    @IsTest
+    public static void testScoreShouldCountATwoBonusRollsEachOnceForAStrikeInTheLastFrame() {
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 1
+        };
+        Integer expectedResult = 18;
+        testScore(rollList, expectedResult);
+    }
+
+    @IsTest
+    public static void testScoreShouldNotCountAdditionalBonusRollsForASpareInTwoRollBonus() {
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 3
+        };
+        Integer expectedResult = 20;
+        testScore(rollList, expectedResult);
+    }
+
+    @IsTest
+    public static void testScoreShouldNotCountAdditionalBonusRollsForASpikesInSpikeTwoRollBonus() {
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10
+        };
+        Integer expectedResult = 30;
+        testScore(rollList, expectedResult);
+    }
+
+    @IsTest
+    public static void testScoreShouldNotCountAdditionalBonusRollsForASpikesInSpareOneRollBonus() {
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 10
+        };
+        Integer expectedResult = 20;
+        testScore(rollList, expectedResult);
+    }
+
+    @IsTest
+    public static void testScoreShouldReturn300ForAPerfectGame() {
+        List<Integer> rollList = new List<Integer>{
+                10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
+        };
+        Integer expectedResult = 300;
+        testScore(rollList, expectedResult);
+    }
+
+    @IsTest
+    public static void testScoreShouldCountMoreThan10PointsBetweenStrikeBonusRollsIfOneIsAStrike() {
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 6
+        };
+        Integer expectedResult = 26;
+        testScore(rollList, expectedResult);
+    }
+
+    private static void testScore(List<Integer> rollList, Integer expectedResult) {
+        // Arrange
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+
+        // Act
+        Integer result;
+        Test.startTest();
+        System.runAs(TEST_USER) {
+            result = bowlingUnderTest.score();
+        }
+        Test.stopTest();
+
+        // Assert
+        System.assertEquals(expectedResult, result);
+    }
+
+    // Score Exception Tests ---------------------------------------------------------------------
+
+    @IsTest
+    public static void testScoreThrowsExceptionWhenGameHasNotStarted() {
+        // Arrange
+        ALP_BOWL_Bowling bowlingUnderTest = new ALP_BOWL_Bowling();
+
+        // Act
+        testScoreException(bowlingUnderTest, 'Score cannot be taken until the end of the game');
+    }
+
+    @IsTest
+    public static void testScoreThrowsExceptionWhenGameHasNotCompleted() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+
+        // Act
+        testScoreException(bowlingUnderTest, 'Score cannot be taken until the end of the game');
+    }
+
+    @IsTest
+    public static void testScoreThrowsExceptionWhenBonusRollsForStrikeHaveNotBeenRolled() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+
+        // Act
+        testScoreException(bowlingUnderTest, 'Score cannot be taken until the end of the game');
+    }
+
+    @IsTest
+    public static void testScoreThrowsExceptionWhenBothBonusRollsForStrikeHaveNotBeenRolled() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+
+        // Act
+        testScoreException(bowlingUnderTest, 'Score cannot be taken until the end of the game');
+    }
+
+    @IsTest
+    public static void testScoreThrowsExceptionWhenBonusRollForSpareHasNotBeenRolled() {
+        // Arrange
+        List<Integer> rollList = new List<Integer>{
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3
+        };
+        ALP_BOWL_Bowling bowlingUnderTest = rollReduce(new ALP_BOWL_Bowling(), rollList);
+
+        // Act
+        testScoreException(bowlingUnderTest, 'Score cannot be taken until the end of the game');
+    }
+
+    private static void testScoreException(ALP_BOWL_Bowling bowlingUnderTest, String expectedMessage) {
+        // Act
+        ALP_BOWL_ScoreException resultException;
+        Test.startTest();
+        System.runAs(TEST_USER) {
+            try {
+                bowlingUnderTest.score();
+            }
+            catch (ALP_BOWL_ScoreException ex) {
+                resultException = ex;
+            }
+        }
+        Test.stopTest();
+
+        // Assert
+        System.assertNotEquals(null, resultException);
+        System.assertEquals(expectedMessage, resultException.getMessage());
+    }
+
+    // Helpers ---------------------------------------------------------------------------------
+
+    private static ALP_BOWL_Bowling rollReduce(ALP_BOWL_Bowling game, List<Integer> rollList) {
+        for (Integer roll : rollList) {
+            game.roll(roll);
+        }
+        return game;
+    }
 }
