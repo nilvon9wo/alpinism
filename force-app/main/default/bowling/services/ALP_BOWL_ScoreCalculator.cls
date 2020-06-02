@@ -18,16 +18,17 @@ public with sharing class ALP_BOWL_ScoreCalculator {
 
         Integer runningTotal = 0;
         for (Integer i = 0; i < normalKnockDowns.size(); i++) {
-            Integer roll = allKnockDowns[i];
-            if (gameContext.isStrike(roll)) {
-                runningTotal += roll + allKnockDowns[i + 1] + allKnockDowns[i + 2];
+            Integer thisRoll = allKnockDowns[i];
+            Integer nextRoll = allKnockDowns[i + 1];
+            if (gameContext.isStrike(thisRoll)) {
+                runningTotal += 10 + nextRoll + allKnockDowns[i + 2];
             }
-            else if (gameContext.isSpare(roll, allKnockDowns[i + 1])) {
-                runningTotal += roll + allKnockDowns[i + 1] + allKnockDowns[i + 2];
+            else if (gameContext.isSpare(thisRoll, nextRoll)) {
+                runningTotal += 10 + allKnockDowns[i + 2];
                 i++;
             }
             else {
-                runningTotal += roll;
+                runningTotal += thisRoll + nextRoll;
                 i++;
             }
         }
@@ -35,70 +36,9 @@ public with sharing class ALP_BOWL_ScoreCalculator {
     }
 
     public ALP_BOWL_ScoreCalculator validateScorable(ALP_BOWL_GameContext gameContext){
-        System.debug('######### validateScorable gameContext: ' + gameContext);
-        System.debug('######### validateScorable gameContext.hasMoreRolls(): ' + gameContext.hasMoreRolls());
         if (gameContext.hasMoreRolls()) {
-            System.debug('######### THROWING!');
             throw new ALP_BOWL_ScoreException('Score cannot be taken until the end of the game');
         }
         return this;
     }
-
-    /*
-
-
-  @doc """
-  """
-
-  @spec score(any) :: integer | String.t()
-  def score(%Bowling{frame_count: frame_count})
-      when frame_count < 10,
-      do: {:error, ""}
-
-  def score(%Bowling{
-        bonus_type: :strike,
-        bonus_roll_count: bonus_roll_count
-      })
-      when bonus_roll_count != 2,
-      do: {:error, "Score cannot be taken until the end of the game"}
-
-  def score(%Bowling{
-        rolls: [last_roll | [penultimate_roll | [10 | _]]] = rolls,
-        bonus_type: :strike,
-        bonus_roll_count: 2
-      }),
-      do: score(%Bowling{rolls: rolls, bonus_type: :none}) - last_roll - penultimate_roll
-
-  def score(%Bowling{
-        bonus_type: :spare,
-        bonus_roll_count: bonus_roll_count
-      })
-      when bonus_roll_count != 1,
-      do: {:error, "Score cannot be taken until the end of the game"}
-
-  def score(%Bowling{rolls: [last_roll | _] = rolls, bonus_type: :spare, bonus_roll_count: 1}),
-    do: score(%Bowling{rolls: rolls, bonus_type: :none}) - last_roll
-
-  def score(%Bowling{rolls: rolls, bonus_type: :none}),
-    do: score(Enum.reverse(rolls), _accumulator = 0)
-
-  defp score([] = _rolls, accumulator),
-    do: accumulator
-
-  defp score([10 = head_roll | [next_throw_1 | [next_throw_2 | _]] = tail_rolls], accumulator),
-    do: score(tail_rolls, accumulator + head_roll + next_throw_1 + next_throw_2)
-
-  defp score([head_roll | [next_throw_1 | [next_throw_2 | _] = tail_rolls]], accumulator)
-       when head_roll + next_throw_1 == 10,
-       do: score(tail_rolls, accumulator + head_roll + next_throw_1 + next_throw_2)
-
-  defp score([head_roll | [next_throw_1 | tail_rolls]], accumulator),
-    do: score(tail_rolls, accumulator + head_roll + next_throw_1)
-
-  defp score([head_roll | tail_rolls], accumulator),
-    do: score(tail_rolls, accumulator + head_roll)
-end
-
-     */
-
 }
