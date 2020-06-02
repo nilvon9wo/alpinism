@@ -18,6 +18,7 @@ accessing by SObjectField, and potentially other properties and methods which ma
 | [Spiral Matrix](https://exercism.io/my/solutions/17c85d91725648abb399fe7b85552d7d) | | ALP_SMTX_ |
 | [Bowling](https://exercism.io/my/solutions/594e2a57d9014c61b53587f4a73a574b) | | ALP_BOWL_ |
 | [Sieve](https://exercism.io/my/solutions/1a8c99b313e346a59e30190d642b9547) | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | ALP_SIVE_ |
+| [Minesweeper](https://exercism.io/my/solutions/e51061d187544c768322562a45359b09) | | ALP_MNSP_ |
 
 ## Testing Notes
 

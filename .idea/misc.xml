@@ -1,47 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectRootManager" version="2" project-jdk-name="Unknown Elixir version at C:/devtools/Elixir" project-jdk-type="Elixir SDK" />
-  <component name="SbtLocalSettings">
-    <option name="projectSyncType">
-      <map>
-        <entry key="D:/tutorials/exercism/scala/accumulate" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/acronym" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/all-your-base" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/allergies" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/anagram" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/atbash-cipher" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/book-store" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/custom-set" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/difference-of-squares" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/flatten-array" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/gigasecond" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/isogram" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/kindergarten-garden" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/largest-series-product" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/luhn" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/matching-brackets" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/matrix" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/ocr-numbers" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/palindrome-products" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/pangram" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/perfect-numbers" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/pig-latin" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/protein-translation" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/rail-fence-cipher" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/raindrops" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/robot-name" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/roman-numerals" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/run-length-encoding" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/saddle-points" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/scrabble-score" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/series" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/sieve" value="PREVIEW" />
-        <entry key="D:/tutorials/exercism/scala/sum-of-multiples" value="PREVIEW" />
-      </map>
-    </option>
-  </component>
-  <component name="ScalaSbtSettings">
-    <option name="customVMEnabled" value="true" />
-    <option name="customVMPath" value="C:/devtools/Java/jdk-12.0.1" />
-  </component>
 </project>
