@@ -24,6 +24,11 @@ While for real world project I generally advocate [Martin Fowler's Test Pyramid]
 for these exercises, I've followed a philosophy of [Lean Testing](https://medium.com/@AWGHodder/lean-testing-f900b5a7e82e),
 only included Apex adaptations of the original challenges.  
 
+Tests can and should be executed as normal when or after being deployed to any Salesforce org.
+I recommend execution with [IntelliJ IDEA](https://www.jetbrains.com/idea/) [Illuminated Cloud](http://www.illuminatedcloud.com/),
+however it they can also be executed with Salesforce's built in Developer Console.  
+(i.e., through the Developer Console, through the Metadata API by way of any IDE or build too, etc.) 
+
 In order to ensure consistent test execution, all tests uses:
 * `Test.startTest()`
 * `Test.stopTest()`
