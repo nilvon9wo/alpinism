@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreCalculator.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreException.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_BowlingTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_BowlingTest.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_RollException.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_RollException.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_RollException.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_RollException.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_ScoreException.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreException.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_ScoreException.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreCalculator.cls-meta.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +53,17 @@
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSPAREROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSTRIKEROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_BONUSTYPE" value="1591025789000" />
-                      <entry key="APEXCLASS:ALP_BOWL_BOWLING" value="1591108366000" />
-                      <entry key="APEXCLASS:ALP_BOWL_BOWLINGTEST" value="1591108366000" />
+                      <entry key="APEXCLASS:ALP_BOWL_BOWLING" value="1591109400000" />
+                      <entry key="APEXCLASS:ALP_BOWL_BOWLINGTEST" value="1591109905558" />
                       <entry key="APEXCLASS:ALP_BOWL_GAME" value="1591025845960" />
-                      <entry key="APEXCLASS:ALP_BOWL_GAMECONTEXT" value="1591108680319" />
+                      <entry key="APEXCLASS:ALP_BOWL_GAMECONTEXT" value="1591108944362" />
                       <entry key="APEXCLASS:ALP_BOWL_OPENROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDERINTF" value="1591025789000" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDERLOOKUP" value="1591017749914" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLHANDLER" value="1591108366000" />
+                      <entry key="APEXCLASS:ALP_BOWL_SCORECALCULATOR" value="1591109905558" />
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
@@ -95,6 +103,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\bowling\entities" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\bowling\exceptions" />
     </key>
   </component>
@@ -259,9 +268,52 @@
       <option name="workflowLogLevel" value="INFO" />
       <method v="2" />
     </configuration>
+    <configuration name="ALP_BOWL_BowlingTest.testScoreThrowsExceptionWhenBonusRollForSpareHasNotBeenRolled" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_BOWL_BowlingTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="ALP_BOWL_BowlingTest">
+            <value>
+              <set>
+                <option value="testScoreThrowsExceptionWhenBonusRollForSpareHasNotBeenRolled" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest" />
+        <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testScoreThrowsExceptionWhenBonusRollForSpareHasNotBeenRolled" />
         <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testRollShouldThrowExceptionStrikeAlreadyHasBonus" />
         <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testRollShouldThrowExceptionSpareAlreadyHasBonus" />
         <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testRollShouldThrowExceptionForSecondBonusRollStrikeWithoutFirstBonusRollStrike" />
@@ -287,22 +339,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="938" height="336" key="GridCell.Tab.0.bottom" timestamp="1591108613467">
+    <state width="1563" height="336" key="GridCell.Tab.0.bottom" timestamp="1591109942332">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="938" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108613467" />
-    <state width="938" height="336" key="GridCell.Tab.0.center" timestamp="1591108613467">
+    <state width="1563" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591109942332" />
+    <state width="1563" height="336" key="GridCell.Tab.0.center" timestamp="1591109942331">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="938" height="336" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108613467" />
-    <state width="938" height="336" key="GridCell.Tab.0.left" timestamp="1591108613467">
+    <state width="1563" height="336" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591109942331" />
+    <state width="1563" height="336" key="GridCell.Tab.0.left" timestamp="1591109942331">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="938" height="336" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108613467" />
-    <state width="938" height="336" key="GridCell.Tab.0.right" timestamp="1591108613467">
+    <state width="1563" height="336" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591109942331" />
+    <state width="1563" height="336" key="GridCell.Tab.0.right" timestamp="1591109942331">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="938" height="336" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108613467" />
+    <state width="1563" height="336" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591109942331" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -315,8 +367,12 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591103827854" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1591108914978">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108914978" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591108613463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591110021695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

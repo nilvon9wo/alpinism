@@ -53,6 +53,14 @@ public with sharing class ALP_BOWL_GameContext {
         return fullRollList[fullRollList.size() + negativeIndex];
     }
 
+    public List<Integer> getNormalRolls() {
+        return this.pinsKnockedDownList;
+    }
+
+    public List<Integer> getBonusRolls() {
+        return this.pinsKnockedDownList;
+    }
+
     public Boolean hasMoreRolls() {
         return !this.isLastFrame()
                 || this.hasBonusRolls();

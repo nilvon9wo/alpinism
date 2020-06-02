@@ -357,12 +357,14 @@ public with sharing class ALP_BOWL_BowlingTest {
                 bowlingUnderTest.score();
             }
             catch (ALP_BOWL_ScoreException ex) {
+                System.debug('######### testScoreException ex: ' + ex);
                 resultException = ex;
             }
         }
         Test.stopTest();
 
         // Assert
+        System.debug('######### testScoreException resultException: ' + resultException);
         System.assertNotEquals(null, resultException);
         System.assertEquals(expectedMessage, resultException.getMessage());
     }
