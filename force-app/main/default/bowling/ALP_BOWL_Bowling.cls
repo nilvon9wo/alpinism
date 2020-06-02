@@ -31,8 +31,6 @@ public with sharing class ALP_BOWL_Bowling {
         if (this.getTotalDownPins(pinsKnockedDown) > MAXIMUM_PINS) {
             throw new ALP_BOWL_RollException('Pin count exceeds pins on the lane');
         }
-        System.debug('##### validateRoll this.isLastFrame(): ' + this.isLastFrame());
-        System.debug('##### validateRoll this.untakenBonusRounds: ' + this.untakenBonusRounds);
         if (
                 this.isLastFrame()
                         && this.untakenBonusRounds == 0

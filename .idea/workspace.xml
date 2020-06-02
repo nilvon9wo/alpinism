@@ -93,7 +93,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Apex Unit Tests.ALP_BOWL_BowlingTest.testRollShouldThrowExceptionStrikeAlreadyHasBonus">
+  <component name="RunManager" selected="Apex Unit Tests.ALP_BOWL_BowlingTest">
     <configuration name="ALP_BOWL_BowlingTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
@@ -256,8 +256,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testRollShouldThrowExceptionStrikeAlreadyHasBonus" />
         <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest" />
+        <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testRollShouldThrowExceptionStrikeAlreadyHasBonus" />
         <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testRollShouldThrowExceptionSpareAlreadyHasBonus" />
         <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testRollShouldThrowExceptionForSecondBonusRollStrikeWithoutFirstBonusRollStrike" />
       </list>
@@ -304,6 +304,6 @@
     <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591096544382" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591097366620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591097518436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>
