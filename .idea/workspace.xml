@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_RollHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_RollHandler.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +46,17 @@
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSPAREROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSTRIKEROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_BONUSTYPE" value="1591025789000" />
-                      <entry key="APEXCLASS:ALP_BOWL_BOWLING" value="1591107192000" />
-                      <entry key="APEXCLASS:ALP_BOWL_BOWLINGTEST" value="1591107192000" />
+                      <entry key="APEXCLASS:ALP_BOWL_BOWLING" value="1591108366000" />
+                      <entry key="APEXCLASS:ALP_BOWL_BOWLINGTEST" value="1591108366000" />
                       <entry key="APEXCLASS:ALP_BOWL_GAME" value="1591025845960" />
-                      <entry key="APEXCLASS:ALP_BOWL_GAMECONTEXT" value="1591107192000" />
+                      <entry key="APEXCLASS:ALP_BOWL_GAMECONTEXT" value="1591108680319" />
                       <entry key="APEXCLASS:ALP_BOWL_OPENROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDERINTF" value="1591025789000" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDERLOOKUP" value="1591017749914" />
-                      <entry key="APEXCLASS:ALP_BOWL_ROLLEXCEPTION" value="1591107192000" />
-                      <entry key="APEXCLASS:ALP_BOWL_ROLLHANDLER" value="1591107192000" />
-                      <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591107192000" />
+                      <entry key="APEXCLASS:ALP_BOWL_ROLLEXCEPTION" value="1591108611000" />
+                      <entry key="APEXCLASS:ALP_BOWL_ROLLHANDLER" value="1591108366000" />
+                      <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
                     </map>
@@ -288,22 +287,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1315" height="336" key="GridCell.Tab.0.bottom" timestamp="1591107208671">
+    <state width="938" height="336" key="GridCell.Tab.0.bottom" timestamp="1591108613467">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1315" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591107208671" />
-    <state width="1315" height="336" key="GridCell.Tab.0.center" timestamp="1591107208671">
+    <state width="938" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108613467" />
+    <state width="938" height="336" key="GridCell.Tab.0.center" timestamp="1591108613467">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1315" height="336" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591107208671" />
-    <state width="1315" height="336" key="GridCell.Tab.0.left" timestamp="1591107208671">
+    <state width="938" height="336" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108613467" />
+    <state width="938" height="336" key="GridCell.Tab.0.left" timestamp="1591108613467">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1315" height="336" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591107208671" />
-    <state width="1315" height="336" key="GridCell.Tab.0.right" timestamp="1591107208671">
+    <state width="938" height="336" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108613467" />
+    <state width="938" height="336" key="GridCell.Tab.0.right" timestamp="1591108613467">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1315" height="336" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591107208671" />
+    <state width="938" height="336" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108613467" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -318,6 +317,6 @@
     <state x="616" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591103827854" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591107208668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591108613463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

@@ -25,10 +25,7 @@ public with sharing class ALP_BOWL_Bowling {
     }
 
     public ALP_BOWL_Bowling validateScorable(){
-        if (
-                !this.gameContext.isLastFrame()
-                        || this.gameContext.hasBonusRolls()
-                ) {
+        if (this.gameContext.hasMoreRolls()) {
             new ALP_BOWL_ScoreException('Score cannot be taken until the end of the game');
         }
         return this;

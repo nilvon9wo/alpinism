@@ -33,21 +33,21 @@ public with sharing class ALP_BOWL_GameContext {
     }
 
 
-    public Integer getPreviousPinsDown() {
+    private Integer getPreviousPinsDown() {
         return this.isNewFrame
                 ? 0
                 : this.getLastRoll();
     }
 
-    public Integer getLastRoll() {
+    private Integer getLastRoll() {
         return this.getRoll(-1);
     }
 
-    public Integer getPenultimateRoll() {
+    private Integer getPenultimateRoll() {
         return this.getRoll(-2);
     }
 
-    public Integer getRoll(Integer negativeIndex) {
+    private Integer getRoll(Integer negativeIndex) {
         List<Integer> fullRollList = this.pinsKnockedDownList.clone();
         fullRollList.addAll(this.bonusPinsKnockedDownList);
         return fullRollList[fullRollList.size() + negativeIndex];
@@ -63,7 +63,7 @@ public with sharing class ALP_BOWL_GameContext {
     private Boolean isNewFrame = true;
 
     private Integer completedFrameCount = 0;
-    public ALP_BOWL_GameContext setToNewFrame(Integer pinsKnockedDown) {
+    private ALP_BOWL_GameContext setToNewFrame(Integer pinsKnockedDown) {
         this.isNewFrame = pinsKnockedDown == MAXIMUM_PINS || !this.isNewFrame;
         return this.incrementFrame();
     }
@@ -75,7 +75,7 @@ public with sharing class ALP_BOWL_GameContext {
         return this;
     }
 
-    public Boolean isLastFrame() {
+    private Boolean isLastFrame() {
         return this.completedFrameCount == MAXIMUM_FRAMES;
     }
 
@@ -93,7 +93,7 @@ public with sharing class ALP_BOWL_GameContext {
 
     private Integer untakenBonusRounds = 0;
 
-    public ALP_BOWL_GameContext updateBonusRounds() {
+    private ALP_BOWL_GameContext updateBonusRounds() {
         return this.consumeBonusRounds()
                 .addBonusRounds();
     }
@@ -118,7 +118,7 @@ public with sharing class ALP_BOWL_GameContext {
         return this;
     }
 
-    public Boolean hasBonusRolls() {
+    private Boolean hasBonusRolls() {
         return this.untakenBonusRounds != 0;
     }
 }
