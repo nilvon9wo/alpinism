@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreCalculator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreCalculator.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDERLOOKUP" value="1591017749914" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLHANDLER" value="1591108366000" />
-                      <entry key="APEXCLASS:ALP_BOWL_SCORECALCULATOR" value="1591112785977" />
+                      <entry key="APEXCLASS:ALP_BOWL_SCORECALCULATOR" value="1591112881020" />
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
@@ -331,22 +331,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1208" height="233" key="GridCell.Tab.0.bottom" timestamp="1591112672414">
+    <state width="1208" height="233" key="GridCell.Tab.0.bottom" timestamp="1591112893046">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1208" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591112672414" />
-    <state width="1208" height="233" key="GridCell.Tab.0.center" timestamp="1591112672414">
+    <state width="1208" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591112893046" />
+    <state width="1208" height="233" key="GridCell.Tab.0.center" timestamp="1591112893046">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1208" height="233" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591112672414" />
-    <state width="1208" height="233" key="GridCell.Tab.0.left" timestamp="1591112672414">
+    <state width="1208" height="233" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591112893046" />
+    <state width="1208" height="233" key="GridCell.Tab.0.left" timestamp="1591112893046">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1208" height="233" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591112672414" />
-    <state width="1208" height="233" key="GridCell.Tab.0.right" timestamp="1591112672414">
+    <state width="1208" height="233" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591112893046" />
+    <state width="1208" height="233" key="GridCell.Tab.0.right" timestamp="1591112893046">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1208" height="233" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591112672414" />
+    <state width="1208" height="233" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591112893046" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -365,6 +365,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108914978" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591112672410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591112893042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

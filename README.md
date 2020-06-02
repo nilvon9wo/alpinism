@@ -20,6 +20,10 @@ accessing by SObjectField, and potentially other properties and methods which ma
 
 ## Testing Notes
 
+While for real world project I generally advocate [Martin Fowler's Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html),
+for these exercises, I've followed a philosophy of [Lean Testing](https://medium.com/@AWGHodder/lean-testing-f900b5a7e82e),
+only included Apex adaptations of the original challenges.  
+
 In order to ensure consistent test execution, all tests uses:
 * `Test.startTest()`
 * `Test.stopTest()`
