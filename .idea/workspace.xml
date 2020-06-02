@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_RollException.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_RollException.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_RollHandler.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_RollHandler.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_ScoreException.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/bowling/helpers/ALP_BOWL_ScoreException.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/roll_helpers/ALP_BOWL_AfterSpareRollAdder.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/roll_helpers/ALP_BOWL_AfterSpareRollAdder.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/roll_helpers/ALP_BOWL_AfterStrikeRollAdder.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/roll_helpers/ALP_BOWL_AfterStrikeRollAdder.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/roll_helpers/ALP_BOWL_OpenRollAdder.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/roll_helpers/ALP_BOWL_OpenRollAdder.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/roll_helpers/ALP_BOWL_RollAdder.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/roll_helpers/ALP_BOWL_RollAdder.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/exceptions/ALP_BOWL_RollException.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/exceptions/ALP_BOWL_RollException.cls-meta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/exceptions/ALP_BOWL_ScoreException.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/exceptions/ALP_BOWL_ScoreException.cls-meta.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +57,16 @@
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSPAREROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSTRIKEROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_BONUSTYPE" value="1591025789000" />
-                      <entry key="APEXCLASS:ALP_BOWL_BOWLING" value="1591097365495" />
+                      <entry key="APEXCLASS:ALP_BOWL_BOWLING" value="1591103101955" />
                       <entry key="APEXCLASS:ALP_BOWL_BOWLINGTEST" value="1591025789000" />
                       <entry key="APEXCLASS:ALP_BOWL_GAME" value="1591025845960" />
+                      <entry key="APEXCLASS:ALP_BOWL_GAMECONTEXT" value="1591104330305" />
                       <entry key="APEXCLASS:ALP_BOWL_OPENROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDERINTF" value="1591025789000" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLADDERLOOKUP" value="1591017749914" />
                       <entry key="APEXCLASS:ALP_BOWL_ROLLEXCEPTION" value="1591025789000" />
+                      <entry key="APEXCLASS:ALP_BOWL_ROLLHANDLER" value="1591103101955" />
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591025789000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
@@ -82,16 +92,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/node_modules/@vue/cli" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sfdc-skills-test/WefoxChallenge" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\bowling\exceptions" />
+    </key>
   </component>
   <component name="RunManager" selected="Apex Unit Tests.ALP_BOWL_BowlingTest">
     <configuration name="ALP_BOWL_BowlingTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
@@ -278,32 +294,40 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="579" y="372" key="#Illuminated_Cloud_(Alpinism)/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591014996554" />
-    <state width="1682" height="455" key="GridCell.Tab.0.bottom" timestamp="1591097366623">
+    <state x="2660" y="294" key="FileChooserDialogImpl" timestamp="1591100982937">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
+    <state width="1055" height="336" key="GridCell.Tab.0.bottom" timestamp="1591103319071">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1682" height="455" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591097366623" />
-    <state width="1682" height="455" key="GridCell.Tab.0.center" timestamp="1591097366623">
+    <state width="1055" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591103319071" />
+    <state width="1055" height="336" key="GridCell.Tab.0.center" timestamp="1591103319071">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1682" height="455" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591097366623" />
-    <state width="1682" height="455" key="GridCell.Tab.0.left" timestamp="1591097366623">
+    <state width="1055" height="336" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591103319071" />
+    <state width="1055" height="336" key="GridCell.Tab.0.left" timestamp="1591103319071">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1682" height="455" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591097366623" />
-    <state width="1682" height="455" key="GridCell.Tab.0.right" timestamp="1591097366623">
+    <state width="1055" height="336" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591103319071" />
+    <state width="1055" height="336" key="GridCell.Tab.0.right" timestamp="1591103319071">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1682" height="455" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591097366623" />
+    <state width="1055" height="336" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591103319071" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591017604826" />
-    <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1591096544382">
+    <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1591097589586">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591096544382" />
+    <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591097589586" />
+    <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1591103827854">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591103827854" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591097518436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_BOWL_BowlingTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591104512672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>
