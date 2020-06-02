@@ -7,13 +7,31 @@ public with sharing class ALP_BOWL_GameContext {
     private List<Integer> pinsKnockedDownList = new List<Integer>();
     private List<Integer> bonusPinsKnockedDownList = new List<Integer>();
     public ALP_BOWL_GameContext addRoll(Integer pinsKnockedDown) {
+        this.validateRoll(pinsKnockedDown);
+
         (
                 (this.untakenBonusRounds == 0)
                         ? this.pinsKnockedDownList
                         : this.bonusPinsKnockedDownList
         ).add(pinsKnockedDown);
+
+        return this.setToNewFrame(pinsKnockedDown)
+                .updateBonusRounds();
+    }
+
+    private ALP_BOWL_GameContext validateRoll(Integer pinsKnockedDown) {
+        if (pinsKnockedDown < 0) {
+            throw new ALP_BOWL_RollException('Negative roll is invalid');
+        }
+        if (pinsKnockedDown + this.getPreviousPinsDown() > ALP_BOWL_GameContext.MAXIMUM_PINS) {
+            throw new ALP_BOWL_RollException('Pin count exceeds pins on the lane');
+        }
+        if (!this.hasMoreRolls()) {
+            throw new ALP_BOWL_RollException('Cannot roll after game is over');
+        }
         return this;
     }
+
 
     public Integer getPreviousPinsDown() {
         return this.isNewFrame

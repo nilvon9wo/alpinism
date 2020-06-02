@@ -1,21 +1,19 @@
 public with sharing class ALP_BOWL_Bowling {
     ALP_BOWL_GameContext gameContext;
-    ALP_BOWL_RollHandler rollHandler;
 
-    private ALP_BOWL_Bowling(ALP_BOWL_GameContext gameContext, ALP_BOWL_RollHandler rollHandler) {
+    private ALP_BOWL_Bowling(ALP_BOWL_GameContext gameContext) {
         this.gameContext = gameContext;
-        this.rollHandler = rollHandler;
     }
 
     public ALP_BOWL_Bowling() {
-        this(new ALP_BOWL_GameContext(), ALP_BOWL_RollHandler.getInstance());
+        this(new ALP_BOWL_GameContext());
     }
 
     //    Records the number of pins knocked down on a single roll. Returns `any`
     //    unless there is something wrong with the given number of pins, in which
     //    case it returns a helpful message.
     public ALP_BOWL_Bowling roll(Integer pinsKnockedDown) {
-        this.rollHandler.roll(gameContext, pinsKnockedDown);
+        this.gameContext.addRoll(pinsKnockedDown);
         return this;
     }
 
