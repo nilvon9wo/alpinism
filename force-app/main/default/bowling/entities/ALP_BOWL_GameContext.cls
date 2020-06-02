@@ -1,6 +1,6 @@
 public with sharing class ALP_BOWL_GameContext {
     public static final Integer MAXIMUM_PINS = 10;
-    public static final Integer MAXIMUM_FRAMES = 10;
+    private static final Integer MAXIMUM_FRAMES = 10;
 
     // Rolls -----------------------------------------------------------
 
@@ -48,8 +48,7 @@ public with sharing class ALP_BOWL_GameContext {
     }
 
     private Integer getRoll(Integer negativeIndex) {
-        List<Integer> fullRollList = this.pinsKnockedDownList.clone();
-        fullRollList.addAll(this.bonusPinsKnockedDownList);
+        List<Integer> fullRollList = getAllRolls();
         return fullRollList[fullRollList.size() + negativeIndex];
     }
 
@@ -57,8 +56,10 @@ public with sharing class ALP_BOWL_GameContext {
         return this.pinsKnockedDownList;
     }
 
-    public List<Integer> getBonusRolls() {
-        return this.pinsKnockedDownList;
+    public List<Integer> getAllRolls() {
+        List<Integer> fullRollList = this.pinsKnockedDownList.clone();
+        fullRollList.addAll(this.bonusPinsKnockedDownList);
+        return fullRollList;
     }
 
     public Boolean hasMoreRolls() {
@@ -91,14 +92,6 @@ public with sharing class ALP_BOWL_GameContext {
 
     private Boolean hasBonusStarted = false;
 
-    private Boolean isStrike(Integer pinsKnockedDown) {
-        return pinsKnockedDown == ALP_BOWL_GameContext.MAXIMUM_PINS;
-    }
-
-    private Boolean isSpare(Integer newPinsKnockedDown, Integer oldPinsKnockedDown) {
-        return newPinsKnockedDown + oldPinsKnockedDown == ALP_BOWL_GameContext.MAXIMUM_PINS;
-    }
-
     private Integer untakenBonusRounds = 0;
 
     private ALP_BOWL_GameContext updateBonusRounds() {
@@ -128,5 +121,15 @@ public with sharing class ALP_BOWL_GameContext {
 
     private Boolean hasBonusRolls() {
         return this.untakenBonusRounds != 0;
+    }
+
+    // Success confirmations -------------------------------------------------------------
+
+    public Boolean isStrike(Integer pinsKnockedDown) {
+        return pinsKnockedDown == ALP_BOWL_GameContext.MAXIMUM_PINS;
+    }
+
+    public Boolean isSpare(Integer newPinsKnockedDown, Integer oldPinsKnockedDown) {
+        return newPinsKnockedDown + oldPinsKnockedDown == ALP_BOWL_GameContext.MAXIMUM_PINS;
     }
 }

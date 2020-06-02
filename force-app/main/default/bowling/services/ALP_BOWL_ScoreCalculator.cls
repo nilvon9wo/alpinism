@@ -12,9 +12,26 @@ public with sharing class ALP_BOWL_ScoreCalculator {
 
     public Integer evaluate(ALP_BOWL_GameContext gameContext) {
         this.validateScorable(gameContext);
+
         List<Integer> normalKnockDowns = gameContext.getNormalRolls();
-        List<Integer> bonusKnockDowns = gameContext.getBonusRolls();
-        return 0;
+        List<Integer> allKnockDowns = gameContext.getAllRolls();
+
+        Integer runningTotal = 0;
+        for (Integer i = 0; i < normalKnockDowns.size(); i++) {
+            Integer roll = allKnockDowns[i];
+            if (gameContext.isStrike(roll)) {
+                runningTotal += roll + allKnockDowns[i + 1] + allKnockDowns[i + 2];
+            }
+            else if (gameContext.isSpare(roll, allKnockDowns[i + 1])) {
+                runningTotal += roll + allKnockDowns[i + 1] + allKnockDowns[i + 2];
+                i++;
+            }
+            else {
+                runningTotal += roll;
+                i++;
+            }
+        }
+        return runningTotal;
     }
 
     public ALP_BOWL_ScoreCalculator validateScorable(ALP_BOWL_GameContext gameContext){
