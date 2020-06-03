@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -64,6 +62,8 @@
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591137799000" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591137805000" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
                     </map>
@@ -330,10 +330,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="551" y="171" key="#Illuminated_Cloud/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591014954917" />
-    <state x="579" y="372" key="#Illuminated_Cloud_(Alpinism)" timestamp="1591014996554">
+    <state x="579" y="372" key="#Illuminated_Cloud_(Alpinism)" timestamp="1591160250451">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="579" y="372" key="#Illuminated_Cloud_(Alpinism)/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591014996554" />
+    <state x="579" y="372" key="#Illuminated_Cloud_(Alpinism)/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591160250451" />
     <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1591127630271">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -13,12 +13,12 @@ accessing by SObjectField, and potentially other properties and methods which ma
 
 | Exercism Name | Other Names | Project Prefix |
 |---------------|-------------|----------------|
+| [Bowling](https://exercism.io/my/solutions/594e2a57d9014c61b53587f4a73a574b) | | ALP_BOWL_ |
 | [Connect](https://exercism.io/my/solutions/d1a4151ec4c84d2fb3d8aedbc0a63795) | [Hex](https://en.wikipedia.org/wiki/Hex_%28board_game%29) / Polygon / CON-TAC-TIX | ALP_CONX_ |
 | [Custom Set](https://exercism.io/my/solutions/a660b002e1c14679895063781fb4dd16) |   | ALP_CSET_ |
-| [Spiral Matrix](https://exercism.io/my/solutions/17c85d91725648abb399fe7b85552d7d) | | ALP_SMTX_ |
-| [Bowling](https://exercism.io/my/solutions/594e2a57d9014c61b53587f4a73a574b) | | ALP_BOWL_ |
-| [Sieve](https://exercism.io/my/solutions/1a8c99b313e346a59e30190d642b9547) | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | ALP_SIVE_ |
 | [Minesweeper](https://exercism.io/my/solutions/e51061d187544c768322562a45359b09) | | ALP_MNSP_ |
+| [Sieve](https://exercism.io/my/solutions/1a8c99b313e346a59e30190d642b9547) | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | ALP_SIVE_ |
+| [Spiral Matrix](https://exercism.io/my/solutions/17c85d91725648abb399fe7b85552d7d) | | ALP_SMTX_ |
 
 ## Testing Notes
 
