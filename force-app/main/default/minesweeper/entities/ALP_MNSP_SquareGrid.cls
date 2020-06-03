@@ -20,7 +20,7 @@ public with sharing class ALP_MNSP_SquareGrid {
     }
 
     public ALP_MNSP_SquareGrid annotate() {
-        this.cellList.forEach(new ALP_MNSP_AnnotationStrategy(this.cellList));
+        this.cellList.forEach(new ALP_MNSP_ApplyAnnotationStrategy(this.cellList));
         return this;
     }
 

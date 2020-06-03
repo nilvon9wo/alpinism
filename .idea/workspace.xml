@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
                       <entry key="APEXCLASS:ALP_MNSP_ANNOTATIONSTRATEGY" value="1591186251947" />
                       <entry key="APEXCLASS:ALP_MNSP_CELLNEIGHBOURFILTER" value="1591186135000" />
                       <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591188285954" />
-                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591186600007" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591188429962" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELL" value="1591186135000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLFACTORY" value="1591180674000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLIST" value="1591186251947" />
@@ -378,22 +378,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591127630271" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1300" height="372" key="GridCell.Tab.0.bottom" timestamp="1591188289601">
+    <state width="1300" height="372" key="GridCell.Tab.0.bottom" timestamp="1591188646668">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1300" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188289601" />
-    <state width="1300" height="372" key="GridCell.Tab.0.center" timestamp="1591188289601">
+    <state width="1300" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188646668" />
+    <state width="1300" height="372" key="GridCell.Tab.0.center" timestamp="1591188646668">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1300" height="372" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188289601" />
-    <state width="1300" height="372" key="GridCell.Tab.0.left" timestamp="1591188289601">
+    <state width="1300" height="372" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188646668" />
+    <state width="1300" height="372" key="GridCell.Tab.0.left" timestamp="1591188646667">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1300" height="372" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188289601" />
-    <state width="1300" height="372" key="GridCell.Tab.0.right" timestamp="1591188289601">
+    <state width="1300" height="372" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188646667" />
+    <state width="1300" height="372" key="GridCell.Tab.0.right" timestamp="1591188646668">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1300" height="372" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188289601" />
+    <state width="1300" height="372" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188646668" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -406,10 +406,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="300" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591122991378" />
-    <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1591188368982">
+    <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1591188441925">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188368982" />
+    <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188441925" />
     <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1591103827854">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -420,6 +420,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108914978" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_MNSP_MinesweeperTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591188289596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_MNSP_MinesweeperTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591188428272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

@@ -1,7 +1,7 @@
-public with sharing class ALP_MNSP_AnnotationStrategy implements ALP_MNSP_SquareCellStrategyIntf {
+public with sharing class ALP_MNSP_ApplyAnnotationStrategy implements ALP_MNSP_SquareCellStrategyIntf {
     ALP_MNSP_SquareCellList cellList;
 
-    public ALP_MNSP_AnnotationStrategy(ALP_MNSP_SquareCellList cellList) {
+    public ALP_MNSP_ApplyAnnotationStrategy(ALP_MNSP_SquareCellList cellList) {
         this.cellList = cellList;
     }
 
