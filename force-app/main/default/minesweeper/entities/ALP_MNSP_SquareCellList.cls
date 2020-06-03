@@ -23,23 +23,6 @@ public with sharing class ALP_MNSP_SquareCellList {
         return this;
     }
 
-    public ALP_MNSP_SquareCellList filter(ALP_MNSP_SquareCellPredicateIntf predicate) {
-        List<ALP_MNSP_SquareCell> filteredList = new List<ALP_MNSP_SquareCell>();
-        for (ALP_MNSP_SquareCell cell : this.cellList) {
-            if (predicate.isTrueFor(cell)) {
-                filteredList.add(cell);
-            }
-        }
-        return new ALP_MNSP_SquareCellList(filteredList);
-    }
-
-//    public ALP_MNSP_SquareCellList setAnnotations() {
-//        for (ALP_MNSP_SquareCell cell : this.cellList) {
-//            cell.setAnnotation(this.cellList);
-//        }
-//        return this;
-//    }
-
     public ALP_MNSP_SquareCellList forEach(ALP_MNSP_SquareCellStrategyIntf strategy) {
         for (ALP_MNSP_SquareCell cell : this.cellList) {
             strategy.execute(cell);

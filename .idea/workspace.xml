@@ -3,11 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_BowlingTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_BowlingTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellList.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellListFactory.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellListFactory.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_CellNeighbourFilter.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_CellNeighbourFilter.cls-meta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_SquareCellPredicateIntf.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_SquareCellPredicateIntf.cls-meta.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/services/ALP_MNSP_SquareCellListPublisher.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/services/ALP_MNSP_SquareCellListPublisher.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_AnnotationStrategy.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_AnnotationStrategy.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,18 +70,19 @@
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
-                      <entry key="APEXCLASS:ALP_MNSP_ANNOTATIONSTRATEGY" value="1591185018581" />
-                      <entry key="APEXCLASS:ALP_MNSP_CELLNEIGHBOURFILTER" value="1591184562000" />
-                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591184562000" />
-                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591184562000" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELL" value="1591184781143" />
+                      <entry key="APEXCLASS:ALP_MNSP_ANNOTATIONSTRATEGY" value="1591186251947" />
+                      <entry key="APEXCLASS:ALP_MNSP_CELLNEIGHBOURFILTER" value="1591186135000" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591188285954" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591186600007" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELL" value="1591186135000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLFACTORY" value="1591180674000" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLIST" value="1591184834617" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTFACTORY" value="1591184562000" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTPUBLISHER" value="1591184562000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLIST" value="1591186251947" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTFACTORY" value="1591187313052" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTPUBLISHER" value="1591187477657" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTSTRATEGYINTF" value="1591184562000" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLPREDICATEINTF" value="1591184562000" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUAREGRID" value="1591184562000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLPREDICATEINTF" value="1591186135000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLSTRATEGYINTF" value="1591186251947" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUAREGRID" value="1591186135000" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
                     </map>
@@ -264,6 +268,48 @@
       <option name="workflowLogLevel" value="INFO" />
       <method v="2" />
     </configuration>
+    <configuration name="ALP_MNSP_MinesweeperTest.testAnnotatingShouldReturnEmptyStringForNoColumns" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_MNSP_MinesweeperTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="ALP_MNSP_MinesweeperTest">
+            <value>
+              <set>
+                <option value="testAnnotatingShouldReturnEmptyStringForNoColumns" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
     <configuration name="ALP_SIVE_SieveTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
@@ -298,55 +344,13 @@
       <option name="workflowLogLevel" value="INFO" />
       <method v="2" />
     </configuration>
-    <configuration name="ALP_SIVE_SieveTest.testPrimesToUnderTenShouldReturnTwoThreeFiveSeven" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allTests" value="false" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="apexLogLevel" value="DEBUG" />
-      <option name="calloutsLogLevel" value="INFO" />
-      <option name="connectionName" value="Alpinism" />
-      <option name="connectionType" value="OAUTH" />
-      <option name="contextConfiguration" value="true" />
-      <option name="databaseLogLevel" value="INFO" />
-      <option name="logLevelsInitialized" value="false" />
-      <option name="moduleToTestClassNames">
-        <map>
-          <entry key="Alpinism">
-            <value>
-              <set>
-                <option value="ALP_SIVE_SieveTest" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="nbaLogLevel" value="INFO" />
-      <option name="profilingLogLevel" value="INFO" />
-      <option name="systemLogLevel" value="DEBUG" />
-      <option name="testClassToTestMethodNames">
-        <map>
-          <entry key="ALP_SIVE_SieveTest">
-            <value>
-              <set>
-                <option value="testPrimesToUnderTenShouldReturnTwoThreeFiveSeven" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="testSuiteName" />
-      <option name="validationLogLevel" value="INFO" />
-      <option name="visualforceLogLevel" value="INFO" />
-      <option name="waveLogLevel" value="INFO" />
-      <option name="workflowLogLevel" value="INFO" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Apex Unit Tests.ALP_MNSP_MinesweeperTest" />
+        <item itemvalue="Apex Unit Tests.ALP_MNSP_MinesweeperTest.testAnnotatingShouldReturnEmptyStringForNoColumns" />
         <item itemvalue="Apex Unit Tests.ALP_MNSP_MinesweeperTest.testAnnotatingShouldCorrectlyEvaluateHorizontalLine" />
         <item itemvalue="Apex Unit Tests.ALP_MNSP_MinesweeperTest.testAnnotatingShouldCorrectlyEvaluateACross" />
         <item itemvalue="Apex Unit Tests.ALP_SIVE_SieveTest" />
-        <item itemvalue="Apex Unit Tests.ALP_SIVE_SieveTest.testPrimesToUnderTenShouldReturnTwoThreeFiveSeven" />
       </list>
     </recent_temporary>
   </component>
@@ -382,22 +386,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591127630271" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1555" height="359" key="GridCell.Tab.0.bottom" timestamp="1591185037523">
+    <state width="1300" height="372" key="GridCell.Tab.0.bottom" timestamp="1591188289601">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1555" height="359" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591185037523" />
-    <state width="1555" height="359" key="GridCell.Tab.0.center" timestamp="1591185037523">
+    <state width="1300" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188289601" />
+    <state width="1300" height="372" key="GridCell.Tab.0.center" timestamp="1591188289601">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1555" height="359" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591185037523" />
-    <state width="1555" height="359" key="GridCell.Tab.0.left" timestamp="1591185037523">
+    <state width="1300" height="372" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188289601" />
+    <state width="1300" height="372" key="GridCell.Tab.0.left" timestamp="1591188289601">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1555" height="359" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591185037523" />
-    <state width="1555" height="359" key="GridCell.Tab.0.right" timestamp="1591185037523">
+    <state width="1300" height="372" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188289601" />
+    <state width="1300" height="372" key="GridCell.Tab.0.right" timestamp="1591188289601">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1555" height="359" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591185037523" />
+    <state width="1300" height="372" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188289601" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -410,10 +414,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="300" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591122991378" />
-    <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1591184536292">
+    <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1591188326984">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591184536292" />
+    <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188326984" />
     <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1591103827854">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -424,6 +428,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108914978" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_MNSP_MinesweeperTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591186146198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_MNSP_MinesweeperTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591188289596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

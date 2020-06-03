@@ -15,6 +15,7 @@ public with sharing class ALP_MNSP_SquareCellListPublisher {
                 = new Map<Integer, Map<Integer, ALP_Cell__c>>();
         Integer maximumRow = 0;
         Integer maximumColumn = 0;
+
         for (ALP_MNSP_SquareCell cellWrapper : cellWrapperList.toList()) {
             ALP_Cell__c cell = cellWrapper.toCell();
             Integer row = Integer.valueOf(cell.Row__c);
@@ -44,16 +45,20 @@ public with sharing class ALP_MNSP_SquareCellListPublisher {
             Integer maximumColumn
     ) {
         List<String> rowStringList = new List<String>();
-        for (Integer rowIndex = 0; rowIndex <= maximumRow; rowIndex++) {
-            rowStringList.add(this.reveal(cellByColumnByRowMap.get(rowIndex), maximumColumn));
+        if (!cellByColumnByRowMap.isEmpty()) {
+            for (Integer rowIndex = 0; rowIndex <= maximumRow; rowIndex++) {
+                rowStringList.add(this.reveal(cellByColumnByRowMap.get(rowIndex), maximumColumn));
+            }
         }
         return rowStringList;
     }
 
     public String reveal(Map<Integer, ALP_Cell__c> cellByColumnMap, Integer maximumColumn) {
         String rowString = '';
-        for (Integer columnIndex = 0; columnIndex <= maximumColumn; columnIndex++) {
-            rowString += cellByColumnMap.get(columnIndex).Annotation__c;
+        if (cellByColumnMap != null) {
+            for (Integer columnIndex = 0; columnIndex <= maximumColumn; columnIndex++) {
+                rowString += cellByColumnMap.get(columnIndex).Annotation__c;
+            }
         }
         return rowString;
     }
