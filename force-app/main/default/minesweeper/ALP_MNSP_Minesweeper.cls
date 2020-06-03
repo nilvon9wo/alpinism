@@ -1,5 +1,5 @@
 public with sharing class ALP_MNSP_Minesweeper {
-    public List<List<String>> annotate(List<List<String>> strings) {
+    public List<String> annotate(List<String> board) {
         return null;
     }
 

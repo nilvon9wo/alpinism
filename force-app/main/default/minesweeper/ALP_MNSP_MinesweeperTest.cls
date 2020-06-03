@@ -6,140 +6,184 @@ public with sharing class ALP_MNSP_MinesweeperTest {
     @IsTest
     public static void testAnnotatingNoRowsResultsInEmptyList() {
         // Arrange
-        List<List<String> mineListList = new List<List<String>();
+        List<String> testMineList = new List<String>();
+        List<String> expectedResultList = new List<String>();
+        testAnnotate(testMineList, expectedResultList);
+    }
 
+    @IsTest
+    public static void testAnnotatingShouldReturnEmptyStringForNoColumns() {
+        // Arrange
+        List<String> testMineList = new List<String>{''};
+        List<String> expectedResultList = new List<String>{''};
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    @IsTest
+    public static void testAnnotatingShouldReturnEmptyStringsForNoMines() {
+        // Arrange
+        List<String> testMineList = new List<String>{
+                '   ',
+                '   ',
+                '   '
+        };
+        List<String> expectedResultList = new List<String>{
+                '   ',
+                '   ',
+                '   '
+        };
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    @IsTest
+    public static void testAnnotatingShouldReturnAllAsterisksStringsForAllMines() {
+        // Arrange
+        List<String> testMineList = new List<String>{
+                '***',
+                '***',
+                '***'
+        };
+        List<String> expectedResultList = new List<String>{
+                '***',
+                '***',
+                '***'
+        };
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    @IsTest
+    public static void testAnnotatingShouldReturnAsteriskSurroundedByOnesWhenCenterIsOnlyMine() {
+        // Arrange
+        List<String> testMineList = new List<String>{
+                '   ',
+                ' * ',
+                '   '
+        };
+        List<String> expectedResultList = new List<String>{
+                '111',
+                '1*1',
+                '111'
+        };
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    @IsTest
+    public static void testAnnotatingShouldReturnEightSurroundedByAsterisksWhenCenterIsOnlyNoneMine() {
+        // Arrange
+        List<String> testMineList = new List<String>{
+                '***',
+                '*8*',
+                '***'
+        };
+        List<String> expectedResultList = new List<String>{
+                '***',
+                '* *',
+                '***'
+        };
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    @IsTest
+    public static void testAnnotatingShouldCorrectlyEvaluateHorizontalLine() {
+        // Arrange
+        List<String> testMineList = new List<String>{' * * '};
+        List<String> expectedResultList = new List<String>{'1*2*1'};
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    @IsTest
+    public static void testAnnotatingShouldCorrectlyEvaluateVerticalLineWithMiddleMines() {
+        // Arrange
+        List<String> testMineList = new List<String>{
+                ' ',
+                '*',
+                ' ',
+                '*',
+                ' '
+        };
+        List<String> expectedResultList = new List<String>{
+                '1',
+                '*',
+                '2',
+                '*',
+                '1'
+        };
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    @IsTest
+    public static void testAnnotatingShouldCorrectlyEvaluateVerticalLineWithEndpointMines() {
+        // Arrange
+        List<String> testMineList = new List<String>{
+                '*',
+                ' ',
+                ' ',
+                ' ',
+                '*'
+        };
+        List<String> expectedResultList = new List<String>{
+                '*',
+                '1',
+                ' ',
+                '1',
+                '*'
+        };
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    @IsTest
+    public static void testAnnotatingShouldCorrectlyEvaluateACross() {
+        // Arrange
+        List<String> testMineList = new List<String>{
+                '  *  ',
+                '  *  ',
+                '*****',
+                '  *  ',
+                '  *  '
+        };
+        List<String> expectedResultList = new List<String>{
+                ' 2*2 ',
+                '25*52',
+                '*****',
+                '25*52',
+                ' 2*2 '
+        };
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    @IsTest
+    public static void testAnnotatingShouldCorrectlyEvaluateALargeAsymmetricalMinefield() {
+        // Arrange
+        List<String> testMineList = new List<String>{
+                ' *  * ',
+                '  *   ',
+                '    * ',
+                '   * *',
+                ' *  * ',
+                '      '
+        };
+        List<String> expectedResultList = new List<String>{
+                '1*22*1',
+                '12*322',
+                ' 123*2',
+                '112*4*',
+                '1*22*2',
+                '111111'
+        };
+        testAnnotate(testMineList, expectedResultList);
+    }
+
+    private static void testAnnotate(List<String> testMineList, List<String> expectedResultList) {
         // Act
-        List<List<String> actualResultListList;
+        List<String> actualResultList;
         Test.startTest();
         System.runAs(TEST_USER) {
-            actualResultListList = SWEEPER_UNDER_TEST.annotate(mineListList);
+            actualResultList = SWEEPER_UNDER_TEST.annotate(testMineList);
         }
         Test.stopTest();
 
         // Assert
-        System.assert(actualResultListList.isEmpty());
+        System.assertEquals(expectedResultList, actualResultList);
     }
-    /*
-    class MinesweeperTest extends FunSuite with Matchers {
-
-        test("no rows") {
-        Minesweeper.annotate(List()) should be(List())
-        }
-
-        test("no columns") {
-
-        Minesweeper.annotate(List("")) should be(List(""))
-                }
-
-                test("no mines") {
-
-                Minesweeper.annotate(List("   ",
-                "   ",
-                "   ")) should be(
-                List("   ",
-                "   ",
-                "   "))
-                }
-
-                test("minefield with only mines") {
-
-                Minesweeper.annotate(List("***",
-                "***",
-                "***")) should be(
-        List("***",
-        "***",
-        "***"))
-        }
-
-        test("mine surrounded by spaces") {
-
-        Minesweeper.annotate(List("   ",
-        " * ",
-        "   ")) should be(
-        List("111",
-        "1*1",
-        "111"))
-        }
-
-        test("space surrounded by mines") {
-
-        Minesweeper.annotate(List("***",
-        "* *",
-        "***")) should be(
-        List("***",
-        "*8*",
-        "***"))
-        }
-
-        test("horizontal line") {
-
-        Minesweeper.annotate(List(" * * ")) should be(List("1*2*1"))
-                }
-
-                test("horizontal line, mines at edges") {
-
-                Minesweeper.annotate(List("*   *")) should be(List("*1 1*"))
-                }
-
-                test("vertical line") {
-
-                Minesweeper.annotate(List(" ",
-                "*",
-                " ",
-                "*",
-                " ")) should be(
-        List("1",
-        "*",
-        "2",
-        "*",
-        "1"))
-        }
-
-        test("vertical line, mines at edges") {
-
-        Minesweeper.annotate(List("*",
-        " ",
-        " ",
-        " ",
-        "*")) should be(
-        List("*",
-        "1",
-        " ",
-        "1",
-        "*"))
-        }
-
-        test("cross") {
-
-        Minesweeper.annotate(List("  *  ",
-        "  *  ",
-        "*****",
-        "  *  ",
-        "  *  ")) should be(
-        List(" 2*2 ",
-        "25*52",
-        "*****",
-        "25*52",
-        " 2*2 "))
-        }
-
-        test("large minefield") {
-
-        Minesweeper.annotate(List(" *  * ",
-        "  *   ",
-        "    * ",
-        "   * *",
-        " *  * ",
-        "      ")) should be(
-        List("1*22*1",
-        "12*322",
-        " 123*2",
-        "112*4*",
-        "1*22*2",
-        "111111"))
-                }
-                }
-
-                */
 }
 

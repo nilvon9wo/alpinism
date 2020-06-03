@@ -63,8 +63,8 @@
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
-                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591137799000" />
-                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591137805000" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591168425264" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591168425264" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
                     </map>
@@ -342,6 +342,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added new fields to Cell for Minesweeper." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new fields to Cell for Minesweeper." />
+  </component>
   <component name="WindowStateProjectService">
     <state x="551" y="171" key="#Illuminated_Cloud" timestamp="1591014954917">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -351,6 +355,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="579" y="372" key="#Illuminated_Cloud_(Alpinism)/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591160250451" />
+    <state x="587" y="108" key="CommitChangelistDialog2" timestamp="1591168256431">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="587" y="108" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591168256431" />
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1591168416029">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591168416029" />
     <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1591127630271">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -376,6 +388,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591017604826" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1591168262484">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591168262484" />
     <state x="690" y="300" key="extract.method.dialog" timestamp="1591122991378">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
