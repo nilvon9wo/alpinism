@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +67,22 @@
                       <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591137805000" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
+                    </map>
+                  </option>
+                  <option name="lastBuildScope" value="CONTEXT" />
+                  <option name="lastBuildViewToggles">
+                    <map>
+                      <entry key="RETRIEVE">
+                        <value>
+                          <BuildViewToggles>
+                            <option name="showLocalAndServer" value="true" />
+                            <option name="showLocalOnly" value="false" />
+                            <option name="showServerOnly" value="true" />
+                            <option name="showSubscribedByParent" value="true" />
+                            <option name="showSubscribedOnly" value="true" />
+                          </BuildViewToggles>
+                        </value>
+                      </entry>
                     </map>
                   </option>
                 </ConnectionWorkspaceSettings>

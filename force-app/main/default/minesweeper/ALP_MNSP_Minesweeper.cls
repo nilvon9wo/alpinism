@@ -1,4 +1,7 @@
 public with sharing class ALP_MNSP_Minesweeper {
+    public List<List<String>> annotate(List<List<String>> strings) {
+        return null;
+    }
 
     /*
     case class Point(

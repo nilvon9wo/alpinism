@@ -1,5 +1,24 @@
+@IsTest
 public with sharing class ALP_MNSP_MinesweeperTest {
+    private static final User TEST_USER = TEST_DummyUserFactoryOutlet.TEST_ADMIN_USER;
+    private static final ALP_MNSP_Minesweeper SWEEPER_UNDER_TEST = new ALP_MNSP_Minesweeper();
 
+    @IsTest
+    public static void testAnnotatingNoRowsResultsInEmptyList() {
+        // Arrange
+        List<List<String> mineListList = new List<List<String>();
+
+        // Act
+        List<List<String> actualResultListList;
+        Test.startTest();
+        System.runAs(TEST_USER) {
+            actualResultListList = SWEEPER_UNDER_TEST.annotate(mineListList);
+        }
+        Test.stopTest();
+
+        // Assert
+        System.assert(actualResultListList.isEmpty());
+    }
     /*
     class MinesweeperTest extends FunSuite with Matchers {
 
