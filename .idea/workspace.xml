@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellList.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellListFactory.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellListFactory.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_CellNeighbourFilter.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_CellNeighbourFilter.cls-meta.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_SquareCellPredicateIntf.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_SquareCellPredicateIntf.cls-meta.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/services/ALP_MNSP_SquareCellListPublisher.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/services/ALP_MNSP_SquareCellListPublisher.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +69,8 @@
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELL" value="1591186135000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLFACTORY" value="1591180674000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLIST" value="1591186251947" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTFACTORY" value="1591187313052" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTPUBLISHER" value="1591187477657" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTFACTORY" value="1591188342490" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTPUBLISHER" value="1591188342490" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTSTRATEGYINTF" value="1591184562000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLPREDICATEINTF" value="1591186135000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLSTRATEGYINTF" value="1591186251947" />
@@ -414,10 +406,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="300" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591122991378" />
-    <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1591188326984">
+    <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1591188368982">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188326984" />
+    <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188368982" />
     <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1591103827854">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

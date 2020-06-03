@@ -72,12 +72,12 @@ public with sharing class ALP_MNSP_MinesweeperTest {
         // Arrange
         List<String> testMineList = new List<String>{
                 '***',
-                '*8*',
+                '* *',
                 '***'
         };
         List<String> expectedResultList = new List<String>{
                 '***',
-                '* *',
+                '*8*',
                 '***'
         };
         testAnnotate(testMineList, expectedResultList);
