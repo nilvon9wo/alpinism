@@ -44,7 +44,7 @@ public with sharing class ALP_MNSP_SquareCellListPublisher {
             Integer maximumColumn
     ) {
         List<String> rowStringList = new List<String>();
-        for (Integer rowIndex = 0; rowIndex < maximumRow; rowIndex++) {
+        for (Integer rowIndex = 0; rowIndex <= maximumRow; rowIndex++) {
             rowStringList.add(this.reveal(cellByColumnByRowMap.get(rowIndex), maximumColumn));
         }
         return rowStringList;
@@ -52,7 +52,7 @@ public with sharing class ALP_MNSP_SquareCellListPublisher {
 
     public String reveal(Map<Integer, ALP_Cell__c> cellByColumnMap, Integer maximumColumn) {
         String rowString = '';
-        for (Integer columnIndex = 0; columnIndex < maximumColumn; columnIndex++) {
+        for (Integer columnIndex = 0; columnIndex <= maximumColumn; columnIndex++) {
             rowString += cellByColumnMap.get(columnIndex).Annotation__c;
         }
         return rowString;

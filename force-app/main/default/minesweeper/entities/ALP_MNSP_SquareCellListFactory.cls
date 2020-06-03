@@ -14,7 +14,7 @@ public with sharing class ALP_MNSP_SquareCellListFactory {
 
     public ALP_MNSP_SquareCellList createFor(List<String> rowStringList) {
         ALP_MNSP_SquareCellList cellList = new ALP_MNSP_SquareCellList();
-        for (Integer rowIndex = 0; rowIndex < rowStringList.size() - 1; rowIndex++) {
+        for (Integer rowIndex = 0; rowIndex < rowStringList.size(); rowIndex++) {
             cellList.add(this.createFor(rowIndex, rowStringList[rowIndex]));
         }
         return cellList;
@@ -23,7 +23,7 @@ public with sharing class ALP_MNSP_SquareCellListFactory {
     private ALP_MNSP_SquareCellList createFor(Integer rowIndex, String rowString) {
         ALP_MNSP_SquareCellList cellList = new ALP_MNSP_SquareCellList();
         List<String> columnStringList = rowString.split('');
-        for (Integer columnIndex = 0; columnIndex < columnStringList.size() - 1; columnIndex++) {
+        for (Integer columnIndex = 0; columnIndex < columnStringList.size(); columnIndex++) {
             cellList.add(new ALP_Cell__c(
                     Row__c = rowIndex,
                     Column__c = columnIndex,
@@ -32,5 +32,4 @@ public with sharing class ALP_MNSP_SquareCellListFactory {
         }
         return cellList;
     }
-
 }

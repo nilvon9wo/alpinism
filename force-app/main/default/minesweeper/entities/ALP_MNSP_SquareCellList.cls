@@ -30,18 +30,17 @@ public with sharing class ALP_MNSP_SquareCellList {
                 filteredList.add(cell);
             }
         }
-        this.cellList = filteredList;
-        return this;
+        return new ALP_MNSP_SquareCellList(filteredList);
     }
 
-    public ALP_MNSP_SquareCellList setAnnotations() {
-        for (ALP_MNSP_SquareCell cell : this.cellList) {
-            cell.setAnnotation(this.cellList);
-        }
-        return this;
-    }
+//    public ALP_MNSP_SquareCellList setAnnotations() {
+//        for (ALP_MNSP_SquareCell cell : this.cellList) {
+//            cell.setAnnotation(this.cellList);
+//        }
+//        return this;
+//    }
 
-    public ALP_MNSP_SquareCellList forEach(ALP_MNSP_SquareCellListStrategyIntf strategy) {
+    public ALP_MNSP_SquareCellList forEach(ALP_MNSP_SquareCellStrategyIntf strategy) {
         for (ALP_MNSP_SquareCell cell : this.cellList) {
             strategy.execute(cell);
         }
