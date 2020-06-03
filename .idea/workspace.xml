@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCell.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCell.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellList.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellList.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellListFactory.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellListFactory.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareGrid.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareGrid.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_CellNeighbourFilter.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_CellNeighbourFilter.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_SquareCellPredicateIntf.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/filters/ALP_MNSP_SquareCellPredicateIntf.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/services/ALP_MNSP_SquareCellListPublisher.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/services/ALP_MNSP_SquareCellListPublisher.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_AnnotationStrategy.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_AnnotationStrategy.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_SquareCellListStrategyIntf.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_SquareCellListStrategyIntf.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCellFactory.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCellFactory.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Apex Interface" />
         <option value="Apex Class" />
         <option value="Apex Metadata" />
       </list>
@@ -63,8 +82,18 @@
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
-                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591168425264" />
-                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591168425264" />
+                      <entry key="APEXCLASS:ALP_MNSP_ANNOTATIONSTRATEGY" value="1591183511000" />
+                      <entry key="APEXCLASS:ALP_MNSP_CELLNEIGHBOURFILTER" value="1591183450000" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591183385000" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591183385000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELL" value="1591183511000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLFACTORY" value="1591180674000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLIST" value="1591183511000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTFACTORY" value="1591183511000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTPUBLISHER" value="1591183514233" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTSTRATEGYINTF" value="1591183511000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLPREDICATEINTF" value="1591183450000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUAREGRID" value="1591183463000" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
                     </map>
@@ -131,7 +160,7 @@
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\sieve" />
     </key>
   </component>
-  <component name="RunManager" selected="Apex Unit Tests.ALP_SIVE_SieveTest">
+  <component name="RunManager" selected="Apex Unit Tests.ALP_MNSP_MinesweeperTest">
     <configuration name="ALP_BOWL_BowlingTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
@@ -208,7 +237,7 @@
       <option name="workflowLogLevel" value="INFO" />
       <method v="2" />
     </configuration>
-    <configuration name="ALP_BOWL_BowlingTest.testScoreThrowsExceptionWhenBonusRollForSpareHasNotBeenRolled" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="ALP_MNSP_MinesweeperTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
       <option name="apexLogLevel" value="DEBUG" />
@@ -223,7 +252,7 @@
           <entry key="Alpinism">
             <value>
               <set>
-                <option value="ALP_BOWL_BowlingTest" />
+                <option value="ALP_MNSP_MinesweeperTest" />
               </set>
             </value>
           </entry>
@@ -233,15 +262,7 @@
       <option name="profilingLogLevel" value="INFO" />
       <option name="systemLogLevel" value="DEBUG" />
       <option name="testClassToTestMethodNames">
-        <map>
-          <entry key="ALP_BOWL_BowlingTest">
-            <value>
-              <set>
-                <option value="testScoreThrowsExceptionWhenBonusRollForSpareHasNotBeenRolled" />
-              </set>
-            </value>
-          </entry>
-        </map>
+        <map />
       </option>
       <option name="testSuiteName" />
       <option name="validationLogLevel" value="INFO" />
@@ -328,11 +349,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Apex Unit Tests.ALP_MNSP_MinesweeperTest" />
         <item itemvalue="Apex Unit Tests.ALP_SIVE_SieveTest" />
         <item itemvalue="Apex Unit Tests.ALP_SIVE_SieveTest.testPrimesToUnderTenShouldReturnTwoThreeFiveSeven" />
         <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest" />
         <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testScoreShouldBeAbleToScoreAGameWithNoStrikesOrSpares" />
-        <item itemvalue="Apex Unit Tests.ALP_BOWL_BowlingTest.testScoreThrowsExceptionWhenBonusRollForSpareHasNotBeenRolled" />
       </list>
     </recent_temporary>
   </component>
@@ -368,22 +389,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591127630271" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1207" height="235" key="GridCell.Tab.0.bottom" timestamp="1591127632145">
+    <state width="1206" height="235" key="GridCell.Tab.0.bottom" timestamp="1591176759916">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1207" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591127632145" />
-    <state width="1207" height="235" key="GridCell.Tab.0.center" timestamp="1591127632145">
+    <state width="1206" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591176759916" />
+    <state width="1206" height="235" key="GridCell.Tab.0.center" timestamp="1591176759916">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1207" height="235" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591127632145" />
-    <state width="1207" height="235" key="GridCell.Tab.0.left" timestamp="1591127632145">
+    <state width="1206" height="235" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591176759916" />
+    <state width="1206" height="235" key="GridCell.Tab.0.left" timestamp="1591176759916">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1207" height="235" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591127632145" />
-    <state width="1207" height="235" key="GridCell.Tab.0.right" timestamp="1591127632145">
+    <state width="1206" height="235" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591176759916" />
+    <state width="1206" height="235" key="GridCell.Tab.0.right" timestamp="1591176759916">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1207" height="235" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591127632145" />
+    <state width="1206" height="235" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591176759916" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -410,6 +431,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108914978" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_SIVE_SieveTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591125016419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_MNSP_MinesweeperTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591175933566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

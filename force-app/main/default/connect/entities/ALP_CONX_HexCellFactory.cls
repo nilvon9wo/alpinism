@@ -11,8 +11,6 @@ public with sharing class ALP_CONX_HexCellFactory {
 	}
 
 	public List<ALP_CONX_HexCell> fromStringList(List<String> board) {
-		//List<String> reverseBoard = this.listHelper.reverse(board);
-
 		List<ALP_CONX_HexCell> cellList = new List<ALP_CONX_HexCell>();
 		for (Integer rowIndex = 0; rowIndex < board.size(); rowIndex++) {
 			List<String> occupantList = board[rowIndex].split('');
