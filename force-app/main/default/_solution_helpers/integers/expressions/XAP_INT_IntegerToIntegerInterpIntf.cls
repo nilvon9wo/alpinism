@@ -1,3 +1,3 @@
 public interface XAP_INT_IntegerToIntegerInterpIntf {
-    Integer interpret(Integer currentValue);
+    Integer interpret(Integer value1, Integer value2);
 }

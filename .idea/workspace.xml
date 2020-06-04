@@ -4,8 +4,9 @@
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerToIntegerInterpIntf.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerToIntegerInterpIntf.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaxiumCalculator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaxiumCalculator.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_ProductCalculator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_ProductCalculator.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/largest_series_product/ALP_LSP_LargestSeriesProduct.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/largest_series_product/ALP_LSP_LargestSeriesProduct.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,7 @@
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_LSP_ILLEGALARGUMENT" value="1591304404000" />
                       <entry key="APEXCLASS:ALP_LSP_ILLEGALARGUMENTEXCEPTION" value="1591304620000" />
-                      <entry key="APEXCLASS:ALP_LSP_LARGESTSERIESPRODUCT" value="1591310866598" />
+                      <entry key="APEXCLASS:ALP_LSP_LARGESTSERIESPRODUCT" value="1591310918100" />
                       <entry key="APEXCLASS:ALP_LSP_LARGESTSERIESPRODUCTTEST" value="1591304621000" />
                       <entry key="APEXCLASS:ALP_MNSP_ANNOTATIONSTRATEGY" value="1591186251947" />
                       <entry key="APEXCLASS:ALP_MNSP_APPLYANNOTATIONSTRATEGY" value="1591189713000" />
@@ -107,12 +108,12 @@
                       <entry key="APEXCLASS:ALP_SCIP_TRANSFORMATIONSTRATEGYINTF" value="1591280697000" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
-                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591310668093" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591311864413" />
                       <entry key="APEXCLASS:XAP_INT_INTEGERLISTTOINTEGERINTERPINTF" value="1591306852000" />
-                      <entry key="APEXCLASS:XAP_INT_INTEGERTOINTEGERINTERPINTF" value="1591309746000" />
-                      <entry key="APEXCLASS:XAP_INT_MAXIUMCALCULATOR" value="1591310668093" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGERTOINTEGERINTERPINTF" value="1591311864413" />
+                      <entry key="APEXCLASS:XAP_INT_MAXIUMCALCULATOR" value="1591311950511" />
                       <entry key="APEXCLASS:XAP_INT_MAXIUMFINDER" value="1591307075000" />
-                      <entry key="APEXCLASS:XAP_INT_PRODUCTCALCULATOR" value="1591309746000" />
+                      <entry key="APEXCLASS:XAP_INT_PRODUCTCALCULATOR" value="1591311950511" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CONTEXT" />
@@ -435,22 +436,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591194042765" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1307" height="381" key="GridCell.Tab.0.bottom" timestamp="1591310866034">
+    <state width="1307" height="381" key="GridCell.Tab.0.bottom" timestamp="1591310999679">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1307" height="381" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310866034" />
-    <state width="1307" height="381" key="GridCell.Tab.0.center" timestamp="1591310866033">
+    <state width="1307" height="381" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310999679" />
+    <state width="1307" height="381" key="GridCell.Tab.0.center" timestamp="1591310999678">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1307" height="381" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310866033" />
-    <state width="1307" height="381" key="GridCell.Tab.0.left" timestamp="1591310866033">
+    <state width="1307" height="381" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310999678" />
+    <state width="1307" height="381" key="GridCell.Tab.0.left" timestamp="1591310999678">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1307" height="381" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310866033" />
-    <state width="1307" height="381" key="GridCell.Tab.0.right" timestamp="1591310866033">
+    <state width="1307" height="381" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310999678" />
+    <state width="1307" height="381" key="GridCell.Tab.0.right" timestamp="1591310999679">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1307" height="381" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310866033" />
+    <state width="1307" height="381" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310999679" />
     <state x="540" y="282" key="IDE.errors.dialog" timestamp="1591307724395">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
