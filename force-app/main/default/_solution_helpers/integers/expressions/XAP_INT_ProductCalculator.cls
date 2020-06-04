@@ -2,7 +2,7 @@ public with sharing class XAP_INT_ProductCalculator implements XAP_INT_IntegerTo
     private Integer accumulator = 1;
 
     public Integer interpret(Integer currentValue) {
-        this.accumulator = currentValue * this.accumulator;
+        this.accumulator *= currentValue;
         return this.accumulator;
     }
 }

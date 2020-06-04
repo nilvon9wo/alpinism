@@ -24,11 +24,8 @@ public with sharing class ALP_LSP_LargestSeriesProduct {
 
     private XAP_INT_IntegerList findProducts(String series, Integer size) {
         XAP_INT_IntegerList productList = new XAP_INT_IntegerList();
-        for (Integer i = 0; i < series.length() - size; i++) {
-            productList.add(
-                    this.extractSubSeries(series, size, i)
-                            .product()
-            );
+        for (Integer i = 0; i < series.length() - size + 1; i++) {
+            productList.add(this.extractSubSeries(series, size, i));
         }
         return productList;
     }
@@ -37,10 +34,17 @@ public with sharing class ALP_LSP_LargestSeriesProduct {
         XAP_INT_IntegerList seriesList = new XAP_INT_IntegerList();
         for (Integer i = start; i < series.length() - size + 1; i++) {
             String substring = series.substring(i, i + size);
-            seriesList.add(Integer.valueOf(substring));
+            seriesList.add(this.calculateProduct(substring));
         }
-        System.debug('###### seriesList: ' + seriesList);
         return seriesList;
+    }
+
+    private Integer calculateProduct(String substring) {
+        Integer product = 1;
+        for (Integer i = 0; i < substring.length(); i++) {
+            product *= Integer.valueOf(substring.substring(i, i + 1));
+        }
+        return product;
     }
 
     private ALP_LSP_LargestSeriesProduct validateInput(String series, Integer size) {
@@ -58,5 +62,4 @@ public with sharing class ALP_LSP_LargestSeriesProduct {
         }
         return this;
     }
-
 }

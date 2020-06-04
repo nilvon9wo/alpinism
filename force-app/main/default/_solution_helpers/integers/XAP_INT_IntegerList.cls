@@ -18,6 +18,11 @@ public with sharing class XAP_INT_IntegerList {
         return this;
     }
 
+    public XAP_INT_IntegerList add(XAP_INT_IntegerList that) {
+        this.integerList.addAll(that.integerList);
+        return this;
+    }
+
     public Integer product() {
         return this.evaluate(new XAP_INT_ProductCalculator());
     }
