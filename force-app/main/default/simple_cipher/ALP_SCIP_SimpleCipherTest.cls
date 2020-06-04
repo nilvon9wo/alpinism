@@ -1,79 +1,284 @@
+@IsTest
 public with sharing class ALP_SCIP_SimpleCipherTest {
     private static final User TEST_USER = TEST_DummyUserFactoryOutlet.TEST_ADMIN_USER;
+    private static final ALP_SCIP_SimpleCipher CIPHER_UNDER_TEST = new ALP_SCIP_SimpleCipher();
 
-    /*
-    defmodule SimpleCipherTest do
-  use ExUnit.Case
+    // Encoding Tests ------------------------------------------------------------------------
 
-  #
-  test "encoding with 'a' returns the original text" do
-    assert SimpleCipher.encode("a", "a") == "a"
-    assert SimpleCipher.encode("b", "a") == "b"
-    assert SimpleCipher.encode("c", "a") == "c"
-  end
+    @IsTest
+    public static void testEncodingAWithJustAReturnsOriginalText() {
+        String testPlainText = 'a';
+        String testKey = 'a';
+        String expectedResult = testPlainText;
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-  test "encoding with another key returns shifted text" do
-    assert SimpleCipher.encode("a", "d") == "d"
-    assert SimpleCipher.encode("b", "d") == "e"
-    assert SimpleCipher.encode("c", "d") == "f"
-  end
+    @IsTest
+    public static void testEncodingBWithJustAReturnsOriginalText() {
+        String testPlainText = 'b';
+        String testKey = 'a';
+        String expectedResult = testPlainText;
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-  test "decoding with 'a' returns the original text" do
-    assert SimpleCipher.decode("a", "a") == "a"
-    assert SimpleCipher.decode("b", "a") == "b"
-    assert SimpleCipher.decode("c", "a") == "c"
-  end
+    @IsTest
+    public static void testEncodingCWithJustAReturnsOriginalText() {
+        String testPlainText = 'c';
+        String testKey = 'a';
+        String expectedResult = testPlainText;
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-  test "decoding with another key returns unshifted text" do
-    assert SimpleCipher.decode("d", "d") == "a"
-    assert SimpleCipher.decode("e", "d") == "b"
-    assert SimpleCipher.decode("f", "d") == "c"
-  end
+    @IsTest
+    public static void testEncodingAWithDShiftsTextByFour() {
+        String testPlainText = 'a';
+        String testKey = 'd';
+        String expectedResult = 'd';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-  test "key uses per-letter translation for encoding" do
-    key = "abc"
+    @IsTest
+    public static void testEncodingBWithDShiftsTextByFour() {
+        String testPlainText = 'b';
+        String testKey = 'd';
+        String expectedResult = 'e';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-    assert SimpleCipher.encode("abc", key) == "ace"
-    assert SimpleCipher.encode("bcd", key) == "bdf"
-    assert SimpleCipher.encode("cde", key) == "ceg"
-    assert SimpleCipher.encode("iamapandabear", "dddddddddddddd") == "ldpdsdqgdehdu"
-  end
+    @IsTest
+    public static void testEncodingCWithDShiftsTextByFour() {
+        String testPlainText = 'c';
+        String testKey = 'd';
+        String expectedResult = 'f';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-  test "key uses per-letter translation for decoding" do
-    key = "abc"
+    @IsTest
+    public static void testEncodingABCWithABCShiftsForCorrespondingLettersInKey() {
+        String testPlainText = 'abc';
+        String testKey = 'abc';
+        String expectedResult = 'ace';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-    assert SimpleCipher.decode("ace", key) == "abc"
-    assert SimpleCipher.decode("bdf", key) == "bcd"
-    assert SimpleCipher.decode("ceg", key) == "cde"
-    assert SimpleCipher.decode("ldpdsdqgdehdu", "dddddddddddddd") == "iamapandabear"
-  end
+    @IsTest
+    public static void testEncodingBCDWithABCShiftsForCorrespondingLettersInKey() {
+        String testPlainText = 'bcd';
+        String testKey = 'abc';
+        String expectedResult = 'bdf';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-  test "only lowercase a-z are translated, rest are passed through" do
-    assert SimpleCipher.encode("this is a test!", "d") == "wklv lv d whvw!"
-    assert SimpleCipher.decode("wklv lv d whvw!", "d") == "this is a test!"
-  end
+    @IsTest
+    public static void testEncodingCDEWithABCShiftsForCorrespondingLettersInKey() {
+        String testPlainText = 'cde';
+        String testKey = 'abc';
+        String expectedResult = 'ceg';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-  test "if key is shorter than text, repeat key" do
-    assert SimpleCipher.encode("abc", "a") == "abc"
-    assert SimpleCipher.encode("abcdefghi", "abc") == "acedfhgik"
-  end
+    @IsTest
+    public static void testEncodingIAmAPandaBearWithABCShiftsForCorrespondingLettersInKey() {
+        String testPlainText = 'iamapandabear';
+        String testKey = 'abc';
+        String expectedResult = 'dddddddddddddd';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-  test "if key is longer than text, only use as much as needed" do
-    key = "somewhatlongkey"
+    @IsTest
+    public static void testEncodingOnlyTranslatesLowercaseAThroughZ() {
+        String testPlainText = 'this is a test!';
+        String testKey = 'd';
+        String expectedResult = 'wklv lv d whvw!';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-    assert SimpleCipher.encode("abc", key) == "spo"
-    assert SimpleCipher.decode("abc", key) == "inq"
-  end
+    @IsTest
+    public static void testEncodingRepeatsSingleCharacterKeyWhenShorterThanTargetText() {
+        String testPlainText = 'abc';
+        String testKey = 'a';
+        String expectedResult = 'abc';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-  test "if you know both the encoded and decoded text, you can figure out the key" do
-    key = "supersecretkey"
+    @IsTest
+    public static void testEncodingRepeatsMultipleCharacterKeyWhenShorterThanTargetText() {
+        String testPlainText = 'abcdefghi';
+        String testKey = 'abc';
+        String expectedResult = 'acedfhgik';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-    plaintext = "attackxatxdawn"
-    ciphertext = SimpleCipher.encode(plaintext, key)
+    @IsTest
+    public static void testEncodingTruncatesKeyToRequiredLengthIfLongerThanText() {
+        String testPlainText = 'abc';
+        String testKey = 'somewhatlongkey';
+        String expectedResult = 'spo';
+        testEncoding(testPlainText, testKey, expectedResult);
+    }
 
-    assert SimpleCipher.decode(ciphertext, plaintext) == key
-  end
-end
+    private static void testEncoding(String testPlainText, String testKey, String expectedResult) {
+        // Act
+        String actualResult;
+        Test.startTest();
+        System.runAs(TEST_USER) {
+            actualResult = CIPHER_UNDER_TEST.encode(testPlainText, testKey);
+        }
+        Test.stopTest();
 
-     */
+        // Assert
+        System.assertEquals(expectedResult, actualResult);
+    }
+
+    // Decoding tests ---------------------------------------------------------------
+
+    @IsTest
+    public static void testDecodingAWithJustAReturnsOriginalText() {
+        String testCipherText = 'a';
+        String testKey = 'a';
+        String expectedResult = testCipherText;
+        testDecoding(testCipherText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingBWithJustAReturnsOriginalText() {
+        String testCipherText = 'b';
+        String testKey = 'a';
+        String expectedResult = testCipherText;
+        testDecoding(testCipherText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingCWithJustAReturnsOriginalText() {
+        String testCipherText = 'c';
+        String testKey = 'a';
+        String expectedResult = testCipherText;
+        testDecoding(testCipherText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingDWithDUnshiftsTextByFour() {
+        String testCipherText = 'd';
+        String testKey = 'd';
+        String expectedResult = 'a';
+        testDecoding(testCipherText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingEWithDUnshiftsTextByFour() {
+        String testCipherText = 'e';
+        String testKey = 'd';
+        String expectedResult = 'b';
+        testDecoding(testCipherText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingFWithDUnshiftsTextByFour() {
+        String testCipherText = 'f';
+        String testKey = 'd';
+        String expectedResult = 'c';
+        testDecoding(testCipherText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingACEWithABCShiftsForCorrespondingLettersInKey() {
+        String testPlainText = 'ace';
+        String testKey = 'abc';
+        String expectedResult = 'abc';
+        testDecoding(testPlainText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingBDFWithABCShiftsForCorrespondingLettersInKey() {
+        String testPlainText = 'bdf';
+        String testKey = 'abc';
+        String expectedResult = 'bcd';
+        testDecoding(testPlainText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingCEGWithABCShiftsForCorrespondingLettersInKey() {
+        String testPlainText = 'ceg';
+        String testKey = 'abc';
+        String expectedResult = 'cde';
+        testDecoding(testPlainText, testKey, expectedResult);
+    }
+
+
+    @IsTest
+    public static void testDecodingDDDDDDDDDDDDDDWithABCShiftsForCorrespondingLettersInKey() {
+        String testPlainText = 'dddddddddddddd';
+        String testKey = 'abc';
+        String expectedResult = 'iamapandabear';
+        testDecoding(testPlainText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingOnlyTranslatesLowercaseAThroughZ() {
+        String testPlainText = 'wklv lv d whvw!';
+        String testKey = 'd';
+        String expectedResult = 'this is a test!';
+        testDecoding(testPlainText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingRepeatsSingleCharacterKeyWhenShorterThanTargetText() {
+        String testPlainText = 'abc';
+        String testKey = 'a';
+        String expectedResult = 'abc';
+        testDecoding(testPlainText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingRepeatsMultipleCharacterKeyWhenShorterThanTargetText() {
+        String testPlainText = 'abcdefghik';
+        String testKey = 'abc';
+        String expectedResult = 'acedfhgi';
+        testDecoding(testPlainText, testKey, expectedResult);
+    }
+
+    @IsTest
+    public static void testDecodingTruncatesKeyToRequiredLengthIfLongerThanText() {
+        String testPlainText = 'abc';
+        String testKey = 'somewhatlongkey';
+        String expectedResult = 'inq';
+        testDecoding(testPlainText, testKey, expectedResult);
+    }
+
+    private static void testDecoding(String testCipherText, String testKey, String expectedResult) {
+        // Act
+        String actualResult;
+        Test.startTest();
+        System.runAs(TEST_USER) {
+            actualResult = CIPHER_UNDER_TEST.decode(testCipherText, testKey);
+        }
+        Test.stopTest();
+
+        // Assert
+        System.assertEquals(expectedResult, actualResult);
+    }
+
+    // Process Test --------------------------------------------------------------------
+
+    @IsTest
+    public static void testDecodingRevealsKeyIfProvidedCipherAndPlainText() {
+        // Arrange
+        String testPlainText = 'attackxatxdawn';
+        String testKey = 'supersecretkey';
+
+        // In general, it is a bad idea to test more than one thing in a single test.
+        // However, encode() is relatively well tested on its own and we wish to provide a "Round-trip" test.
+        String testCipherText = CIPHER_UNDER_TEST.encode(testPlainText, testKey);
+
+        // Act
+        String actualResult;
+        Test.startTest();
+        System.runAs(TEST_USER) {
+            actualResult = CIPHER_UNDER_TEST.decode(testCipherText, testPlainText);
+        }
+        Test.stopTest();
+
+        // Assert
+        System.assertEquals(testKey, actualResult);
+    }
 }

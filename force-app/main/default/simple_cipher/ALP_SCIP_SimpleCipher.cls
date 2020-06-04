@@ -1,4 +1,11 @@
 public with sharing class ALP_SCIP_SimpleCipher {
+    public String encode(String plainText, String Key) {
+        return null;
+    }
+
+    public String decode(String cipherText, String Key) {
+        return null;
+    }
 
     /*
     defmodule SimpleCipher do

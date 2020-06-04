@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipher.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipher.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipher.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipher.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +78,8 @@
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLPREDICATEINTF" value="1591186135000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLSTRATEGYINTF" value="1591189713000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUAREGRID" value="1591189713000" />
-                      <entry key="APEXCLASS:ALP_SCIP_SIMPLECIPHER" value="1591265108000" />
-                      <entry key="APEXCLASS:ALP_SCIP_SIMPLECIPHERTEST" value="1591265112000" />
+                      <entry key="APEXCLASS:ALP_SCIP_SIMPLECIPHER" value="1591273724405" />
+                      <entry key="APEXCLASS:ALP_SCIP_SIMPLECIPHERTEST" value="1591273724405" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
                     </map>
@@ -141,13 +137,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\simple_cipher" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\minesweeper" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\sieve" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\bowling\entities" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\bowling\exceptions" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\minesweeper" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\sieve" />
     </key>
   </component>
   <component name="RunManager" selected="Apex Unit Tests.ALP_MNSP_MinesweeperTest">
