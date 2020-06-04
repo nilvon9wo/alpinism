@@ -1,7 +1,7 @@
 @IsTest
 public with sharing class ALP_SCIP_SimpleCipherTest {
     private static final User TEST_USER = TEST_DummyUserFactoryOutlet.TEST_ADMIN_USER;
-    private static final ALP_SCIP_SimpleCipher CIPHER_UNDER_TEST = new ALP_SCIP_SimpleCipher();
+    private static final ALP_SCIP_SimpleCipher CIPHER_UNDER_TEST = ALP_SCIP_SimpleCipher.getInstance();
 
     // Encoding Tests ------------------------------------------------------------------------
 
@@ -80,8 +80,8 @@ public with sharing class ALP_SCIP_SimpleCipherTest {
     @IsTest
     public static void testEncodingIAmAPandaBearWithABCShiftsForCorrespondingLettersInKey() {
         String testPlainText = 'iamapandabear';
-        String testKey = 'abc';
-        String expectedResult = 'dddddddddddddd';
+        String testKey = 'dddddddddddddd';
+        String expectedResult = 'ldpdsdqgdehdu';
         testEncoding(testPlainText, testKey, expectedResult);
     }
 
@@ -181,68 +181,68 @@ public with sharing class ALP_SCIP_SimpleCipherTest {
     }
 
     @IsTest
-    public static void testDecodingACEWithABCShiftsForCorrespondingLettersInKey() {
-        String testPlainText = 'ace';
+    public static void testDecodingACEWithABCUnshiftsForCorrespondingLettersInKey() {
+        String testCipherText = 'ace';
         String testKey = 'abc';
         String expectedResult = 'abc';
-        testDecoding(testPlainText, testKey, expectedResult);
+        testDecoding(testCipherText, testKey, expectedResult);
     }
 
     @IsTest
-    public static void testDecodingBDFWithABCShiftsForCorrespondingLettersInKey() {
-        String testPlainText = 'bdf';
+    public static void testDecodingBDFWithABCUnshiftsForCorrespondingLettersInKey() {
+        String testCipherText = 'bdf';
         String testKey = 'abc';
         String expectedResult = 'bcd';
-        testDecoding(testPlainText, testKey, expectedResult);
+        testDecoding(testCipherText, testKey, expectedResult);
     }
 
     @IsTest
-    public static void testDecodingCEGWithABCShiftsForCorrespondingLettersInKey() {
-        String testPlainText = 'ceg';
+    public static void testDecodingCEGWithABCUnshiftsForCorrespondingLettersInKey() {
+        String testCipherText = 'ceg';
         String testKey = 'abc';
         String expectedResult = 'cde';
-        testDecoding(testPlainText, testKey, expectedResult);
+        testDecoding(testCipherText, testKey, expectedResult);
     }
 
 
     @IsTest
-    public static void testDecodingDDDDDDDDDDDDDDWithABCShiftsForCorrespondingLettersInKey() {
-        String testPlainText = 'dddddddddddddd';
-        String testKey = 'abc';
+    public static void testDecodingLdpdsdqgdehduWithABCUnshiftsForCorrespondingLettersInKey() {
+        String testCipherText = 'ldpdsdqgdehdu';
+        String testKey = 'dddddddddddddd';
         String expectedResult = 'iamapandabear';
-        testDecoding(testPlainText, testKey, expectedResult);
+        testDecoding(testCipherText, testKey, expectedResult);
     }
 
     @IsTest
     public static void testDecodingOnlyTranslatesLowercaseAThroughZ() {
-        String testPlainText = 'wklv lv d whvw!';
+        String testCipherText = 'wklv lv d whvw!';
         String testKey = 'd';
         String expectedResult = 'this is a test!';
-        testDecoding(testPlainText, testKey, expectedResult);
+        testDecoding(testCipherText, testKey, expectedResult);
     }
 
     @IsTest
     public static void testDecodingRepeatsSingleCharacterKeyWhenShorterThanTargetText() {
-        String testPlainText = 'abc';
+        String testCipherText = 'abc';
         String testKey = 'a';
         String expectedResult = 'abc';
-        testDecoding(testPlainText, testKey, expectedResult);
+        testDecoding(testCipherText, testKey, expectedResult);
     }
 
     @IsTest
     public static void testDecodingRepeatsMultipleCharacterKeyWhenShorterThanTargetText() {
-        String testPlainText = 'abcdefghik';
+        String testCipherText = 'acedfhgik';
         String testKey = 'abc';
-        String expectedResult = 'acedfhgi';
-        testDecoding(testPlainText, testKey, expectedResult);
+        String expectedResult = 'abcdefghi';
+        testDecoding(testCipherText, testKey, expectedResult);
     }
 
     @IsTest
     public static void testDecodingTruncatesKeyToRequiredLengthIfLongerThanText() {
-        String testPlainText = 'abc';
+        String testCipherText = 'abc';
         String testKey = 'somewhatlongkey';
         String expectedResult = 'inq';
-        testDecoding(testPlainText, testKey, expectedResult);
+        testDecoding(testCipherText, testKey, expectedResult);
     }
 
     private static void testDecoding(String testCipherText, String testKey, String expectedResult) {
