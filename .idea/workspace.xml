@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipher.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipher.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,18 +69,21 @@
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_MNSP_ANNOTATIONSTRATEGY" value="1591186251947" />
+                      <entry key="APEXCLASS:ALP_MNSP_APPLYANNOTATIONSTRATEGY" value="1591189713000" />
                       <entry key="APEXCLASS:ALP_MNSP_CELLNEIGHBOURFILTER" value="1591186135000" />
-                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591188285954" />
-                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591188429962" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELL" value="1591186135000" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPER" value="1591189713000" />
+                      <entry key="APEXCLASS:ALP_MNSP_MINESWEEPERTEST" value="1591189713000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELL" value="1591189713000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLFACTORY" value="1591180674000" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLIST" value="1591186251947" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTFACTORY" value="1591188342490" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTPUBLISHER" value="1591188342490" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLIST" value="1591189713000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTFACTORY" value="1591189713000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTPUBLISHER" value="1591189713000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLLISTSTRATEGYINTF" value="1591184562000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLPREDICATEINTF" value="1591186135000" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLSTRATEGYINTF" value="1591186251947" />
-                      <entry key="APEXCLASS:ALP_MNSP_SQUAREGRID" value="1591186135000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUARECELLSTRATEGYINTF" value="1591189713000" />
+                      <entry key="APEXCLASS:ALP_MNSP_SQUAREGRID" value="1591189713000" />
+                      <entry key="APEXCLASS:ALP_SCIP_SIMPLECIPHER" value="1591265108000" />
+                      <entry key="APEXCLASS:ALP_SCIP_SIMPLECIPHERTEST" value="1591265112000" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
                     </map>
@@ -119,7 +128,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/force-app/main/default/minesweeper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/force-app/main/default/simple_cipher" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -373,27 +382,27 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591168416029" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1591127630271">
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1591194042765">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591127630271" />
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591194042765" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1300" height="372" key="GridCell.Tab.0.bottom" timestamp="1591188646668">
+    <state width="1299" height="372" key="GridCell.Tab.0.bottom" timestamp="1591189754013">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1300" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188646668" />
-    <state width="1300" height="372" key="GridCell.Tab.0.center" timestamp="1591188646668">
+    <state width="1299" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591189754013" />
+    <state width="1299" height="372" key="GridCell.Tab.0.center" timestamp="1591189754012">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1300" height="372" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188646668" />
-    <state width="1300" height="372" key="GridCell.Tab.0.left" timestamp="1591188646667">
+    <state width="1299" height="372" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591189754012" />
+    <state width="1299" height="372" key="GridCell.Tab.0.left" timestamp="1591189754012">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1300" height="372" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188646667" />
-    <state width="1300" height="372" key="GridCell.Tab.0.right" timestamp="1591188646668">
+    <state width="1299" height="372" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591189754012" />
+    <state width="1299" height="372" key="GridCell.Tab.0.right" timestamp="1591189754013">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1300" height="372" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591188646668" />
+    <state width="1299" height="372" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591189754013" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -420,6 +429,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108914978" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_MNSP_MinesweeperTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591188428272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_MNSP_MinesweeperTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591189715015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>
