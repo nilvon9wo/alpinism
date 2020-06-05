@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquareTest.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquareTest.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/manifest/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +45,9 @@
             <option name="savedDocuments">
               <list>
                 <AnonymousApexSavedDocument>
-                  <option name="body" value="String key = 'ab';&#10;String target = '1234567890';&#10;System.debug(key.rightPad(target.length(), key));" />
+                  <option name="body" value="String normalizedText = 'abcd';&#10;Integer columns = 2;&#10;List&lt;String&gt; accumulatorList = new List&lt;String&gt;();&#10;System.debug(accumulatorList.add(normalizedText.substring(0, columns)));" />
                   <option name="name" value="Anonymous Apex 1" />
+                  <option name="splitterProportion" value="0.47943926" />
                 </AnonymousApexSavedDocument>
               </list>
             </option>
@@ -82,8 +77,8 @@
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
-                      <entry key="APEXCLASS:ALP_CSQ_CRYPTOSQUARE" value="1591370396390" />
-                      <entry key="APEXCLASS:ALP_CSQ_CRYPTOSQUARETEST" value="1591370396390" />
+                      <entry key="APEXCLASS:ALP_CSQ_CRYPTOSQUARE" value="1591382285813" />
+                      <entry key="APEXCLASS:ALP_CSQ_CRYPTOSQUARETEST" value="1591371009299" />
                       <entry key="APEXCLASS:ALP_LSP_ILLEGALARGUMENT" value="1591304404000" />
                       <entry key="APEXCLASS:ALP_LSP_ILLEGALARGUMENTEXCEPTION" value="1591304620000" />
                       <entry key="APEXCLASS:ALP_LSP_LARGESTSERIESPRODUCT" value="1591310918100" />
@@ -145,6 +140,17 @@
             </entry>
           </map>
         </option>
+        <option name="soqlQuerySettings">
+          <SoqlQuerySettings>
+            <option name="savedDocuments">
+              <list>
+                <SoqlQuerySavedDocument>
+                  <option name="name" value="SOQL Query 1" />
+                </SoqlQuerySavedDocument>
+              </list>
+            </option>
+          </SoqlQuerySettings>
+        </option>
       </ProjectWorkspaceSettings>
     </option>
   </component>
@@ -192,7 +198,167 @@
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\largest_series_product\exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Apex Unit Tests.ALP_LSP_LargestSeriesProductTest">
+  <component name="RunManager" selected="Apex Unit Tests.ALP_CSQ_CryptoSquareTest">
+    <configuration name="ALP_CSQ_CryptoSquareTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_CSQ_CryptoSquareTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map />
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ALP_CSQ_CryptoSquareTest.testEncodeReturnCorrectResultForLongString" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_CSQ_CryptoSquareTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="ALP_CSQ_CryptoSquareTest">
+            <value>
+              <set>
+                <option value="testEncodeReturnCorrectResultForLongString" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForAPerfectLittleSquare" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_CSQ_CryptoSquareTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="ALP_CSQ_CryptoSquareTest">
+            <value>
+              <set>
+                <option value="testEncodeReturnsCorrectResultForAPerfectLittleSquare" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForImperfectSquare" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_CSQ_CryptoSquareTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="ALP_CSQ_CryptoSquareTest">
+            <value>
+              <set>
+                <option value="testEncodeReturnsCorrectResultForImperfectSquare" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
     <configuration name="ALP_LSP_LargestSeriesProductTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
@@ -227,181 +393,13 @@
       <option name="workflowLogLevel" value="INFO" />
       <method v="2" />
     </configuration>
-    <configuration name="ALP_LSP_LargestSeriesProductTest.testLargestProductOfAllZerosIsZero" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allTests" value="false" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="apexLogLevel" value="DEBUG" />
-      <option name="calloutsLogLevel" value="INFO" />
-      <option name="connectionName" value="Alpinism" />
-      <option name="connectionType" value="OAUTH" />
-      <option name="contextConfiguration" value="true" />
-      <option name="databaseLogLevel" value="INFO" />
-      <option name="logLevelsInitialized" value="false" />
-      <option name="moduleToTestClassNames">
-        <map>
-          <entry key="Alpinism">
-            <value>
-              <set>
-                <option value="ALP_LSP_LargestSeriesProductTest" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="nbaLogLevel" value="INFO" />
-      <option name="profilingLogLevel" value="INFO" />
-      <option name="systemLogLevel" value="DEBUG" />
-      <option name="testClassToTestMethodNames">
-        <map>
-          <entry key="ALP_LSP_LargestSeriesProductTest">
-            <value>
-              <set>
-                <option value="testLargestProductOfAllZerosIsZero" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="testSuiteName" />
-      <option name="validationLogLevel" value="INFO" />
-      <option name="visualforceLogLevel" value="INFO" />
-      <option name="waveLogLevel" value="INFO" />
-      <option name="workflowLogLevel" value="INFO" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ALP_LSP_LargestSeriesProductTest.testLargestProductOfWhereAllProductsAreZeroIsZero" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allTests" value="false" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="apexLogLevel" value="DEBUG" />
-      <option name="calloutsLogLevel" value="INFO" />
-      <option name="connectionName" value="Alpinism" />
-      <option name="connectionType" value="OAUTH" />
-      <option name="contextConfiguration" value="true" />
-      <option name="databaseLogLevel" value="INFO" />
-      <option name="logLevelsInitialized" value="false" />
-      <option name="moduleToTestClassNames">
-        <map>
-          <entry key="Alpinism">
-            <value>
-              <set>
-                <option value="ALP_LSP_LargestSeriesProductTest" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="nbaLogLevel" value="INFO" />
-      <option name="profilingLogLevel" value="INFO" />
-      <option name="systemLogLevel" value="DEBUG" />
-      <option name="testClassToTestMethodNames">
-        <map>
-          <entry key="ALP_LSP_LargestSeriesProductTest">
-            <value>
-              <set>
-                <option value="testLargestProductOfWhereAllProductsAreZeroIsZero" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="testSuiteName" />
-      <option name="validationLogLevel" value="INFO" />
-      <option name="visualforceLogLevel" value="INFO" />
-      <option name="waveLogLevel" value="INFO" />
-      <option name="workflowLogLevel" value="INFO" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ALP_LSP_LargestSeriesProductTest.testLargestSize2ProductIs72" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allTests" value="false" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="apexLogLevel" value="DEBUG" />
-      <option name="calloutsLogLevel" value="INFO" />
-      <option name="connectionName" value="Alpinism" />
-      <option name="connectionType" value="OAUTH" />
-      <option name="contextConfiguration" value="true" />
-      <option name="databaseLogLevel" value="INFO" />
-      <option name="logLevelsInitialized" value="false" />
-      <option name="moduleToTestClassNames">
-        <map>
-          <entry key="Alpinism">
-            <value>
-              <set>
-                <option value="ALP_LSP_LargestSeriesProductTest" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="nbaLogLevel" value="INFO" />
-      <option name="profilingLogLevel" value="INFO" />
-      <option name="systemLogLevel" value="DEBUG" />
-      <option name="testClassToTestMethodNames">
-        <map>
-          <entry key="ALP_LSP_LargestSeriesProductTest">
-            <value>
-              <set>
-                <option value="testLargestSize2ProductIs72" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="testSuiteName" />
-      <option name="validationLogLevel" value="INFO" />
-      <option name="visualforceLogLevel" value="INFO" />
-      <option name="waveLogLevel" value="INFO" />
-      <option name="workflowLogLevel" value="INFO" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ALP_LSP_LargestSeriesProductTest.testLargestSize2ProductOfTinyNumber12Is2" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allTests" value="false" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="apexLogLevel" value="DEBUG" />
-      <option name="calloutsLogLevel" value="INFO" />
-      <option name="connectionName" value="Alpinism" />
-      <option name="connectionType" value="OAUTH" />
-      <option name="contextConfiguration" value="true" />
-      <option name="databaseLogLevel" value="INFO" />
-      <option name="logLevelsInitialized" value="false" />
-      <option name="moduleToTestClassNames">
-        <map>
-          <entry key="Alpinism">
-            <value>
-              <set>
-                <option value="ALP_LSP_LargestSeriesProductTest" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="nbaLogLevel" value="INFO" />
-      <option name="profilingLogLevel" value="INFO" />
-      <option name="systemLogLevel" value="DEBUG" />
-      <option name="testClassToTestMethodNames">
-        <map>
-          <entry key="ALP_LSP_LargestSeriesProductTest">
-            <value>
-              <set>
-                <option value="testLargestSize2ProductOfTinyNumber12Is2" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="testSuiteName" />
-      <option name="validationLogLevel" value="INFO" />
-      <option name="visualforceLogLevel" value="INFO" />
-      <option name="waveLogLevel" value="INFO" />
-      <option name="workflowLogLevel" value="INFO" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest" />
+        <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForImperfectSquare" />
+        <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForAPerfectLittleSquare" />
+        <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest.testEncodeReturnCorrectResultForLongString" />
         <item itemvalue="Apex Unit Tests.ALP_LSP_LargestSeriesProductTest" />
-        <item itemvalue="Apex Unit Tests.ALP_LSP_LargestSeriesProductTest.testLargestSize2ProductOfTinyNumber12Is2" />
-        <item itemvalue="Apex Unit Tests.ALP_LSP_LargestSeriesProductTest.testLargestSize2ProductIs72" />
-        <item itemvalue="Apex Unit Tests.ALP_LSP_LargestSeriesProductTest.testLargestProductOfAllZerosIsZero" />
-        <item itemvalue="Apex Unit Tests.ALP_LSP_LargestSeriesProductTest.testLargestProductOfWhereAllProductsAreZeroIsZero" />
       </list>
     </recent_temporary>
   </component>
@@ -445,26 +443,26 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591194042765" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1117" height="381" key="GridCell.Tab.0.bottom" timestamp="1591339887066">
+    <state width="1860" height="376" key="GridCell.Tab.0.bottom" timestamp="1591382301686">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1117" height="381" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591339887066" />
-    <state width="1117" height="381" key="GridCell.Tab.0.center" timestamp="1591339887066">
+    <state width="1860" height="376" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591382301686" />
+    <state width="1860" height="376" key="GridCell.Tab.0.center" timestamp="1591382301686">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1117" height="381" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591339887066" />
-    <state width="1117" height="381" key="GridCell.Tab.0.left" timestamp="1591339887065">
+    <state width="1860" height="376" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591382301686" />
+    <state width="1860" height="376" key="GridCell.Tab.0.left" timestamp="1591382301686">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1117" height="381" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591339887065" />
-    <state width="1117" height="381" key="GridCell.Tab.0.right" timestamp="1591339887066">
+    <state width="1860" height="376" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591382301686" />
+    <state width="1860" height="376" key="GridCell.Tab.0.right" timestamp="1591382301686">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1117" height="381" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591339887066" />
-    <state x="540" y="282" key="IDE.errors.dialog" timestamp="1591307724395">
+    <state width="1860" height="376" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591382301686" />
+    <state x="540" y="282" key="IDE.errors.dialog" timestamp="1591370848421">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="540" y="282" key="IDE.errors.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591307724395" />
+    <state x="540" y="282" key="IDE.errors.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591370848421" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -477,20 +475,20 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="300" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591122991378" />
-    <state x="667" y="273" width="585" height="592" key="find.popup" timestamp="1591369803888">
+    <state x="667" y="273" width="585" height="592" key="find.popup" timestamp="1591375436420">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="667" y="273" width="585" height="592" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591369803888" />
+    <state x="667" y="273" width="585" height="592" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591375436420" />
     <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1591103827854">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591103827854" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1591108914978">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1591378496393">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108914978" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591378496393" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_LSP_LargestSeriesProductTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591337274162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_CSQ_CryptoSquareTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591382301682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

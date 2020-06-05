@@ -1,5 +1,5 @@
 public with sharing class ALP_CSQ_CryptoSquare {
-    private ALP_CSQ_CryptoSquare(){
+    private ALP_CSQ_CryptoSquare() {
     }
 
     private static ALP_CSQ_CryptoSquare instance;
@@ -10,78 +10,69 @@ public with sharing class ALP_CSQ_CryptoSquare {
         return instance;
     }
 
-    public String encode(String inputString) {
-        return null;
+    /*
+        Encode string square methods
+    */
+    public String encode(String plainText) {
+        if (String.isBlank(plainText)) {
+            return '';
+        }
+
+        String normalizedText = this.normalize(plainText);
+        List<String> rectangleTextRowList = this.toRectangle(normalizedText);
+        return this.encode(rectangleTextRowList);
     }
 
+    private String normalize(String plainText) {
+        return plainText.toLowerCase()
+                .replaceAll('[^a-z0-9]', '');
+    }
 
-    /*
-    defmodule CryptoSquare do
-  @doc """
-  Encode string square methods
-  ## Examples
+    private List<String> toRectangle(String normalizedText) {
+        Integer columns = this.calculateColumns(normalizedText.length());
+        List<String> accumulatorList = new List<String>();
+        return this.makeRows(normalizedText, columns, accumulatorList);
+    }
 
-    iex> CryptoSquare.encode("abcd")
-    "ac bd"
-  """
-  @spec encode(String.t()) :: String.t()
-  def encode("" = _plain_text),
-    do: ""
+    private Integer calculateColumns(Integer textLength) {
+        Double squareRoot = Math.sqrt(textLength);
+        Integer truncatedRoot = squareRoot.intValue();
+        Integer columns = (squareRoot == truncatedRoot)
+                ? truncatedRoot
+                : truncatedRoot + 1;
 
-  def encode(plain_text),
-    do:
-      plain_text
-      |> normalize()
-      |> to_rectangle()
-      |> Enum.reverse()
-      |> Enum.map(&String.graphemes/1)
-      |> Enum.zip()
-      |> Enum.map(&Tuple.to_list/1)
-      |> Enum.map(&Enum.join/1)
-      |> Enum.map(&String.trim/1)
-      |> Enum.join(" ")
+        return (Math.pow(columns, 2) >= textLength)
+                ? columns
+                : columns + 1;
+    }
 
-  defp normalize(plain_text),
-    do:
-      plain_text
-      |> String.downcase()
-      |> String.replace(~r/[^a-z0-9]/, "")
+    private List<String> makeRows(String text, Integer columns, List<String> accumulatorList) {
+        Integer textLength = text.length();
+        if (textLength <= columns) {
+            accumulatorList.add(text.rightPad(columns).trim());
+            return accumulatorList;
+        }
+        else {
+            accumulatorList.add(text.substring(0, columns));
+            return this.makeRows(
+                    text.substring(columns, textLength),
+                    columns,
+                    accumulatorList
+            );
+        }
+    }
 
-  defp to_rectangle(normalized_text),
-    do:
-      normalized_text
-      |> calculate_dimensions()
-      |> make_rows(normalized_text)
-
-  defp calculate_dimensions(normalized_text) do
-    text_length = String.length(normalized_text)
-    rows = calculate_columns(text_length)
-
-    if :math.pow(rows, 2) >= text_length,
-      do: rows,
-      else: rows + 1
-  end
-
-  defp make_rows(columns, text, accumulator \\ []) do
-    if String.length(text) < columns,
-      do: [String.pad_trailing(text, columns) | accumulator],
-      else:
-        make_rows(
-          columns,
-          String.slice(text, columns, String.length(text) - columns),
-          [String.slice(text, 0, columns) | accumulator]
-        )
-  end
-
-  defp calculate_columns(text_length) do
-    square_root = :math.sqrt(text_length)
-    truncated_root = trunc(square_root)
-
-    if square_root == truncated_root,
-      do: truncated_root,
-      else: truncated_root + 1
-  end
-end
-
-     */
+    private String encode(List<String> rectangleTextRowList) {
+        Map<Integer, String> encodedRowByIndexMap = new Map<Integer, String>();
+        for (String rectangleTextRow : rectangleTextRowList) {
+            List<String> rectangleRowLetterList = rectangleTextRow.split('');
+            for (Integer i = 0; i < rectangleRowLetterList.size(); i++) {
+                String oldRow = (encodedRowByIndexMap.containsKey(i))
+                        ? encodedRowByIndexMap.get(i)
+                        : '';
+                encodedRowByIndexMap.put(i, oldRow + rectangleRowLetterList[i]);
+            }
+        }
+        return String.join(encodedRowByIndexMap.values(), ' ');
+    }
 }
