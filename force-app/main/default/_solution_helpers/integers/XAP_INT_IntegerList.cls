@@ -1,8 +1,14 @@
 public with sharing class XAP_INT_IntegerList {
     private List<Integer> integerList;
+    private XAP_INT_IntegerEvaluator integerEvaluator;
+
+    public XAP_INT_IntegerList(List<Integer> integerList, XAP_INT_IntegerEvaluator integerEvaluator) {
+        this.integerList = integerList;
+        this.integerEvaluator = integerEvaluator;
+    }
 
     public XAP_INT_IntegerList(List<Integer> integerList) {
-        this.integerList = integerList;
+        this(integerList, XAP_INT_IntegerEvaluator.getInstance());
     }
 
     public XAP_INT_IntegerList() {
@@ -21,23 +27,11 @@ public with sharing class XAP_INT_IntegerList {
 
     public Integer max(){
         Integer initialValue = 0;
-        return this.evaluate(XAP_INT_MaximumCalculator.getInstance(), initialValue);
+        return this.integerEvaluator.evaluate(XAP_INT_MaximumCalculator.class, this.integerList, initialValue);
     }
 
     public Integer product() {
         Integer initialValue = 1;
-        return this.evaluate(XAP_INT_ProductCalculator.getInstance(), initialValue);
-    }
-
-    private Integer evaluate(XAP_INT_IntegerToIntegerInterpIntf function, Integer initialValue) {
-        if (this.integerList.isEmpty()) {
-            return null;
-        }
-
-        Integer result = initialValue;
-        for (Integer value : this.integerList) {
-            result = function.interpret(value, result);
-        }
-        return result;
+        return this.integerEvaluator.evaluate(XAP_INT_ProductCalculator.class, this.integerList, initialValue);
     }
 }

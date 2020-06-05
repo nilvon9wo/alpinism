@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerEvaluator.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerEvaluator.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerToIntegerInterpIntf.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerToIntegerInterpIntf.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaxiumCalculator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaxiumCalculator.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerToIntegerInterpIntf.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_2IntegersToIntegerInterpIntf.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerToIntegerInterpIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_2IntegersToIntegerInterpIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaximumCalculator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaximumCalculator.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_ProductCalculator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_ProductCalculator.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,12 +111,15 @@
                       <entry key="APEXCLASS:ALP_SCIP_TRANSFORMATIONSTRATEGYINTF" value="1591280697000" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
-                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591311864413" />
+                      <entry key="APEXCLASS:XAP_INT_2INTEGERSTOINTEGERINTERPINTF" value="1591337167000" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGEREVALUATOR" value="1591337167000" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591337167000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGERLISTTOINTEGERINTERPINTF" value="1591306852000" />
-                      <entry key="APEXCLASS:XAP_INT_INTEGERTOINTEGERINTERPINTF" value="1591311864413" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGERTOINTEGERINTERPINTF" value="1591312077000" />
+                      <entry key="APEXCLASS:XAP_INT_MAXIMUMCALCULATOR" value="1591337167000" />
                       <entry key="APEXCLASS:XAP_INT_MAXIUMCALCULATOR" value="1591311950511" />
                       <entry key="APEXCLASS:XAP_INT_MAXIUMFINDER" value="1591307075000" />
-                      <entry key="APEXCLASS:XAP_INT_PRODUCTCALCULATOR" value="1591311950511" />
+                      <entry key="APEXCLASS:XAP_INT_PRODUCTCALCULATOR" value="1591337167000" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CONTEXT" />
@@ -419,10 +425,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="579" y="372" key="#Illuminated_Cloud_(Alpinism)/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591281256374" />
-    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser" timestamp="1591306969958">
+    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser" timestamp="1591336745378">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591306969958" />
+    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591336745378" />
     <state x="587" y="108" key="CommitChangelistDialog2" timestamp="1591168256431">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -436,22 +442,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591194042765" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1307" height="381" key="GridCell.Tab.0.bottom" timestamp="1591310999679">
+    <state width="1306" height="381" key="GridCell.Tab.0.bottom" timestamp="1591312144201">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1307" height="381" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310999679" />
-    <state width="1307" height="381" key="GridCell.Tab.0.center" timestamp="1591310999678">
+    <state width="1306" height="381" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591312144201" />
+    <state width="1306" height="381" key="GridCell.Tab.0.center" timestamp="1591312144201">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1307" height="381" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310999678" />
-    <state width="1307" height="381" key="GridCell.Tab.0.left" timestamp="1591310999678">
+    <state width="1306" height="381" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591312144201" />
+    <state width="1306" height="381" key="GridCell.Tab.0.left" timestamp="1591312144200">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1307" height="381" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310999678" />
-    <state width="1307" height="381" key="GridCell.Tab.0.right" timestamp="1591310999679">
+    <state width="1306" height="381" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591312144200" />
+    <state width="1306" height="381" key="GridCell.Tab.0.right" timestamp="1591312144201">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1307" height="381" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310999679" />
+    <state width="1306" height="381" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591312144201" />
     <state x="540" y="282" key="IDE.errors.dialog" timestamp="1591307724395">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -482,6 +488,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108914978" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_LSP_LargestSeriesProductTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591310866030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_LSP_LargestSeriesProductTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591337180794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>
