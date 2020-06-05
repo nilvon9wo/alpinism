@@ -16,6 +16,7 @@ accessing by SObjectField, and potentially other properties and methods which ma
 | [Bowling](https://exercism.io/my/solutions/594e2a57d9014c61b53587f4a73a574b) | | ALP_BOWL_ |
 | [Connect](https://exercism.io/my/solutions/d1a4151ec4c84d2fb3d8aedbc0a63795) | [Hex](https://en.wikipedia.org/wiki/Hex_%28board_game%29) / Polygon / CON-TAC-TIX | ALP_CONX_ |
 | [Custom Set](https://exercism.io/my/solutions/a660b002e1c14679895063781fb4dd16) |   | ALP_CSET_ |
+| [Crypto Square](https://exercism.io/my/solutions/1ab1e10566f7451e8bf3153774764f68) | | ALP_CSQ_ |
 | [Largest Series Product](https://exercism.io/my/solutions/1c9b756be40f41cbb9f223ef288f83b3) | | ALP_LSP_ |
 | [Minesweeper](https://exercism.io/my/solutions/e51061d187544c768322562a45359b09) | | ALP_MNSP_ |
 | [Simple Cipher](https://exercism.io/my/solutions/4faeaede7a874e8db4696d3b336f49e3) | [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher) | ALP_SCIP_ |

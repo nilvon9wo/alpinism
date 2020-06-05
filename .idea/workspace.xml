@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerEvaluator.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerEvaluator.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquareTest.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquareTest.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerToIntegerInterpIntf.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_2IntegersToIntegerInterpIntf.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerToIntegerInterpIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_2IntegersToIntegerInterpIntf.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaximumCalculator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaximumCalculator.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_ProductCalculator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_ProductCalculator.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/manifest/package.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
         <entry key="Alpinism">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1591015009662" />
+              <option name="moduleContentsLastModified" value="1591369760067" />
               <option name="selectedTabIndex" value="1" />
             </ModuleWorkspaceSettings>
           </value>
@@ -82,6 +82,8 @@
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
+                      <entry key="APEXCLASS:ALP_CSQ_CRYPTOSQUARE" value="1591370396390" />
+                      <entry key="APEXCLASS:ALP_CSQ_CRYPTOSQUARETEST" value="1591370396390" />
                       <entry key="APEXCLASS:ALP_LSP_ILLEGALARGUMENT" value="1591304404000" />
                       <entry key="APEXCLASS:ALP_LSP_ILLEGALARGUMENTEXCEPTION" value="1591304620000" />
                       <entry key="APEXCLASS:ALP_LSP_LARGESTSERIESPRODUCT" value="1591310918100" />
@@ -111,15 +113,15 @@
                       <entry key="APEXCLASS:ALP_SCIP_TRANSFORMATIONSTRATEGYINTF" value="1591280697000" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
-                      <entry key="APEXCLASS:XAP_INT_2INTEGERSTOINTEGERINTERPINTF" value="1591337167000" />
-                      <entry key="APEXCLASS:XAP_INT_INTEGEREVALUATOR" value="1591337167000" />
-                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591337167000" />
+                      <entry key="APEXCLASS:XAP_INT_2INTEGERSTOINTEGERINTERPINTF" value="1591337259000" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGEREVALUATOR" value="1591337259000" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591337259000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGERLISTTOINTEGERINTERPINTF" value="1591306852000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGERTOINTEGERINTERPINTF" value="1591312077000" />
-                      <entry key="APEXCLASS:XAP_INT_MAXIMUMCALCULATOR" value="1591337167000" />
+                      <entry key="APEXCLASS:XAP_INT_MAXIMUMCALCULATOR" value="1591337259000" />
                       <entry key="APEXCLASS:XAP_INT_MAXIUMCALCULATOR" value="1591311950511" />
                       <entry key="APEXCLASS:XAP_INT_MAXIUMFINDER" value="1591307075000" />
-                      <entry key="APEXCLASS:XAP_INT_PRODUCTCALCULATOR" value="1591337167000" />
+                      <entry key="APEXCLASS:XAP_INT_PRODUCTCALCULATOR" value="1591337259000" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CONTEXT" />
@@ -162,7 +164,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/force-app/main/default/largest_series_product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/force-app/main/default/crypto_square" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -175,18 +177,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\crypto_square" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\largest_series_product" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\simple_cipher" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\minesweeper" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\sieve" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\integers\expressions" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\integers" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\enums" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\largest_series_product\exceptions" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\largest_series_product" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\simple_cipher" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\minesweeper" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\sieve" />
     </key>
   </component>
   <component name="RunManager" selected="Apex Unit Tests.ALP_LSP_LargestSeriesProductTest">
@@ -442,22 +445,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591194042765" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1306" height="381" key="GridCell.Tab.0.bottom" timestamp="1591312144201">
+    <state width="1117" height="381" key="GridCell.Tab.0.bottom" timestamp="1591339887066">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1306" height="381" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591312144201" />
-    <state width="1306" height="381" key="GridCell.Tab.0.center" timestamp="1591312144201">
+    <state width="1117" height="381" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591339887066" />
+    <state width="1117" height="381" key="GridCell.Tab.0.center" timestamp="1591339887066">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1306" height="381" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591312144201" />
-    <state width="1306" height="381" key="GridCell.Tab.0.left" timestamp="1591312144200">
+    <state width="1117" height="381" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591339887066" />
+    <state width="1117" height="381" key="GridCell.Tab.0.left" timestamp="1591339887065">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1306" height="381" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591312144200" />
-    <state width="1306" height="381" key="GridCell.Tab.0.right" timestamp="1591312144201">
+    <state width="1117" height="381" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591339887065" />
+    <state width="1117" height="381" key="GridCell.Tab.0.right" timestamp="1591339887066">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1306" height="381" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591312144201" />
+    <state width="1117" height="381" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591339887066" />
     <state x="540" y="282" key="IDE.errors.dialog" timestamp="1591307724395">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -474,10 +477,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="300" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591122991378" />
-    <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1591310894185">
+    <state x="667" y="273" width="585" height="592" key="find.popup" timestamp="1591369803888">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="667" y="273" width="585" height="534" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591310894185" />
+    <state x="667" y="273" width="585" height="592" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591369803888" />
     <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1591103827854">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -488,6 +491,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591108914978" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_LSP_LargestSeriesProductTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591337180794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_LSP_LargestSeriesProductTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591337274162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>
