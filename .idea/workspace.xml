@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_SumCalculator.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_SumCalculator.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_Allergies.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_Allergies.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_AllergiesTest.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_AllergiesTest.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/allergies/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_Allergen.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_Allergen.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_AllergenHelper.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_AllergenHelper.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Apex Interface" />
+        <option value="Apex Enum" />
         <option value="Apex Class" />
         <option value="Apex Metadata" />
       </list>
@@ -45,7 +58,7 @@
             <option name="savedDocuments">
               <list>
                 <AnonymousApexSavedDocument>
-                  <option name="body" value="String normalizedText = 'abcd';&#10;Integer columns = 2;&#10;List&lt;String&gt; accumulatorList = new List&lt;String&gt;();&#10;System.debug(accumulatorList.add(normalizedText.substring(0, columns)));" />
+                  <option name="body" value="System.debug(ALP_ALG_Allergies.getInstance().ignoreUnassignedValues(1024 + 3));" />
                   <option name="name" value="Anonymous Apex 1" />
                   <option name="splitterProportion" value="0.47943926" />
                 </AnonymousApexSavedDocument>
@@ -60,6 +73,10 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
+                      <entry key="APEXCLASS:ALP_ALG_ALLERGEN" value="1591478270893" />
+                      <entry key="APEXCLASS:ALP_ALG_ALLERGENHELPER" value="1591478496000" />
+                      <entry key="APEXCLASS:ALP_ALG_ALLERGIES" value="1591478671226" />
+                      <entry key="APEXCLASS:ALP_ALG_ALLERGIESTEST" value="1591478496000" />
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSPAREROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSTRIKEROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_BONUSTYPE" value="1591025789000" />
@@ -77,7 +94,7 @@
                       <entry key="APEXCLASS:ALP_BOWL_SCOREEXCEPTION" value="1591108611000" />
                       <entry key="APEXCLASS:ALP_BOWL_SPAREROLLADDER" value="1591019432000" />
                       <entry key="APEXCLASS:ALP_BOWL_STRIKEROLLADDER" value="1591019432000" />
-                      <entry key="APEXCLASS:ALP_CSQ_CRYPTOSQUARE" value="1591382285813" />
+                      <entry key="APEXCLASS:ALP_CSQ_CRYPTOSQUARE" value="1591382362185" />
                       <entry key="APEXCLASS:ALP_CSQ_CRYPTOSQUARETEST" value="1591371009299" />
                       <entry key="APEXCLASS:ALP_LSP_ILLEGALARGUMENT" value="1591304404000" />
                       <entry key="APEXCLASS:ALP_LSP_ILLEGALARGUMENTEXCEPTION" value="1591304620000" />
@@ -110,13 +127,14 @@
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
                       <entry key="APEXCLASS:XAP_INT_2INTEGERSTOINTEGERINTERPINTF" value="1591337259000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGEREVALUATOR" value="1591337259000" />
-                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591337259000" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591478496000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGERLISTTOINTEGERINTERPINTF" value="1591306852000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGERTOINTEGERINTERPINTF" value="1591312077000" />
                       <entry key="APEXCLASS:XAP_INT_MAXIMUMCALCULATOR" value="1591337259000" />
                       <entry key="APEXCLASS:XAP_INT_MAXIUMCALCULATOR" value="1591311950511" />
                       <entry key="APEXCLASS:XAP_INT_MAXIUMFINDER" value="1591307075000" />
                       <entry key="APEXCLASS:XAP_INT_PRODUCTCALCULATOR" value="1591337259000" />
+                      <entry key="APEXCLASS:XAP_INT_SUMCALCULATOR" value="1591478496000" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CONTEXT" />
@@ -170,7 +188,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/force-app/main/default/crypto_square" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/force-app/main/default/allergies" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -184,21 +202,55 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\allergies" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\crypto_square" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\largest_series_product" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\simple_cipher" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\minesweeper" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\sieve" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\allergies\enums" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\integers\expressions" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\integers" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\enums" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\largest_series_product\exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Apex Unit Tests.ALP_CSQ_CryptoSquareTest">
+  <component name="RunManager" selected="Apex Unit Tests.ALP_ALG_AllergiesTest">
+    <configuration name="ALP_ALG_AllergiesTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_ALG_AllergiesTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map />
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
     <configuration name="ALP_CSQ_CryptoSquareTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
@@ -359,47 +411,13 @@
       <option name="workflowLogLevel" value="INFO" />
       <method v="2" />
     </configuration>
-    <configuration name="ALP_LSP_LargestSeriesProductTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allTests" value="false" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="apexLogLevel" value="DEBUG" />
-      <option name="calloutsLogLevel" value="INFO" />
-      <option name="connectionName" value="Alpinism" />
-      <option name="connectionType" value="OAUTH" />
-      <option name="contextConfiguration" value="true" />
-      <option name="databaseLogLevel" value="INFO" />
-      <option name="logLevelsInitialized" value="false" />
-      <option name="moduleToTestClassNames">
-        <map>
-          <entry key="Alpinism">
-            <value>
-              <set>
-                <option value="ALP_LSP_LargestSeriesProductTest" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="nbaLogLevel" value="INFO" />
-      <option name="profilingLogLevel" value="INFO" />
-      <option name="systemLogLevel" value="DEBUG" />
-      <option name="testClassToTestMethodNames">
-        <map />
-      </option>
-      <option name="testSuiteName" />
-      <option name="validationLogLevel" value="INFO" />
-      <option name="visualforceLogLevel" value="INFO" />
-      <option name="waveLogLevel" value="INFO" />
-      <option name="workflowLogLevel" value="INFO" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Apex Unit Tests.ALP_ALG_AllergiesTest" />
         <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest" />
         <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForImperfectSquare" />
         <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForAPerfectLittleSquare" />
         <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest.testEncodeReturnCorrectResultForLongString" />
-        <item itemvalue="Apex Unit Tests.ALP_LSP_LargestSeriesProductTest" />
       </list>
     </recent_temporary>
   </component>
@@ -443,22 +461,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591194042765" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1860" height="376" key="GridCell.Tab.0.bottom" timestamp="1591382301686">
+    <state width="1171" height="376" key="GridCell.Tab.0.bottom" timestamp="1591478475083">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="376" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591382301686" />
-    <state width="1860" height="376" key="GridCell.Tab.0.center" timestamp="1591382301686">
+    <state width="1171" height="376" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591478475083" />
+    <state width="1171" height="376" key="GridCell.Tab.0.center" timestamp="1591478475082">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="376" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591382301686" />
-    <state width="1860" height="376" key="GridCell.Tab.0.left" timestamp="1591382301686">
+    <state width="1171" height="376" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591478475082" />
+    <state width="1171" height="376" key="GridCell.Tab.0.left" timestamp="1591478475082">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="376" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591382301686" />
-    <state width="1860" height="376" key="GridCell.Tab.0.right" timestamp="1591382301686">
+    <state width="1171" height="376" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591478475082" />
+    <state width="1171" height="376" key="GridCell.Tab.0.right" timestamp="1591478475083">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="376" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591382301686" />
+    <state width="1171" height="376" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591478475083" />
     <state x="540" y="282" key="IDE.errors.dialog" timestamp="1591370848421">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -489,6 +507,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591378496393" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_CSQ_CryptoSquareTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591382301682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_ALG_AllergiesTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591475948629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

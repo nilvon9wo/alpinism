@@ -13,6 +13,7 @@ accessing by SObjectField, and potentially other properties and methods which ma
 
 | Exercism Name | Other Names | Project Prefix |
 |---------------|-------------|----------------|
+| [Allergies](https://exercism.io/my/solutions/c3a9418b940e443ca1042ffb0d544dba) | | ALP_ALG_ |
 | [Bowling](https://exercism.io/my/solutions/594e2a57d9014c61b53587f4a73a574b) | | ALP_BOWL_ |
 | [Connect](https://exercism.io/my/solutions/d1a4151ec4c84d2fb3d8aedbc0a63795) | [Hex](https://en.wikipedia.org/wiki/Hex_%28board_game%29) / Polygon / CON-TAC-TIX | ALP_CONX_ |
 | [Custom Set](https://exercism.io/my/solutions/a660b002e1c14679895063781fb4dd16) |   | ALP_CSET_ |

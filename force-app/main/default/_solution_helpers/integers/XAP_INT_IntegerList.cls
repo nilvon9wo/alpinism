@@ -34,4 +34,9 @@ public with sharing class XAP_INT_IntegerList {
         Integer initialValue = 1;
         return this.integerEvaluator.evaluate(XAP_INT_ProductCalculator.class, this.integerList, initialValue);
     }
+
+    public Integer sum() {
+        Integer initialValue = 0;
+        return this.integerEvaluator.evaluate(XAP_INT_SumCalculator.class, this.integerList, initialValue);
+    }
 }
