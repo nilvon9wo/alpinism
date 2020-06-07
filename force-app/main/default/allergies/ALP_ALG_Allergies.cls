@@ -20,18 +20,21 @@ public with sharing class ALP_ALG_Allergies {
     }
 
     public List<ALP_ALG_Allergen> toList(Integer inputCode) {
-        List<ALP_ALG_Allergen> allergenList = new List<ALP_ALG_Allergen>();
-
         Integer powerOfTwo = this.highestAssignedPowerOf2;
         Integer code = this.ignoreUnassignedValues(inputCode);
+        List<ALP_ALG_Allergen> allergenList = new List<ALP_ALG_Allergen>();
+
         while (powerOfTwo > 0) {
-            ALP_ALG_Allergen allergen = this.allergenHelper.get(code);
-            if (allergen != null) {
-                allergenList.add(allergen);
-                code = code - powerOfTwo;
+            if (code >= powerOfTwo) {
+                ALP_ALG_Allergen allergen = this.allergenHelper.get(powerOfTwo);
+                if (allergen != null) {
+                    allergenList.add(allergen);
+                    code = code - powerOfTwo;
+                }
             }
             powerOfTwo /= 2;
         }
+
         return allergenList;
     }
 

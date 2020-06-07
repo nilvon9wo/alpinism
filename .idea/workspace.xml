@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.forceignore" beforeDir="false" afterPath="$PROJECT_DIR$/.forceignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_Allergies.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_Allergies.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_AllergiesTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_AllergiesTest.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_AllergenHelper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_AllergenHelper.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +64,8 @@
                     <map>
                       <entry key="APEXCLASS:ALP_ALG_ALLERGEN" value="1591478270893" />
                       <entry key="APEXCLASS:ALP_ALG_ALLERGENHELPER" value="1591530731188" />
-                      <entry key="APEXCLASS:ALP_ALG_ALLERGIES" value="1591531241896" />
-                      <entry key="APEXCLASS:ALP_ALG_ALLERGIESTEST" value="1591531291146" />
+                      <entry key="APEXCLASS:ALP_ALG_ALLERGIES" value="1591531728244" />
+                      <entry key="APEXCLASS:ALP_ALG_ALLERGIESTEST" value="1591531728244" />
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSPAREROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_AFTERSTRIKEROLLADDER" value="1591096554046" />
                       <entry key="APEXCLASS:ALP_BOWL_BONUSTYPE" value="1591025789000" />
@@ -243,6 +240,48 @@
       <option name="workflowLogLevel" value="INFO" />
       <method v="2" />
     </configuration>
+    <configuration name="ALP_ALG_AllergiesTest.testList248ReturnsCatsChocolatePollenStrawberriesAndTomatoes" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_ALG_AllergiesTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="ALP_ALG_AllergiesTest">
+            <value>
+              <set>
+                <option value="testList248ReturnsCatsChocolatePollenStrawberriesAndTomatoes" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
     <configuration name="ALP_ALG_AllergiesTest.testList2ReturnsJustPeanuts" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
@@ -319,48 +358,6 @@
       <option name="workflowLogLevel" value="INFO" />
       <method v="2" />
     </configuration>
-    <configuration name="ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForAPerfectLittleSquare" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allTests" value="false" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="apexLogLevel" value="DEBUG" />
-      <option name="calloutsLogLevel" value="INFO" />
-      <option name="connectionName" value="Alpinism" />
-      <option name="connectionType" value="OAUTH" />
-      <option name="contextConfiguration" value="true" />
-      <option name="databaseLogLevel" value="INFO" />
-      <option name="logLevelsInitialized" value="false" />
-      <option name="moduleToTestClassNames">
-        <map>
-          <entry key="Alpinism">
-            <value>
-              <set>
-                <option value="ALP_CSQ_CryptoSquareTest" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="nbaLogLevel" value="INFO" />
-      <option name="profilingLogLevel" value="INFO" />
-      <option name="systemLogLevel" value="DEBUG" />
-      <option name="testClassToTestMethodNames">
-        <map>
-          <entry key="ALP_CSQ_CryptoSquareTest">
-            <value>
-              <set>
-                <option value="testEncodeReturnsCorrectResultForAPerfectLittleSquare" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="testSuiteName" />
-      <option name="validationLogLevel" value="INFO" />
-      <option name="visualforceLogLevel" value="INFO" />
-      <option name="waveLogLevel" value="INFO" />
-      <option name="workflowLogLevel" value="INFO" />
-      <method v="2" />
-    </configuration>
     <configuration name="ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForImperfectSquare" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
@@ -406,10 +403,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Apex Unit Tests.ALP_ALG_AllergiesTest" />
+        <item itemvalue="Apex Unit Tests.ALP_ALG_AllergiesTest.testList248ReturnsCatsChocolatePollenStrawberriesAndTomatoes" />
         <item itemvalue="Apex Unit Tests.ALP_ALG_AllergiesTest.testList2ReturnsJustPeanuts" />
         <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest" />
         <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForImperfectSquare" />
-        <item itemvalue="Apex Unit Tests.ALP_CSQ_CryptoSquareTest.testEncodeReturnsCorrectResultForAPerfectLittleSquare" />
       </list>
     </recent_temporary>
   </component>
@@ -453,22 +450,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591194042765" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1372" height="253" key="GridCell.Tab.0.bottom" timestamp="1591531293618">
+    <state width="1372" height="274" key="GridCell.Tab.0.bottom" timestamp="1591531729934">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591531293618" />
-    <state width="1372" height="253" key="GridCell.Tab.0.center" timestamp="1591531293618">
+    <state width="1372" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591531729934" />
+    <state width="1372" height="274" key="GridCell.Tab.0.center" timestamp="1591531729934">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="253" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591531293618" />
-    <state width="1372" height="253" key="GridCell.Tab.0.left" timestamp="1591531293617">
+    <state width="1372" height="274" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591531729934" />
+    <state width="1372" height="274" key="GridCell.Tab.0.left" timestamp="1591531729934">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="253" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591531293617" />
-    <state width="1372" height="253" key="GridCell.Tab.0.right" timestamp="1591531293618">
+    <state width="1372" height="274" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591531729934" />
+    <state width="1372" height="274" key="GridCell.Tab.0.right" timestamp="1591531729934">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="253" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591531293618" />
+    <state width="1372" height="274" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591531729934" />
     <state x="540" y="282" key="IDE.errors.dialog" timestamp="1591370848421">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -499,6 +496,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591378496393" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_ALG_AllergiesTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591531293613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_ALG_AllergiesTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1591531729928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>
