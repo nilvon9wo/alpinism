@@ -11,6 +11,10 @@ public with sharing class XAP_INT_IntegerList {
         this(integerList, XAP_INT_IntegerEvaluator.getInstance());
     }
 
+    public XAP_INT_IntegerList(Set<Integer> integerSet) {
+        this(new List<Integer>(integerSet));
+    }
+
     public XAP_INT_IntegerList() {
         this(new List<Integer>());
     }

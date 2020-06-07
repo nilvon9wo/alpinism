@@ -23,7 +23,7 @@ public with sharing class ALP_ALG_AllergiesTest {
     }
 
     @IsTest
-    public static void testList1ReturnsJustPeanuts() {
+    public static void testList2ReturnsJustPeanuts() {
         Integer testCode = 2;
         Set<ALP_ALG_Allergen> expectedResultSet = new Set<ALP_ALG_Allergen>{ALP_ALG_Allergen.PEANUTS};
         testList(testCode, expectedResultSet);
@@ -109,6 +109,8 @@ public with sharing class ALP_ALG_AllergiesTest {
         }
         Test.stopTest();
 
+        System.debug('##### expectedResultSet:' +  expectedResultSet);
+        System.debug('##### actualResultList:' +  actualResultList);
         // Assert
         assertIsASetContaining(expectedResultSet, actualResultList);
     }
