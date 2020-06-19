@@ -20,6 +20,7 @@ accessing by SObjectField, and potentially other properties and methods which ma
 | [Crypto Square](https://exercism.io/my/solutions/1ab1e10566f7451e8bf3153774764f68) | | ALP_CSQ_ |
 | [Largest Series Product](https://exercism.io/my/solutions/1c9b756be40f41cbb9f223ef288f83b3) | | ALP_LSP_ |
 | [Minesweeper](https://exercism.io/my/solutions/e51061d187544c768322562a45359b09) | | ALP_MNSP_ |
+| [Poker](https://exercism.io/my/solutions/715f6ec1017b44ebab705155979db0c9) | | ALP_POKR_ |
 | [Simple Cipher](https://exercism.io/my/solutions/4faeaede7a874e8db4696d3b336f49e3) | [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher) | ALP_SCIP_ |
 | [Sieve](https://exercism.io/my/solutions/1a8c99b313e346a59e30190d642b9547) | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | ALP_SIVE_ |
 | [Spiral Matrix](https://exercism.io/my/solutions/17c85d91725648abb399fe7b85552d7d) | | ALP_SMTX_ |
