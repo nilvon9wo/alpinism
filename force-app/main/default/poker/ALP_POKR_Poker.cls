@@ -10,6 +10,10 @@ public with sharing class ALP_POKR_Poker {
         return instance;
     }
 
+    public List<String> bestHand(List<String> strings) {
+        return null;
+    }
+
     /**
  defmodule Suits do
   @suit_by_character %{
