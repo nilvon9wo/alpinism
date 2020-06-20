@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/Poker.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_Poker.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/Poker.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_Poker.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/PokerTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_PokerTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/PokerTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_PokerTest.cls-meta.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +105,8 @@
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLPREDICATEINTF" value="1591186135000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUARECELLSTRATEGYINTF" value="1591189713000" />
                       <entry key="APEXCLASS:ALP_MNSP_SQUAREGRID" value="1591189713000" />
+                      <entry key="APEXCLASS:ALP_POKR_POKER" value="1592603571000" />
+                      <entry key="APEXCLASS:ALP_POKR_POKERTEST" value="1592603598000" />
                       <entry key="APEXCLASS:ALP_SCIP_DECODINGINTERPRETER" value="1591285827042" />
                       <entry key="APEXCLASS:ALP_SCIP_ENCODINGEXPRESSION" value="1591280728000" />
                       <entry key="APEXCLASS:ALP_SCIP_ENCODINGINTERPRETER" value="1591285774000" />
@@ -112,6 +118,8 @@
                       <entry key="APEXCLASS:ALP_SCIP_TRANSFORMATIONSTRATEGYINTF" value="1591280697000" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVE" value="1591125009861" />
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
+                      <entry key="APEXCLASS:POKER" value="1592600990000" />
+                      <entry key="APEXCLASS:POKERTEST" value="1592601000000" />
                       <entry key="APEXCLASS:XAP_INT_2INTEGERSTOINTEGERINTERPINTF" value="1591337259000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGEREVALUATOR" value="1591337259000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591530707523" />
@@ -175,7 +183,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../exercism/elixir/poker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/force-app/main/default/poker" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -188,19 +196,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\allergies" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\crypto_square" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\largest_series_product" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\simple_cipher" />
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\minesweeper" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\allergies\enums" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\integers\expressions" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\integers" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\enums" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\poker" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\allergies" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\crypto_square" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\largest_series_product" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\simple_cipher" />
     </key>
   </component>
   <component name="RunManager" selected="Apex Unit Tests.ALP_ALG_AllergiesTest">
@@ -464,10 +472,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1372" height="150" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591533830991" />
-    <state x="540" y="282" key="IDE.errors.dialog" timestamp="1591370848421">
+    <state x="540" y="282" key="IDE.errors.dialog" timestamp="1592635703709">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="540" y="282" key="IDE.errors.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591370848421" />
+    <state x="540" y="282" key="IDE.errors.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592635703709" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

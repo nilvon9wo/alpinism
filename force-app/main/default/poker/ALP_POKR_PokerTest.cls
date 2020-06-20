@@ -1,6 +1,10 @@
 @IsTest
-public with sharing class PokerTest {
+public with sharing class ALP_POKR_PokerTest {
+    private static final User TEST_USER = TEST_DummyUserFactoryOutlet.TEST_ADMIN_USER;
+    private static final ALP_POKR_Poker POKER_UNDER_TEST = ALP_POKR_Poker.getInstance();
+
     /***
+     *
 defmodule PokerTest do
   use ExUnit.Case
 

@@ -1,4 +1,15 @@
-public with sharing class Poker {
+public with sharing class ALP_POKR_Poker {
+    private ALP_POKR_Poker() {
+    }
+
+    private static ALP_POKR_Poker instance;
+    public static ALP_POKR_Poker getInstance() {
+        if (instance == null) {
+            instance = new ALP_POKR_Poker();
+        }
+        return instance;
+    }
+
     /**
  defmodule Suits do
   @suit_by_character %{
