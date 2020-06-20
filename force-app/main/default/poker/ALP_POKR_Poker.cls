@@ -39,10 +39,9 @@ public with sharing class ALP_POKR_Poker {
     }
 
     public List<String> bestHand(List<String> handCodeList) {
-        System.debug('############## handCodeList:' + handCodeList);
         return handCodeList.size() == 1
                 ? handCodeList
-                : this.bestHand(new ALP_POKR_HandList(handCodeList));
+                : this.bestHand(ALP_POKR_HandList.fromHandCodes(handCodeList));
     }
 
     private List<String> bestHand(ALP_POKR_HandList handList) {

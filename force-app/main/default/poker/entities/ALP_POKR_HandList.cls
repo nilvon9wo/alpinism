@@ -1,53 +1,74 @@
 public with sharing class ALP_POKR_HandList {
-    List<String> handCodeList;
+    private List<ALP_POKR_Hand> handList;
 
-    public ALP_POKR_HandList(List<String> handCodeList) {
-        this.handCodeList = handCodeList;
+    private ALP_POKR_HandList(List<ALP_POKR_Hand> handList) {
+        this.handList = handList;
     }
+
+    public static ALP_POKR_HandList fromHandCodes(List<String> handCodeList) {
+        List<ALP_POKR_Hand> handList = new List<ALP_POKR_Hand>();
+        for (String handCode : handCodeList) {
+            handList.add(new ALP_POKR_Hand(handCode));
+        }
+        return new ALP_POKR_HandList(handList);
+    }
+
+    private static final Map<Type, ALP_POKR_HandPredicateIntf> PREDICATE_BY_TYPE_MAP
+            = new Map<Type, ALP_POKR_HandPredicateIntf>();
 
     public List<ALP_POKR_Hand> findBestHands() {
+        ALP_POKR_HandList straightFlushList = this.filter(ALP_POKR_HandIsStraightFlush.class);
+        return (straightFlushList.hasMembers())
+                ? this.findBestIgnoringStraightFlush(straightFlushList)
+                : this.findBestIgnoringStraightFlush(this);
+    }
+
+    private List<ALP_POKR_Hand> findBestIgnoringStraightFlush(ALP_POKR_HandList handList) {
+        ALP_POKR_HandList twoRankList = handList.filter(ALP_POKR_HandHasExactlyTwoRanks.class);
+        return (twoRankList.hasMembers())
+                ? this.findBestIgnoringTwoRanks(twoRankList)
+                : this.findBestIgnoringTwoRanks(this);
+    }
+
+    private List<ALP_POKR_Hand> findBestIgnoringTwoRanks(ALP_POKR_HandList handList) {
+        ALP_POKR_HandList flushList = handList.filter(ALP_POKR_HandIsFlush.class);
+        return (flushList.hasMembers())
+                ? this.findBestIgnoringFlush(flushList)
+                : this.findBestIgnoringFlush(this);
+    }
+
+    private List<ALP_POKR_Hand> findBestIgnoringFlush(ALP_POKR_HandList handList) {
+        ALP_POKR_HandList straightList = handList.filter(ALP_POKR_HandIsStraight.class);
+        return (straightList.hasMembers())
+                ? this.findBestStraight(straightList)
+                : this.findBestIgnoringStraight(this);
+    }
+
+    private List<ALP_POKR_Hand> findBestStraight(ALP_POKR_HandList handList) {
+
+        // TODO
         return null;
     }
+
+    private List<ALP_POKR_Hand> findBestIgnoringStraight(ALP_POKR_HandList handList) {
+        ALP_POKR_HandList rankGroupList = handList.filter(ALP_POKR_HandHasRankGroups.class);
+        return (rankGroupList.hasMembers())
+                ? this.findBestRankGroups(rankGroupList)
+                : this.findHighestCards(this);
+
+    }
+
+    private List<ALP_POKR_Hand> findBestRankGroups(ALP_POKR_HandList handList) {
+        // TODO
+        return null;
+    }
+
+    private List<ALP_POKR_Hand> findHighestCards(ALP_POKR_HandList handList) {
+        // TODO
+        return null;
+    }
+
     /*
-
-
-defmodule Hands do
-  def find_best_hands(hands) do
-    hands_with_straight_flush = Enum.filter(hands, &(&1.has_straight && &1.has_flush))
-
-    if !Enum.empty?(hands_with_straight_flush),
-      do: find_best_ignoring_straight_flush(hands_with_straight_flush),
-      else: find_best_ignoring_straight_flush(hands)
-  end
-
-  defp find_best_ignoring_straight_flush(hands) do
-    hands_with_full_house_or_better = Enum.filter(hands, & &1.has_full_house_or_better)
-
-    if !Enum.empty?(hands_with_full_house_or_better) do
-      find_best_ignoring_flush(hands_with_full_house_or_better)
-    else
-      hands_with_flush = Enum.filter(hands, & &1.has_flush)
-
-      if !Enum.empty?(hands_with_flush),
-        do: find_best_ignoring_flush(hands_with_flush),
-        else: find_best_ignoring_flush(hands)
-    end
-  end
-
-  defp find_best_ignoring_flush(hands) do
-    hands_with_straight = Enum.filter(hands, & &1.has_straight)
-
-    if !Enum.empty?(hands_with_straight) do
-      find_best_straight(hands_with_straight)
-    else
-      hands_with_groupings = Enum.filter(hands, &Hand.has_rank_groups/1)
-
-      if Enum.empty?(hands_with_groupings),
-        do: find_highest_cards(hands),
-        else: find_best_group(hands_with_groupings)
-    end
-  end
-
   defp find_best_straight(hands) do
     {low_scoring_straights, high_scoring_straights} =
       Enum.split_with(hands, &Hand.is_low_scoring_straight/1)
@@ -125,4 +146,26 @@ end
 
 
  */
+    private ALP_POKR_HandList filter(Type predicateType) {
+        ALP_POKR_HandPredicateIntf predicate = PREDICATE_BY_TYPE_MAP.get(predicateType);
+        if (predicate == null) {
+            predicate = (ALP_POKR_HandPredicateIntf) predicateType.newInstance();
+            PREDICATE_BY_TYPE_MAP.put(predicateType, predicate);
+        }
+        return this.filter(predicate);
+    }
+
+    private ALP_POKR_HandList filter(ALP_POKR_HandPredicateIntf predicate) {
+        List<ALP_POKR_Hand> filteredHandList = new List<ALP_POKR_Hand>();
+        for (ALP_POKR_Hand hand : this.handList) {
+            if (predicate.isTrueFor(hand)) {
+                filteredHandList.add(hand);
+            }
+        }
+        return new ALP_POKR_HandList(filteredHandList);
+    }
+
+    private Boolean hasMembers() {
+        return !this.handList.isEmpty();
+    }
 }

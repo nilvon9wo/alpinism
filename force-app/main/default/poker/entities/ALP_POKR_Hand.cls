@@ -52,17 +52,17 @@ public with sharing class ALP_POKR_Hand {
         set;
     }
 
-    private Boolean isStraight {
+    public Boolean isStraight {
         get {
             if (this.isStraight == null) {
                 this.isStraight = this.isHighScoringStraight || this.isLowScoringStraight;
             }
             return this.isStraight;
         }
-        set;
+        private set;
     }
 
-    private Boolean isHighScoringStraight {
+    public Boolean isHighScoringStraight {
         get {
             if (this.isHighScoringStraight == null) {
                 this.isHighScoringStraight = this.isHighScoringStraight(
@@ -71,7 +71,7 @@ public with sharing class ALP_POKR_Hand {
             }
             return this.isHighScoringStraight;
         }
-        set;
+        private set;
     }
 
     private Boolean isHighScoringStraight(Integer nextIndex, ALP_POKR_Rank nextRank) {
@@ -85,7 +85,7 @@ public with sharing class ALP_POKR_Hand {
         );
     }
 
-    private Boolean isLowScoringStraight {
+    public Boolean isLowScoringStraight {
         get {
             if (this.isLowScoringStraight == null) {
                 this.isLowScoringStraight = this.cardList[0].rank.equals(ALP_POKR_Rank.ACE)
@@ -96,17 +96,17 @@ public with sharing class ALP_POKR_Hand {
             }
             return this.isLowScoringStraight;
         }
-        set;
+        private set;
     }
 
-    private Boolean isFlush {
+    public Boolean isFlush {
         get {
             if (this.isFlush == null) {
                 this.isFlush = this.cardsBySuitMap.size() == 1;
             }
             return this.isFlush;
         }
-        set;
+        private set;
     }
 
     private Integer numberOfRanks {
@@ -120,24 +120,24 @@ public with sharing class ALP_POKR_Hand {
 
     }
 
-    private Boolean hasOnlyTwoRanks {
+    public Boolean hasExactlyTwoRanks {
         get {
-            if (this.hasOnlyTwoRanks == null) {
-                this.hasOnlyTwoRanks = numberOfRanks == 2;
+            if (this.hasExactlyTwoRanks == null) {
+                this.hasExactlyTwoRanks = numberOfRanks == 2;
             }
-            return this.hasOnlyTwoRanks;
+            return this.hasExactlyTwoRanks;
         }
-        set;
+        private set;
     }
 
-    private Boolean hasRankGroups {
+    public Boolean hasRankGroups {
         get {
             if (this.hasRankGroups == null) {
                 this.hasRankGroups = numberOfRanks < 5;
             }
             return this.hasRankGroups;
         }
-        set;
+        private set;
     }
 
     public String toCode() {
