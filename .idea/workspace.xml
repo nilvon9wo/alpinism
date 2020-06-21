@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasExactlyTwoRanks.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasExactlyTwoRanks.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankGroups.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankGroups.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsFlush.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsFlush.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsHighStraight.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsHighStraight.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsLowStraight.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsLowStraight.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraight.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraight.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraightFlush.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraightFlush.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandPredicateIntf.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandPredicateIntf.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankAtIndex.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankAtIndex.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_Poker.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_Poker.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Hand.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Hand.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandList.cls" afterDir="false" />
     </list>
@@ -123,9 +108,11 @@
                       <entry key="APEXCLASS:ALP_MNSP_SQUAREGRID" value="1591189713000" />
                       <entry key="APEXCLASS:ALP_POKR_ALLPREDICATESTRUE" value="1592685413000" />
                       <entry key="APEXCLASS:ALP_POKR_CARD" value="1592683741000" />
-                      <entry key="APEXCLASS:ALP_POKR_HAND" value="1592689623417" />
+                      <entry key="APEXCLASS:ALP_POKR_HAND" value="1592727016862" />
                       <entry key="APEXCLASS:ALP_POKR_HANDGROUPSHAPE" value="1592683941000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDHASEXACTLYTWORANKS" value="1592689675000" />
+                      <entry key="APEXCLASS:ALP_POKR_HANDHASRANK" value="1592726641000" />
+                      <entry key="APEXCLASS:ALP_POKR_HANDHASRANKATINDEX" value="1592726751000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDHASRANKGROUPS" value="1592689675000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDISFLUSH" value="1592689675000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDISHIGHSTRAIGHT" value="1592689675000" />
@@ -475,10 +462,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="579" y="372" key="#Illuminated_Cloud_(Alpinism)/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592553448497" />
-    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser" timestamp="1592686010931">
+    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser" timestamp="1592726662953">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592686010931" />
+    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592726662953" />
     <state x="587" y="108" key="CommitChangelistDialog2" timestamp="1591168256431">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -492,26 +479,26 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592642561426" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1592685168483">
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1592727038218">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592685168483" />
-    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1592685168483">
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592727038218" />
+    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1592727038218">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592685168483" />
-    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1592685168483">
+    <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592727038218" />
+    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1592727038217">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592685168483" />
-    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1592685168483">
+    <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592727038217" />
+    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1592727038218">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592685168483" />
-    <state x="540" y="282" key="IDE.errors.dialog" timestamp="1592635703709">
+    <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592727038218" />
+    <state x="540" y="282" key="IDE.errors.dialog" timestamp="1592727035952">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="540" y="282" key="IDE.errors.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592635703709" />
+    <state x="540" y="282" key="IDE.errors.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592727035952" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1591017604826">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -536,10 +523,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="667" y="273" width="585" height="592" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591375436420" />
-    <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1592685590433">
+    <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1592725188375">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="616" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592685590433" />
+    <state x="616" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592725188375" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1592671040307">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

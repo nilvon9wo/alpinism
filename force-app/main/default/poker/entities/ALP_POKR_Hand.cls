@@ -26,6 +26,20 @@ public with sharing class ALP_POKR_Hand {
         set;
     }
 
+    public ALP_POKR_Card get(Integer index) {
+        return this.cardList[index];
+    }
+
+    public Integer size {
+        get {
+            if (this.size == null) {
+                this.size = this.cardList.size();
+            }
+            return this.size;
+        }
+        private set;
+    }
+
     private Map<ALP_POKR_Rank, ALP_POKR_Card> cardsByRankMap {
         get {
             if (this.cardsByRankMap == null) {
@@ -133,7 +147,7 @@ public with sharing class ALP_POKR_Hand {
     public Boolean hasRankGroups {
         get {
             if (this.hasRankGroups == null) {
-                this.hasRankGroups = numberOfRanks < 5;
+                this.hasRankGroups = numberOfRanks < this.size;
             }
             return this.hasRankGroups;
         }
