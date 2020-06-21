@@ -28,47 +28,59 @@ public with sharing class ALP_POKR_HandList {
 
     public List<ALP_POKR_Hand> findBestHands() {
         ALP_POKR_HandList straightFlushList = this.filter(ALP_POKR_HandIsStraightFlush.class);
-        return (straightFlushList.hasMembers())
-                ? this.findBestIgnoringStraightFlush(straightFlushList)
-                : this.findBestIgnoringStraightFlush(this);
+        return (straightFlushList.hasJustOneMember())
+                ? straightFlushList.toList()
+                : (straightFlushList.hasMembers())
+                        ? straightFlushList.findBestIgnoringStraightFlush()
+                        : this.findBestIgnoringStraightFlush();
     }
 
-    private List<ALP_POKR_Hand> findBestIgnoringStraightFlush(ALP_POKR_HandList handList) {
-        ALP_POKR_HandList twoRankList = handList.filter(ALP_POKR_HandHasExactlyTwoRanks.class);
-        return (twoRankList.hasMembers())
-                ? this.findBestIgnoringTwoRanks(twoRankList)
-                : this.findBestIgnoringTwoRanks(this);
+    private List<ALP_POKR_Hand> findBestIgnoringStraightFlush() {
+        ALP_POKR_HandList twoRankList = this.filter(ALP_POKR_HandHasExactlyTwoRanks.class);
+        return (twoRankList.hasJustOneMember())
+                ? twoRankList.toList()
+                : (twoRankList.hasMembers())
+                        ? twoRankList.findBestIgnoringTwoRanks()
+                        : this.findBestIgnoringTwoRanks();
     }
 
-    private List<ALP_POKR_Hand> findBestIgnoringTwoRanks(ALP_POKR_HandList handList) {
-        ALP_POKR_HandList flushList = handList.filter(ALP_POKR_HandIsFlush.class);
-        return (flushList.hasMembers())
-                ? this.findBestIgnoringFlush(flushList)
-                : this.findBestIgnoringFlush(this);
+    private List<ALP_POKR_Hand> findBestIgnoringTwoRanks() {
+        ALP_POKR_HandList flushList = this.filter(ALP_POKR_HandIsFlush.class);
+        return (flushList.hasJustOneMember())
+                ? flushList.toList()
+                : (flushList.hasMembers())
+                        ? flushList.findBestIgnoringFlush()
+                        : this.findBestIgnoringFlush();
     }
 
-    private List<ALP_POKR_Hand> findBestIgnoringFlush(ALP_POKR_HandList handList) {
-        ALP_POKR_HandList straightList = handList.filter(ALP_POKR_HandIsStraight.class);
-        return (straightList.hasMembers())
-                ? this.findBestStraight(straightList)
-                : this.findBestIgnoringStraight(this);
+    private List<ALP_POKR_Hand> findBestIgnoringFlush() {
+        ALP_POKR_HandList straightList = this.filter(ALP_POKR_HandIsStraight.class);
+        return (straightList.hasJustOneMember())
+                ? straightList.toList()
+                : (straightList.hasMembers())
+                        ? straightList.findBestStraight()
+                        : this.findBestIgnoringStraight();
     }
 
-    private List<ALP_POKR_Hand> findBestStraight(ALP_POKR_HandList handList) {
-        ALP_POKR_HandList highStraightList = handList.filter(ALP_POKR_HandIsHighStraight.class);
-        return (highStraightList.hasMembers())
-                ? this.findHighestCards(highStraightList)
-                : this.findHighestCards(handList.filter(ALP_POKR_HandIsLowStraight.class));
+    private List<ALP_POKR_Hand> findBestStraight() {
+        ALP_POKR_HandList highStraightList = this.filter(ALP_POKR_HandIsHighStraight.class);
+        return (highStraightList.hasJustOneMember())
+                ? highStraightList.toList()
+                : (highStraightList.hasMembers())
+                        ? highStraightList.findHighestCards()
+                        : this.filter(ALP_POKR_HandIsLowStraight.class).findHighestCards();
     }
 
-    private List<ALP_POKR_Hand> findBestIgnoringStraight(ALP_POKR_HandList handList) {
-        ALP_POKR_HandList rankGroupList = handList.filter(ALP_POKR_HandHasRankGroups.class);
-        return (rankGroupList.hasMembers())
-                ? this.findBestRankGroups(rankGroupList)
-                : this.findHighestCards(this);
+    private List<ALP_POKR_Hand> findBestIgnoringStraight() {
+        ALP_POKR_HandList rankGroupList = this.filter(ALP_POKR_HandHasRankGroups.class);
+        return (rankGroupList.hasJustOneMember())
+                ? rankGroupList.toList()
+                : (rankGroupList.hasMembers())
+                        ? rankGroupList.findBestRankGroups()
+                        : this.findHighestCards();
     }
 
-    private List<ALP_POKR_Hand> findBestRankGroups(ALP_POKR_HandList handList) {
+    private List<ALP_POKR_Hand> findBestRankGroups() {
         // TODO
         return null;
     }
@@ -124,21 +136,21 @@ do: Ranks.is_higher_first(rank_1, rank_2)
 end
 */
 
-    private List<ALP_POKR_Hand> findHighestCards(ALP_POKR_HandList handList) {
-        return this.findHighestCards(handList, 0);
+    private List<ALP_POKR_Hand> findHighestCards() {
+        return this.findHighestCards(0);
     }
 
-    private List<ALP_POKR_Hand> findHighestCards(ALP_POKR_HandList handList, Integer index) {
+    private List<ALP_POKR_Hand> findHighestCards(Integer index) {
         if (index == this.handSize) {
-            return handList.toList();
+            return this.toList();
         }
 
-        List<ALP_POKR_Card> cardList = handList.getCardPerHandByIndex(index);
+        List<ALP_POKR_Card> cardList = this.getCardPerHandByIndex(index);
         cardList.sort();
-        ALP_POKR_HandList rankHoldingHand = handList.filter(new ALP_POKR_HandHasRankAtIndex(cardList[0].rank, index));
+        ALP_POKR_HandList rankHoldingHand = this.filter(new ALP_POKR_HandHasRankAtIndex(cardList[0].rank, index));
         return (rankHoldingHand.handList.size() == 1)
                 ? rankHoldingHand.toList()
-                : findHighestCards(rankHoldingHand, index + 1);
+                : rankHoldingHand.findHighestCards(index + 1);
     }
 
     // ASSUMPTION: Each hand should already be sorted, high-to-low.
@@ -167,6 +179,10 @@ end
             }
         }
         return new ALP_POKR_HandList(filteredHandList);
+    }
+
+    private Boolean hasJustOneMember() {
+        return this.handList.size() == 1;
     }
 
     private Boolean hasMembers() {
