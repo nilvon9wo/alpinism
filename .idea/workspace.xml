@@ -107,7 +107,7 @@
                       <entry key="APEXCLASS:ALP_POKR_CARD" value="1592683741000" />
                       <entry key="APEXCLASS:ALP_POKR_HAND" value="1592747368135" />
                       <entry key="APEXCLASS:ALP_POKR_HANDFILTER" value="1592743657000" />
-                      <entry key="APEXCLASS:ALP_POKR_HANDGROUPSHAPE" value="1592756097979" />
+                      <entry key="APEXCLASS:ALP_POKR_HANDGROUPSHAPE" value="1592756790876" />
                       <entry key="APEXCLASS:ALP_POKR_HANDHASEXACTLYTWORANKS" value="1592689675000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDHASRANK" value="1592726641000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDHASRANKATINDEX" value="1592727057368" />
@@ -485,22 +485,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592642561426" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1565" height="338" key="GridCell.Tab.0.bottom" timestamp="1592756016375">
+    <state width="1120" height="338" key="GridCell.Tab.0.bottom" timestamp="1592756807787">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1565" height="338" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592756016375" />
-    <state width="1565" height="338" key="GridCell.Tab.0.center" timestamp="1592756016375">
+    <state width="1120" height="338" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592756807787" />
+    <state width="1120" height="338" key="GridCell.Tab.0.center" timestamp="1592756807787">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1565" height="338" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592756016375" />
-    <state width="1565" height="338" key="GridCell.Tab.0.left" timestamp="1592756016375">
+    <state width="1120" height="338" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592756807787" />
+    <state width="1120" height="338" key="GridCell.Tab.0.left" timestamp="1592756807787">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1565" height="338" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592756016375" />
-    <state width="1565" height="338" key="GridCell.Tab.0.right" timestamp="1592756016375">
+    <state width="1120" height="338" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592756807787" />
+    <state width="1120" height="338" key="GridCell.Tab.0.right" timestamp="1592756807787">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1565" height="338" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592756016375" />
+    <state width="1120" height="338" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592756807787" />
     <state x="540" y="282" key="IDE.errors.dialog" timestamp="1592727035952">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -525,10 +525,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="300" key="extract.method.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591122991378" />
-    <state x="667" y="273" width="585" height="592" key="find.popup" timestamp="1591375436420">
+    <state x="667" y="273" width="585" height="592" key="find.popup" timestamp="1592757253573">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="667" y="273" width="585" height="592" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591375436420" />
+    <state x="667" y="273" width="585" height="592" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592757253573" />
     <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1592725188375">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -539,6 +539,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592671040307" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_POKR_PokerTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1592756202544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_POKR_PokerTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1592757287042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

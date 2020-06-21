@@ -52,12 +52,12 @@ public with sharing class ALP_POKR_HandGroupShape implements Comparable {
     public Integer numberOfGroups {
         get {
             if (this.numberOfGroups == null) {
-                this.numberOfGroups = this.cardsByRankMap.size();
-//                for (List<ALP_POKR_Card> cards : this.cardsByRankMap.values()) {
-//                    if (cards.size() > 1) {
-//                        this.numberOfGroups++;
-//                    }
-//                }
+                this.numberOfGroups = 0;
+                for (List<ALP_POKR_Card> cards : this.cardsByRankMap.values()) {
+                    if (cards.size() > 1) {
+                        this.numberOfGroups++;
+                    }
+                }
             }
             return this.numberOfGroups;
         }
