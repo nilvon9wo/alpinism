@@ -40,12 +40,18 @@ public with sharing class ALP_POKR_Hand {
         private set;
     }
 
-    private Map<ALP_POKR_Rank, ALP_POKR_Card> cardsByRankMap {
+    private Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap {
         get {
             if (this.cardsByRankMap == null) {
-                this.cardsByRankMap = new Map<ALP_POKR_Rank, ALP_POKR_Card>();
+                this.cardsByRankMap = new Map<ALP_POKR_Rank, List<ALP_POKR_Card>>();
                 for (ALP_POKR_Card card : this.cardList) {
-                    this.cardsByRankMap.put(card.rank, card);
+                    ALP_POKR_Rank rank = card.rank;
+                    List<ALP_POKR_Card> cardList = this.cardsByRankMap.get(rank);
+                    if (cardList == null) {
+                        cardList = new List<ALP_POKR_Card>();
+                        this.cardsByRankMap.put(card.rank, cardList);
+                    }
+                    cardList.add(card);
                 }
             }
             return this.cardsByRankMap;
@@ -53,17 +59,33 @@ public with sharing class ALP_POKR_Hand {
         set;
     }
 
-    private Map<ALP_POKR_Suit, ALP_POKR_Card> cardsBySuitMap {
+    private Map<ALP_POKR_Suit, List<ALP_POKR_Card>> cardsBySuitMap {
         get {
             if (this.cardsBySuitMap == null) {
-                this.cardsBySuitMap = new Map<ALP_POKR_Suit, ALP_POKR_Card>();
+                this.cardsBySuitMap = new Map<ALP_POKR_Suit, List<ALP_POKR_Card>>();
                 for (ALP_POKR_Card card : this.cardList) {
-                    this.cardsBySuitMap.put(card.suit, card);
+                    ALP_POKR_Suit suit = card.suit;
+                    List<ALP_POKR_Card> cardList = this.cardsBySuitMap.get(suit);
+                    if (cardList == null) {
+                        cardList = new List<ALP_POKR_Card>();
+                        this.cardsBySuitMap.put(card.suit, cardList);
+                    }
+                    cardList.add(card);
                 }
             }
             return this.cardsBySuitMap;
         }
         set;
+    }
+
+    public ALP_POKR_HandGroupShape groupShape {
+        get {
+            if (this.groupShape == null) {
+                this.groupShape = new ALP_POKR_HandGroupShape(this.cardsByRankMap);
+            }
+            return this.groupShape;
+        }
+        private set;
     }
 
     public Boolean isStraight {
@@ -157,21 +179,4 @@ public with sharing class ALP_POKR_Hand {
     public String toCode() {
         return this.handCode;
     }
-
-    /**
-  def highest_group_rank(%Hand{rank_grouping: rank_grouping}),
-    do:
-      rank_grouping
-      |> Enum.to_list()
-      |> Enum.map(&elem(&1, 0))
-      |> Enum.max(&Ranks.is_higher_first/2)
-
-  defp has_target_length(%Hand{rank_grouping: rank_grouping}, target_length),
-    do:
-      rank_grouping
-      |> Map.values()
-      |> Enum.any?(&(length(&1) == target_length))
-end
-
-*/
 }

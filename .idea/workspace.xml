@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandFilter.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandPredicateIntf.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Hand.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Hand.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandGroupShape.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandGroupShape.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandList.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasExactlyTwoRanks.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandHasExactlyTwoRanks.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasExactlyTwoRanks.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandFilter.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankAtIndex.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandHasRankAtIndex.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankAtIndex.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandHasExactlyTwoRanks.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankGroups.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandHasRankGroups.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankGroups.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandHasRankAtIndex.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsFlush.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsFlush.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsFlush.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandHasRankGroups.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsHighStraight.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsHighStraight.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsHighStraight.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsFlush.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsLowStraight.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsLowStraight.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsLowStraight.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsHighStraight.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraight.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsStraight.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraight.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsLowStraight.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraightFlush.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsStraightFlush.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraightFlush.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsStraight.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandPredicateIntf.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandPredicateIntf.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandPredicateIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/predicates/ALP_POKR_HandIsStraightFlush.cls-meta.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +48,9 @@
             <option name="savedDocuments">
               <list>
                 <AnonymousApexSavedDocument>
-                  <option name="body" value="ALP_POKR_Hand hand = new ALP_POKR_Hand(null, ALP_POKR_RankHelper.getInstance());&#10;&#10;hand.cardList = new List&lt;ALP_POKR_Card&gt;{&#10;        new ALP_POKR_Card('AH'),&#10;        new ALP_POKR_Card('KD'),&#10;        new ALP_POKR_Card('QD'),&#10;        new ALP_POKR_Card('JC'),&#10;        new ALP_POKR_Card('10S')&#10;};&#10;&#10;System.debug(hand.isStraight); " />
+                  <option name="body" value="ALP_POKR_Rank rank1 = ALP_POKR_Rank.ACE;&#10;ALP_POKR_Rank rank2 = ALP_POKR_Rank.TWO;&#10;ALP_POKR_Rank rank3 = ALP_POKR_Rank.THREE;&#10;List&lt;ALP_POKR_Rank&gt; rankList = new List&lt;ALP_POKR_Rank&gt;{&#10;        rank2, rank1, rank3&#10;};&#10;rankList.sort();&#10;System.debug(rankList[0]); " />
                   <option name="name" value="Anonymous Apex 1" />
-                  <option name="splitterProportion" value="0.31575197" />
+                  <option name="splitterProportion" value="0.500446" />
                 </AnonymousApexSavedDocument>
               </list>
             </option>
@@ -125,9 +107,9 @@
                       <entry key="APEXCLASS:ALP_MNSP_SQUAREGRID" value="1591189713000" />
                       <entry key="APEXCLASS:ALP_POKR_ALLPREDICATESTRUE" value="1592685413000" />
                       <entry key="APEXCLASS:ALP_POKR_CARD" value="1592683741000" />
-                      <entry key="APEXCLASS:ALP_POKR_HAND" value="1592727016862" />
+                      <entry key="APEXCLASS:ALP_POKR_HAND" value="1592747368135" />
                       <entry key="APEXCLASS:ALP_POKR_HANDFILTER" value="1592743657000" />
-                      <entry key="APEXCLASS:ALP_POKR_HANDGROUPSHAPE" value="1592683941000" />
+                      <entry key="APEXCLASS:ALP_POKR_HANDGROUPSHAPE" value="1592749661951" />
                       <entry key="APEXCLASS:ALP_POKR_HANDHASEXACTLYTWORANKS" value="1592689675000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDHASRANK" value="1592726641000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDHASRANKATINDEX" value="1592727057368" />
@@ -136,9 +118,9 @@
                       <entry key="APEXCLASS:ALP_POKR_HANDISHIGHSTRAIGHT" value="1592689675000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDISLOWSTRAIGHT" value="1592689675000" />
                       <entry key="APEXCLASS:ALP_POKR_HANDISSTRAIGHT" value="1592689675000" />
-                      <entry key="APEXCLASS:ALP_POKR_HANDISSTRAIGHTFLUSH" value="1592690309000" />
+                      <entry key="APEXCLASS:ALP_POKR_HANDISSTRAIGHTFLUSH" value="1592751233680" />
                       <entry key="APEXCLASS:ALP_POKR_HANDISTRUEFORALL" value="1592689675000" />
-                      <entry key="APEXCLASS:ALP_POKR_HANDLIST" value="1592727097832" />
+                      <entry key="APEXCLASS:ALP_POKR_HANDLIST" value="1592751233680" />
                       <entry key="APEXCLASS:ALP_POKR_HANDPREDICATEINTF" value="1592689675000" />
                       <entry key="APEXCLASS:ALP_POKR_ISTRUEFORALL" value="1592685627000" />
                       <entry key="APEXCLASS:ALP_POKR_POKER" value="1592685162270" />
@@ -238,8 +220,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\poker\filters\predicates" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\poker\filters" />
+      <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\poker\filters\predicates" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\allergies\enums" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\integers\expressions" />
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\_solution_helpers\integers" />
@@ -252,7 +234,7 @@
       <recent name="D:\tutorials\SFDC2020\Alpinism\force-app\main\default\crypto_square" />
     </key>
   </component>
-  <component name="RunManager" selected="Apex Unit Tests.ALP_POKR_PokerTest.testBestHandSingleHandAlwaysWins">
+  <component name="RunManager" selected="Apex Unit Tests.ALP_POKR_PokerTest.testBestHandFlushBeatsAStraight">
     <configuration name="ALP_ALG_AllergiesTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
@@ -287,90 +269,6 @@
       <option name="workflowLogLevel" value="INFO" />
       <method v="2" />
     </configuration>
-    <configuration name="ALP_ALG_AllergiesTest.testList248ReturnsCatsChocolatePollenStrawberriesAndTomatoes" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allTests" value="false" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="apexLogLevel" value="DEBUG" />
-      <option name="calloutsLogLevel" value="INFO" />
-      <option name="connectionName" value="Alpinism" />
-      <option name="connectionType" value="OAUTH" />
-      <option name="contextConfiguration" value="true" />
-      <option name="databaseLogLevel" value="INFO" />
-      <option name="logLevelsInitialized" value="false" />
-      <option name="moduleToTestClassNames">
-        <map>
-          <entry key="Alpinism">
-            <value>
-              <set>
-                <option value="ALP_ALG_AllergiesTest" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="nbaLogLevel" value="INFO" />
-      <option name="profilingLogLevel" value="INFO" />
-      <option name="systemLogLevel" value="DEBUG" />
-      <option name="testClassToTestMethodNames">
-        <map>
-          <entry key="ALP_ALG_AllergiesTest">
-            <value>
-              <set>
-                <option value="testList248ReturnsCatsChocolatePollenStrawberriesAndTomatoes" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="testSuiteName" />
-      <option name="validationLogLevel" value="INFO" />
-      <option name="visualforceLogLevel" value="INFO" />
-      <option name="waveLogLevel" value="INFO" />
-      <option name="workflowLogLevel" value="INFO" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ALP_ALG_AllergiesTest.testList2ReturnsJustPeanuts" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allTests" value="false" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="apexLogLevel" value="DEBUG" />
-      <option name="calloutsLogLevel" value="INFO" />
-      <option name="connectionName" value="Alpinism" />
-      <option name="connectionType" value="OAUTH" />
-      <option name="contextConfiguration" value="true" />
-      <option name="databaseLogLevel" value="INFO" />
-      <option name="logLevelsInitialized" value="false" />
-      <option name="moduleToTestClassNames">
-        <map>
-          <entry key="Alpinism">
-            <value>
-              <set>
-                <option value="ALP_ALG_AllergiesTest" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="nbaLogLevel" value="INFO" />
-      <option name="profilingLogLevel" value="INFO" />
-      <option name="systemLogLevel" value="DEBUG" />
-      <option name="testClassToTestMethodNames">
-        <map>
-          <entry key="ALP_ALG_AllergiesTest">
-            <value>
-              <set>
-                <option value="testList2ReturnsJustPeanuts" />
-              </set>
-            </value>
-          </entry>
-        </map>
-      </option>
-      <option name="testSuiteName" />
-      <option name="validationLogLevel" value="INFO" />
-      <option name="visualforceLogLevel" value="INFO" />
-      <option name="waveLogLevel" value="INFO" />
-      <option name="workflowLogLevel" value="INFO" />
-      <method v="2" />
-    </configuration>
     <configuration name="ALP_POKR_PokerTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allTests" value="false" />
       <option name="allowRunningInParallel" value="false" />
@@ -397,6 +295,90 @@
       <option name="systemLogLevel" value="DEBUG" />
       <option name="testClassToTestMethodNames">
         <map />
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ALP_POKR_PokerTest.testBestHandBothHandsHaveAFullHouseTieGoesToHighestRankedTriplet" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_POKR_PokerTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="ALP_POKR_PokerTest">
+            <value>
+              <set>
+                <option value="testBestHandBothHandsHaveAFullHouseTieGoesToHighestRankedTriplet" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ALP_POKR_PokerTest.testBestHandFlushBeatsAStraight" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="Alpinism" />
+      <option name="connectionType" value="OAUTH" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="Alpinism">
+            <value>
+              <set>
+                <option value="ALP_POKR_PokerTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="ALP_POKR_PokerTest">
+            <value>
+              <set>
+                <option value="testBestHandFlushBeatsAStraight" />
+              </set>
+            </value>
+          </entry>
+        </map>
       </option>
       <option name="testSuiteName" />
       <option name="validationLogLevel" value="INFO" />
@@ -449,11 +431,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Apex Unit Tests.ALP_POKR_PokerTest.testBestHandSingleHandAlwaysWins" />
+        <item itemvalue="Apex Unit Tests.ALP_POKR_PokerTest.testBestHandFlushBeatsAStraight" />
         <item itemvalue="Apex Unit Tests.ALP_POKR_PokerTest" />
+        <item itemvalue="Apex Unit Tests.ALP_POKR_PokerTest.testBestHandBothHandsHaveAFullHouseTieGoesToHighestRankedTriplet" />
+        <item itemvalue="Apex Unit Tests.ALP_POKR_PokerTest.testBestHandSingleHandAlwaysWins" />
         <item itemvalue="Apex Unit Tests.ALP_ALG_AllergiesTest" />
-        <item itemvalue="Apex Unit Tests.ALP_ALG_AllergiesTest.testList248ReturnsCatsChocolatePollenStrawberriesAndTomatoes" />
-        <item itemvalue="Apex Unit Tests.ALP_ALG_AllergiesTest.testList2ReturnsJustPeanuts" />
       </list>
     </recent_temporary>
   </component>
@@ -480,10 +462,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="579" y="372" key="#Illuminated_Cloud_(Alpinism)/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592553448497" />
-    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser" timestamp="1592726662953">
+    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser" timestamp="1592747382281">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592726662953" />
+    <state x="770" y="258" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592747382281" />
     <state x="587" y="108" key="CommitChangelistDialog2" timestamp="1591168256431">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -497,22 +479,22 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592642561426" />
     <state x="2660" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591100982937" />
-    <state width="1054" height="208" key="GridCell.Tab.0.bottom" timestamp="1592727156270">
+    <state width="1465" height="323" key="GridCell.Tab.0.bottom" timestamp="1592751230434">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1054" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592727156270" />
-    <state width="1054" height="208" key="GridCell.Tab.0.center" timestamp="1592727156270">
+    <state width="1465" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592751230434" />
+    <state width="1465" height="323" key="GridCell.Tab.0.center" timestamp="1592751230434">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1054" height="208" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592727156270" />
-    <state width="1054" height="208" key="GridCell.Tab.0.left" timestamp="1592727156270">
+    <state width="1465" height="323" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592751230434" />
+    <state width="1465" height="323" key="GridCell.Tab.0.left" timestamp="1592751230434">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1054" height="208" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592727156270" />
-    <state width="1054" height="208" key="GridCell.Tab.0.right" timestamp="1592727156270">
+    <state width="1465" height="323" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592751230434" />
+    <state width="1465" height="323" key="GridCell.Tab.0.right" timestamp="1592751230434">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1054" height="208" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592727156270" />
+    <state width="1465" height="323" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592751230434" />
     <state x="540" y="282" key="IDE.errors.dialog" timestamp="1592727035952">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -521,10 +503,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591017604826" />
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1591168262484">
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1592748508324">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591168262484" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592748508324" />
     <state x="92" y="92" width="1736" height="896" key="dock-window-1" timestamp="1592674329655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -551,6 +533,6 @@
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592671040307" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism$ALP_POKR_PokerTest_testBestHandSingleHandAlwaysWins.ic2" NAME="Alpinism Coverage Results" MODIFIED="1592683953580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism$ALP_POKR_PokerTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1592751230431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

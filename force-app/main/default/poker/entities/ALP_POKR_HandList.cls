@@ -28,7 +28,7 @@ public with sharing class ALP_POKR_HandList {
 
     public List<ALP_POKR_Hand> findBestHands() {
         ALP_POKR_HandList straightFlushList = this.filter(ALP_POKR_HandIsStraightFlush.class);
-        return (straightFlushList.hasJustOneMember())
+        return (straightFlushList.hasOneAndOnlyOneMember())
                 ? straightFlushList.toList()
                 : (straightFlushList.hasMembers())
                         ? straightFlushList.findBestIgnoringStraightFlush()
@@ -37,7 +37,7 @@ public with sharing class ALP_POKR_HandList {
 
     private List<ALP_POKR_Hand> findBestIgnoringStraightFlush() {
         ALP_POKR_HandList twoRankList = this.filter(ALP_POKR_HandHasExactlyTwoRanks.class);
-        return (twoRankList.hasJustOneMember())
+        return (twoRankList.hasOneAndOnlyOneMember())
                 ? twoRankList.toList()
                 : (twoRankList.hasMembers())
                         ? twoRankList.findBestIgnoringTwoRanks()
@@ -46,7 +46,7 @@ public with sharing class ALP_POKR_HandList {
 
     private List<ALP_POKR_Hand> findBestIgnoringTwoRanks() {
         ALP_POKR_HandList flushList = this.filter(ALP_POKR_HandIsFlush.class);
-        return (flushList.hasJustOneMember())
+        return (flushList.hasOneAndOnlyOneMember())
                 ? flushList.toList()
                 : (flushList.hasMembers())
                         ? flushList.findBestIgnoringFlush()
@@ -55,7 +55,7 @@ public with sharing class ALP_POKR_HandList {
 
     private List<ALP_POKR_Hand> findBestIgnoringFlush() {
         ALP_POKR_HandList straightList = this.filter(ALP_POKR_HandIsStraight.class);
-        return (straightList.hasJustOneMember())
+        return (straightList.hasOneAndOnlyOneMember())
                 ? straightList.toList()
                 : (straightList.hasMembers())
                         ? straightList.findBestStraight()
@@ -64,7 +64,7 @@ public with sharing class ALP_POKR_HandList {
 
     private List<ALP_POKR_Hand> findBestStraight() {
         ALP_POKR_HandList highStraightList = this.filter(ALP_POKR_HandIsHighStraight.class);
-        return (highStraightList.hasJustOneMember())
+        return (highStraightList.hasOneAndOnlyOneMember())
                 ? highStraightList.toList()
                 : (highStraightList.hasMembers())
                         ? highStraightList.findHighestCards()
@@ -73,7 +73,7 @@ public with sharing class ALP_POKR_HandList {
 
     private List<ALP_POKR_Hand> findBestIgnoringStraight() {
         ALP_POKR_HandList rankGroupList = this.filter(ALP_POKR_HandHasRankGroups.class);
-        return (rankGroupList.hasJustOneMember())
+        return (rankGroupList.hasOneAndOnlyOneMember())
                 ? rankGroupList.toList()
                 : (rankGroupList.hasMembers())
                         ? rankGroupList.findBestRankGroups()
@@ -81,60 +81,31 @@ public with sharing class ALP_POKR_HandList {
     }
 
     private List<ALP_POKR_Hand> findBestRankGroups() {
-        // TODO
-        return null;
+        Map<ALP_POKR_HandGroupShape, List<ALP_POKR_Hand>> handListByShapeMap = this.buildHandListByShapeMap();
+        List<ALP_POKR_HandGroupShape> shapeList = new List<ALP_POKR_HandGroupShape>(handListByShapeMap.keySet());
+        shapeList.sort();
+
+        List<ALP_POKR_Hand> bestHandList = handListByShapeMap.get(shapeList[0]);
+        return (bestHandList.size() == 1)
+                ? bestHandList
+                : new ALP_POKR_HandList(bestHandList).findHighestCards();
     }
 
-    /*
-defp find_best_group(hands) do
-find_best_by_rank(hands)
-end
+    private Map<ALP_POKR_HandGroupShape, List<ALP_POKR_Hand>> buildHandListByShapeMap() {
+        Map<ALP_POKR_HandGroupShape, List<ALP_POKR_Hand>> handListByShapeMap
+                = new Map<ALP_POKR_HandGroupShape, List<ALP_POKR_Hand>>();
 
-defp find_best_by_rank(hands) do
-best_hands =
-  {_largest_group_shape, hands_with_max_number_of_groupings} =
-  hands
-  |> Enum.group_by(&HandGroupingShape.shape_of_rank_groupings(&1))
-  |> Enum.max(&HandGroupingShape.has_best_group_shaping/2)
-
-if length(hands_with_max_number_of_groupings) == 1,
-  do: hands_with_max_number_of_groupings,
-  else: find_best_rank_groups(best_hands)
-end
-
-defp find_best_rank_groups({_largest_group_shape, hands_with_max_number_of_groupings}) do
-best_hands =
-  {_rank, hands_with_highest_ranked_group} =
-  hands_with_max_number_of_groupings
-  |> Enum.group_by(&Hand.highest_group_rank/1)
-  |> Map.to_list()
-  |> Enum.max(&find_higher_rank_group/2)
-
-if length(hands_with_highest_ranked_group) == 1,
-  do: hands_with_highest_ranked_group,
-  else: compare_remaining_cards_by_rank(best_hands)
-end
-
-defp compare_remaining_cards_by_rank({rank, hands_with_highest_ranked_group}) do
-hands_without_best_group =
-  Enum.map(hands_with_highest_ranked_group, &Hand.drop_rank_group(&1, rank))
-
-remaining_group_count =
-  hands_without_best_group
-  |> hd()
-  |> Map.fetch!(:rank_grouping)
-  |> Map.values()
-  |> length()
-
-if remaining_group_count > 0,
-  do: find_best_by_rank(hands_without_best_group),
-  else: find_highest_cards(hands_without_best_group)
-end
-
-defp find_higher_rank_group({rank_1, _}, {rank_2, _}),
-do: Ranks.is_higher_first(rank_1, rank_2)
-end
-*/
+        for (ALP_POKR_Hand hand : this.handList) {
+            ALP_POKR_HandGroupShape shape = hand.groupShape;
+            List<ALP_POKR_Hand> handList = handListByShapeMap.get(shape);
+            if (handList == null) {
+                handList = new List<ALP_POKR_Hand>();
+                handListByShapeMap.put(shape, handList);
+            }
+            handList.add(hand);
+        }
+        return handListByShapeMap;
+    }
 
     private List<ALP_POKR_Hand> findHighestCards() {
         return this.findHighestCards(0);
@@ -181,8 +152,9 @@ end
         return new ALP_POKR_HandList(filteredHandList);
     }
 
-    private Boolean hasJustOneMember() {
-        return this.handList.size() == 1;
+    private Boolean hasOneAndOnlyOneMember() {
+        return this.hasMembers()
+                && this.handList.size() == 1;
     }
 
     private Boolean hasMembers() {

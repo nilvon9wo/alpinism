@@ -1,50 +1,95 @@
-public with sharing class ALP_POKR_HandGroupShape {
-    private ALP_POKR_Hand hand;
+public with sharing class ALP_POKR_HandGroupShape implements Comparable {
+    private Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap;
+    private ALP_POKR_RankHelper rankHelper;
 
-    public ALP_POKR_HandGroupShape(ALP_POKR_Hand hand) {
-        this.hand = hand;
+    private ALP_POKR_HandGroupShape(
+            Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap,
+            ALP_POKR_RankHelper rankHelper
+    ) {
+        this.cardsByRankMap = cardsByRankMap;
+        this.rankHelper = rankHelper;
     }
 
-    public Integer largestGroupSize {get; private set;}
-    public ALP_POKR_Rank highestGroupRank {get; private set;}
-    public Integer numberOfGroups {get; private set;}
-
-    /**
-* defmodule HandGroupingShape do
-  defstruct [:largest_group_size, :largest_group_rank, :number_of_groups]
-
-  def shape_of_rank_groupings(%Hand{rank_grouping: rank_grouping}) do
-    rank_grouping_list = Map.to_list(rank_grouping)
-    {largest_group_rank, largest_group} = Enum.max(rank_grouping_list, &has_largest_list_size/2)
-
-    %HandGroupingShape{
-      largest_group_size: length(largest_group),
-      largest_group_rank: largest_group_rank,
-      number_of_groups: length(rank_grouping_list)
+    public ALP_POKR_HandGroupShape(Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap) {
+        this(cardsByRankMap, ALP_POKR_RankHelper.getInstance());
     }
-  end
 
-  defp has_largest_list_size({_, rank_grouping_list_1}, {_, rank_grouping_list_2}),
-    do: length(rank_grouping_list_1) > length(rank_grouping_list_2)
+    public Integer largestGroupSize {
+        get {
+            if (this.largestGroupSize == null) {
+                this.largestGroupSize = 1;
+                for (List<ALP_POKR_Card> cards : this.cardsByRankMap.values()) {
+                    Integer cardCount = cards.size();
+                    if (cardCount > this.largestGroupSize) {
+                        this.largestGroupSize = cardCount;
+                    }
+                }
+            }
+            return this.largestGroupSize;
+        }
+        private set;
+    }
 
-  def has_best_group_shaping(
-        {%HandGroupingShape{
-           largest_group_size: largest_group_size_1,
-           largest_group_rank: largest_group_rank_1,
-           number_of_groups: number_of_groups_1
-         }, _hand_1},
-        {%HandGroupingShape{
-           largest_group_size: largest_group_size_2,
-           largest_group_rank: largest_group_rank_2,
-           number_of_groups: number_of_groups_2
-         }, _hand_2}
-      ),
-      do:
-        largest_group_size_1 > largest_group_size_2 ||
-          (largest_group_size_1 == largest_group_size_2 && number_of_groups_1 > number_of_groups_2) ||
-          (largest_group_size_1 == largest_group_size_2 &&
-             number_of_groups_1 == number_of_groups_2 &&
-             Ranks.is_higher_first(largest_group_rank_1, largest_group_rank_2))
-end
-*/
+    public ALP_POKR_Rank largestGroupRank {
+        get {
+            if (this.largestGroupRank == null) {
+                this.largestGroupRank = ALP_POKR_Rank.TWO;
+                for (ALP_POKR_Rank rank : this.cardsByRankMap.keySet()) {
+                    if (
+                            this.rankHelper.isHigherFirst(rank, this.largestGroupRank)
+                                    && this.cardsByRankMap.get(rank).size() == this.largestGroupSize
+                            ) {
+                        this.largestGroupRank = rank;
+                    }
+                }
+            }
+            return this.largestGroupRank;
+        }
+        private set;
+    }
+
+
+    public Integer numberOfGroups {
+        get {
+            if (this.numberOfGroups == null) {
+                this.numberOfGroups = this.cardsByRankMap.size();
+            }
+            return this.numberOfGroups;
+        }
+        private set;
+    }
+
+    public Integer compareTo(Object thatObject) {
+        ALP_POKR_HandGroupShape that = (ALP_POKR_HandGroupShape) thatObject;
+        System.debug('############## this.largestGroupSize:' + this.largestGroupSize);
+        System.debug('############## that.largestGroupSize:' + that.largestGroupSize);
+        System.debug('############## this.largestGroupSize > that.largestGroupSize:' + (this.largestGroupSize > that.largestGroupSize));
+        System.debug('############## this.numberOfGroups:' + this.numberOfGroups);
+        System.debug('############## that.numberOfGroups:' + that.numberOfGroups);
+        System.debug('############## this.numberOfGroups > that.numberOfGroups:' + (this.numberOfGroups > that.numberOfGroups));
+        System.debug('############## this.largestGroupRank:' + this.largestGroupRank);
+        System.debug('############## that.largestGroupRank:' + that.largestGroupRank);
+        System.debug('############## this.rankHelper.isHigherFirst(this.largestGroupRank, that.largestGroupRank):' + (this.rankHelper.isHigherFirst(this.largestGroupRank, that.largestGroupRank)));
+
+        return (
+                this.largestGroupSize > that.largestGroupSize
+                        || (
+                        this.largestGroupSize == that.largestGroupSize
+                                && this.numberOfGroups > that.numberOfGroups
+                )
+                        || (
+                        this.largestGroupSize == that.largestGroupSize
+                                && this.numberOfGroups == that.numberOfGroups
+                                && this.rankHelper.isHigherFirst(this.largestGroupRank, that.largestGroupRank)
+                )
+        )
+                ? -1
+                : (
+                        this.largestGroupSize == that.largestGroupSize
+                                && this.numberOfGroups == that.numberOfGroups
+                                && this.largestGroupRank == that.largestGroupRank
+                )
+                        ? 0
+                        : 1;
+    }
 }
