@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_Definitions.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_Definitions.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBrackets.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBrackets.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBracketsTest.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBracketsTest.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/exceptions/ALP_MBKT_UnexpectedCloserException.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/exceptions/ALP_MBKT_UnexpectedCloserException.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerIntf.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerIntf.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CloserHandler.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CloserHandler.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_OpenerHandler.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_OpenerHandler.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerProviderIntf.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_DefaultCharacterMatcher.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_DefaultCharacterMatcher.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alpinism.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Alpinism.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_Definitions.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_Definitions.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerProviderIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBrackets.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBrackets.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,13 +109,16 @@
                       <entry key="APEXCLASS:ALP_LSP_ILLEGALARGUMENTEXCEPTION" value="1591304620000" />
                       <entry key="APEXCLASS:ALP_LSP_LARGESTSERIESPRODUCT" value="1591310918100" />
                       <entry key="APEXCLASS:ALP_LSP_LARGESTSERIESPRODUCTTEST" value="1591304621000" />
-                      <entry key="APEXCLASS:ALP_MBKT_CHARACTERHANDLERINTF" value="1616435660000" />
-                      <entry key="APEXCLASS:ALP_MBKT_CLOSERHANDLER" value="1616435687000" />
-                      <entry key="APEXCLASS:ALP_MBKT_DEFINITIONS" value="1616435687000" />
-                      <entry key="APEXCLASS:ALP_MBKT_MATCHINGBRACKETS" value="1616435697000" />
-                      <entry key="APEXCLASS:ALP_MBKT_MATCHINGBRACKETSTEST" value="1616435721000" />
-                      <entry key="APEXCLASS:ALP_MBKT_OPENERHANDLER" value="1616435679000" />
-                      <entry key="APEXCLASS:ALP_MBKT_UNEXPECTEDCLOSEREXCEPTION" value="1616435647000" />
+                      <entry key="APEXCLASS:ALP_MBKT_CHARACTERHANDLERINTF" value="1616436152011" />
+                      <entry key="APEXCLASS:ALP_MBKT_CHARACTERHANDLERPROVIDERINTF" value="1616436615000" />
+                      <entry key="APEXCLASS:ALP_MBKT_CLOSERHANDLER" value="1616436152011" />
+                      <entry key="APEXCLASS:ALP_MBKT_DEFAULTCHARACTERHANDLER" value="1616436911216" />
+                      <entry key="APEXCLASS:ALP_MBKT_DEFAULTCHARACTERMATCHER" value="1616437004000" />
+                      <entry key="APEXCLASS:ALP_MBKT_DEFINITIONS" value="1616436616000" />
+                      <entry key="APEXCLASS:ALP_MBKT_MATCHINGBRACKETS" value="1616437004000" />
+                      <entry key="APEXCLASS:ALP_MBKT_MATCHINGBRACKETSTEST" value="1616436152011" />
+                      <entry key="APEXCLASS:ALP_MBKT_OPENERHANDLER" value="1616436152011" />
+                      <entry key="APEXCLASS:ALP_MBKT_UNEXPECTEDCLOSEREXCEPTION" value="1616436152011" />
                       <entry key="APEXCLASS:ALP_MNSP_ANNOTATIONSTRATEGY" value="1591186251947" />
                       <entry key="APEXCLASS:ALP_MNSP_APPLYANNOTATIONSTRATEGY" value="1591189713000" />
                       <entry key="APEXCLASS:ALP_MNSP_CELLNEIGHBOURFILTER" value="1591186135000" />
@@ -494,6 +486,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added new fields to Cell for Minesweeper." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism_iml$ALP_MBKT_MatchingBracketsTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1616435925271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism.iml" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism_iml$ALP_MBKT_MatchingBracketsTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1616436959194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism.iml" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>
