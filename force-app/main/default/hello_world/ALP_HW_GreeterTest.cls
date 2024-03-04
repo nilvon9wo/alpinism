@@ -2,9 +2,6 @@
 public class ALP_HW_GreeterTest {
     private static final User TEST_USER = TEST_DummyUserFactoryOutlet.TEST_ADMIN_USER;
 
-
-    // Constructor Tests -----------------------------------------------------------
-
     @IsTest
     public static void testThatGreeterReturnsTheCorrectGreeting() {
         // Arrange
