@@ -1,5 +1,5 @@
 public class ALP_MBKT_CloserHandler implements ALP_MBKT_CharacterHandlerIntf {
-    private Map<String, String> closerByOpenerMap;
+    private final Map<String, String> closerByOpenerMap;
     public ALP_MBKT_CloserHandler(Map<String, String> closerByOpenerMap) {
         this.closerByOpenerMap = closerByOpenerMap;
     }

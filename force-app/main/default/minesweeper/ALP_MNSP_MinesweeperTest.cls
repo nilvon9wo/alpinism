@@ -186,4 +186,3 @@ public with sharing class ALP_MNSP_MinesweeperTest {
         System.assertEquals(expectedResultList, actualResultList);
     }
 }
-

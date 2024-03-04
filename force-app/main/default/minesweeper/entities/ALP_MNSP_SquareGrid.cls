@@ -1,6 +1,6 @@
 public with sharing class ALP_MNSP_SquareGrid {
-    ALP_MNSP_SquareCellList cellList;
-    ALP_MNSP_SquareCellListPublisher cellListPublisher;
+    final ALP_MNSP_SquareCellList cellList;
+    final ALP_MNSP_SquareCellListPublisher cellListPublisher;
 
     private ALP_MNSP_SquareGrid(ALP_MNSP_SquareCellList cellList, ALP_MNSP_SquareCellListPublisher cellListPublisher) {
         this.cellList = cellList;
@@ -28,4 +28,3 @@ public with sharing class ALP_MNSP_SquareGrid {
         return this.cellListPublisher.reveal(this.cellList);
     }
 }
-

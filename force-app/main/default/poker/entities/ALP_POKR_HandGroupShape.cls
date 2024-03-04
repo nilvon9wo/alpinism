@@ -1,6 +1,6 @@
 public with sharing class ALP_POKR_HandGroupShape implements Comparable {
-    private Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap;
-    private ALP_POKR_RankHelper rankHelper;
+    private final Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap;
+    private final ALP_POKR_RankHelper rankHelper;
 
     private ALP_POKR_HandGroupShape(
             Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap,
@@ -117,5 +117,14 @@ public with sharing class ALP_POKR_HandGroupShape implements Comparable {
         Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap = groupShape.cardsByRankMap.clone();
         cardsByRankMap.remove(groupShape.largestGroupRank);
         return new ALP_POKR_HandGroupShape(cardsByRankMap);
+    }
+
+    public override Integer hashCode() {
+        Integer result = System.hashCode(cardsByRankMap);
+        result = (31 * result) + System.hashCode(rankHelper);
+        result = (31 * result) + System.hashCode(largestGroupSize);
+        result = (31 * result) + System.hashCode(largestGroupRank);
+        result = (31 * result) + System.hashCode(numberOfGroups);
+        return result;
     }
 }

@@ -1,11 +1,11 @@
 public with sharing class ALP_SMTX_SpiralGrid implements ALP_SMTX_SpiralGridIntf {
-	private Integer dimension;
+	private final Integer dimension;
 	public Integer getDimension() {
 		return dimension;
 	}
 
-	private ALP_SMTX_NextCellLookup nextCellLookup;
-	private ALP_SMTX_RowFillerLookup rowFillerLookup;
+	private final ALP_SMTX_NextCellLookup nextCellLookup;
+	private final ALP_SMTX_RowFillerLookup rowFillerLookup;
 
 	public ALP_SMTX_SpiralGrid(
 			Integer dimension,
@@ -21,7 +21,7 @@ public with sharing class ALP_SMTX_SpiralGrid implements ALP_SMTX_SpiralGridIntf
 		this(dimension, ALP_SMTX_NextCellLookup.getInstance(), ALP_SMTX_RowFillerLookup.getInstance());
 	}
 
-	private Map<Integer, Map<Integer, ALP_Cell__c>> cellByColumnByRowMap
+	private final Map<Integer, Map<Integer, ALP_Cell__c>> cellByColumnByRowMap
 			= new Map<Integer, Map<Integer, ALP_Cell__c>>();
 
 	private ALP_Cell__c lastPopulatedCell;
@@ -34,7 +34,7 @@ public with sharing class ALP_SMTX_SpiralGrid implements ALP_SMTX_SpiralGridIntf
 		return this.nextDirection;
 	}
 
-	private Double finalValue {
+	private final Double finalValue {
 		get {
 			if (this.finalValue == null) {
 				this.finalValue = Math.pow(this.dimension, 2);

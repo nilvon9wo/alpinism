@@ -1,5 +1,5 @@
 public with sharing class ALP_CONX_ColourHelper {
-	XAP_ENUM_EnumConverter converter;
+	final XAP_ENUM_EnumConverter converter;
 	private ALP_CONX_ColourHelper(XAP_ENUM_EnumConverter converter) {
 		this.converter = converter;
 		this.converter.put(ALP_CONX_Colour.class, new XAP_ENUM_EnumWrapper(ALP_CONX_Colour.values()));

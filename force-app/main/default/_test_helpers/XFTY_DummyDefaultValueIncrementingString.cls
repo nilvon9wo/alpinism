@@ -1,6 +1,6 @@
 @IsTest
 public class XFTY_DummyDefaultValueIncrementingString implements XFTY_DummyDefaultValueIntf {
-    private String prefix;
+    private final String prefix;
     private Integer counter = 1;
 
     public XFTY_DummyDefaultValueIncrementingString(String prefix) {

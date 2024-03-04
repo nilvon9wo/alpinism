@@ -1,10 +1,10 @@
 // @see: https://www.redblobgames.com/grids/hexagons/
 public with sharing class ALP_CONX_HexGrid {
-	private ALP_CONX_HexCellFactory cellFactory;
+	private final ALP_CONX_HexCellFactory cellFactory;
 
-	private List<ALP_CONX_HexCell> cellList;
-	private Integer rowMaximum;
-	private Integer columnMaximum;
+	private final List<ALP_CONX_HexCell> cellList;
+	private final Integer rowMaximum;
+	private final Integer columnMaximum;
 
 	private ALP_CONX_HexGrid(
 			List<ALP_CONX_HexCell> cellList,
@@ -158,7 +158,7 @@ public with sharing class ALP_CONX_HexGrid {
 				.toList();
 	}
 
-	private List<ALP_CONX_HexCell> findDisconnectedCells(
+	private static List<ALP_CONX_HexCell> findDisconnectedCells(
 			List<ALP_CONX_HexCell> previouslyDisconnectedCellList,
 			List<ALP_CONX_HexCell> connectedStartCellList,
 			List<ALP_CONX_HexCell> connectedEndCellList

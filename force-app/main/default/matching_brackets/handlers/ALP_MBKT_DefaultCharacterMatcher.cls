@@ -22,7 +22,7 @@ public with sharing class ALP_MBKT_DefaultCharacterMatcher implements ALP_MBKT_C
             OPEN_PARENTHESIS => CLOSE_PARENTHESIS
     };
 
-    private static Map<String, ALP_MBKT_CharacterHandlerIntf> DEFAULT_HANDLER_BY_CHARACTER_MAP {
+    private static final Map<String, ALP_MBKT_CharacterHandlerIntf> DEFAULT_HANDLER_BY_CHARACTER_MAP {
         get {
             if (DEFAULT_HANDLER_BY_CHARACTER_MAP == null) {
                 ALP_MBKT_CharacterHandlerIntf openHandler = new ALP_MBKT_OpenerHandler();

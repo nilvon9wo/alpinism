@@ -1,5 +1,5 @@
 public with sharing class ALP_MBKT_MatchingBrackets {
-    ALP_MBKT_CharacterHandlerProviderIntf characterHandlerProvider;
+    final ALP_MBKT_CharacterHandlerProviderIntf characterHandlerProvider;
 
     public ALP_MBKT_MatchingBrackets(ALP_MBKT_CharacterHandlerProviderIntf characterHandlerProvider) {
         this.characterHandlerProvider = characterHandlerProvider;

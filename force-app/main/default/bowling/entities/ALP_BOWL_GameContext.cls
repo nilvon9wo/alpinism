@@ -4,8 +4,8 @@ public with sharing class ALP_BOWL_GameContext {
 
     // Rolls -----------------------------------------------------------
 
-    private List<Integer> pinsKnockedDownList = new List<Integer>();
-    private List<Integer> bonusPinsKnockedDownList = new List<Integer>();
+    private final List<Integer> pinsKnockedDownList = new List<Integer>();
+    private final List<Integer> bonusPinsKnockedDownList = new List<Integer>();
     public ALP_BOWL_GameContext addRoll(Integer pinsKnockedDown) {
         this.validateRoll(pinsKnockedDown);
 

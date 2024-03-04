@@ -1,5 +1,5 @@
 public with sharing class ALP_POKR_Hand {
-    private ALP_POKR_RankHelper rankHelper;
+    private final ALP_POKR_RankHelper rankHelper;
 
     public String handCode { get; private set; }
 
@@ -12,7 +12,7 @@ public with sharing class ALP_POKR_Hand {
         this(handCode, ALP_POKR_RankHelper.getInstance());
     }
 
-    private List<ALP_POKR_Card> cardList {
+    private final List<ALP_POKR_Card> cardList {
         get {
             if (this.cardList == null) {
                 this.cardList = new List<ALP_POKR_Card>();
@@ -40,7 +40,7 @@ public with sharing class ALP_POKR_Hand {
         private set;
     }
 
-    private Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap {
+    private final Map<ALP_POKR_Rank, List<ALP_POKR_Card>> cardsByRankMap {
         get {
             if (this.cardsByRankMap == null) {
                 this.cardsByRankMap = new Map<ALP_POKR_Rank, List<ALP_POKR_Card>>();
@@ -59,7 +59,7 @@ public with sharing class ALP_POKR_Hand {
         set;
     }
 
-    private Map<ALP_POKR_Suit, List<ALP_POKR_Card>> cardsBySuitMap {
+    private final Map<ALP_POKR_Suit, List<ALP_POKR_Card>> cardsBySuitMap {
         get {
             if (this.cardsBySuitMap == null) {
                 this.cardsBySuitMap = new Map<ALP_POKR_Suit, List<ALP_POKR_Card>>();
@@ -145,7 +145,7 @@ public with sharing class ALP_POKR_Hand {
         private set;
     }
 
-    private Integer numberOfRanks {
+    private final Integer numberOfRanks {
         get {
             if (this.numberOfRanks == null) {
                 this.numberOfRanks = this.cardsByRankMap.size();

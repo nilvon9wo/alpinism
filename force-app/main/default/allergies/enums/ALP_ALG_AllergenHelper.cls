@@ -1,5 +1,5 @@
 public with sharing class ALP_ALG_AllergenHelper {
-    XAP_ENUM_EnumConverter converter;
+    final XAP_ENUM_EnumConverter converter;
     private ALP_ALG_AllergenHelper(XAP_ENUM_EnumConverter converter) {
         this.converter = converter;
         this.converter.put(ALP_ALG_Allergen.class, new XAP_ENUM_EnumWrapper(ALP_ALG_Allergen.values()));

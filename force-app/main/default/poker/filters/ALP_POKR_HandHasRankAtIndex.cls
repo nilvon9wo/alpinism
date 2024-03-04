@@ -1,6 +1,6 @@
 public with sharing class ALP_POKR_HandHasRankAtIndex implements ALP_POKR_HandPredicateIntf {
-    private ALP_POKR_Rank rank;
-    private Integer index;
+    private final ALP_POKR_Rank rank;
+    private final Integer index;
 
     public ALP_POKR_HandHasRankAtIndex(ALP_POKR_Rank rank, Integer index) {
         this.rank = rank;

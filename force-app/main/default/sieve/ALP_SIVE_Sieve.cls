@@ -73,4 +73,3 @@ public with sharing class ALP_SIVE_Sieve {
         return primeList;
     }
 }
-
