@@ -19,6 +19,7 @@ accessing by SObjectField, and potentially other properties and methods which ma
 | [Custom Set](https://exercism.org/tracks/elixir/exercises/custom-set) |   | ALP_CSET_ |
 | [Crypto Square](https://exercism.org/tracks/elixir/exercises/crypto-square) | | ALP_CSQ_ |
 | [Hello World](https://exercism.org/tracks/java/exercises/hello-world) | | ALP_HW_ |
+| [Cook your lasagna](https://exercism.org/tracks/java/exercises/lasagna) | | ALP_LSGN_ |
 | [Largest Series Product](https://exercism.org/tracks/elixir/exercises/largest-series-product) | | ALP_LSP_ |
 | [Matching Brackets](https://exercism.org/tracks/scala/exercises/matching-brackets) | | ALP_MBKT_ |
 | [Minesweeper](https://exercism.org/tracks/scala/exercises/minesweeper) | | ALP_MNSP_ |
