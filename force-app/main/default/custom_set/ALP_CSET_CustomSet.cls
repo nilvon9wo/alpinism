@@ -74,4 +74,10 @@ public with sharing class ALP_CSET_CustomSet {
 	public ALP_CSET_CustomSet unionOf(ALP_CSET_CustomSet that) {
 		return new ALP_CSET_CustomSet(this.add(that.numberSet).numberSet);
 	}
+
+	public override Integer hashCode() {
+		Integer result = System.hashCode(numberSet);
+
+		return result;
+	}
 }

@@ -1,5 +1,5 @@
 public with sharing class ALP_MNSP_SquareCell {
-    private ALP_Cell__c cell;
+    private final ALP_Cell__c cell;
 
     public ALP_MNSP_SquareCell(ALP_Cell__c cell) {
         this.cell = cell;

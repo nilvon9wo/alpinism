@@ -1,6 +1,6 @@
 public with sharing class ALP_CONX_HexCell {
-	private ALP_Cell__c cell;
-	private ALP_CONX_ColourHelper colourHelper;
+	private final ALP_Cell__c cell;
+	private final ALP_CONX_ColourHelper colourHelper;
 
 	private ALP_CONX_HexCell(Integer row, Integer column, ALP_CONX_Colour colour, ALP_CONX_ColourHelper colourHelper) {
 		this.cell = new ALP_Cell__c(

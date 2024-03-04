@@ -1,5 +1,5 @@
 public with sharing class ALP_MNSP_SquareCellList {
-    private List<ALP_MNSP_SquareCell> cellList;
+    private final List<ALP_MNSP_SquareCell> cellList;
 
     public ALP_MNSP_SquareCellList(List<ALP_MNSP_SquareCell> cellList) {
         this.cellList = cellList.clone();

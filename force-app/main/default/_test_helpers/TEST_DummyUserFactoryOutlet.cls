@@ -17,6 +17,7 @@ public class TEST_DummyUserFactoryOutlet implements XFTY_DummyQueueSobjectFactor
 
     private static final String CEO = 'CEO';
     private static final Map<String, Id> USERROLE_ID_BY_USERROLE_NAME_MAP = createUserRoleIdByUserRoleNameMap();
+    //noinspection ApexUnusedDeclaration
     private static final Id CEO_USERROLE_ID = USERROLE_ID_BY_USERROLE_NAME_MAP.get(CEO);
 
     private static final SObjectField PRIMARY_TARGET_FIELD = User.Id;

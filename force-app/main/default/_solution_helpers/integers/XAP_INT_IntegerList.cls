@@ -1,6 +1,6 @@
 public with sharing class XAP_INT_IntegerList {
-    private List<Integer> integerList;
-    private XAP_INT_IntegerEvaluator integerEvaluator;
+    private final List<Integer> integerList;
+    private final XAP_INT_IntegerEvaluator integerEvaluator;
 
     public XAP_INT_IntegerList(List<Integer> integerList, XAP_INT_IntegerEvaluator integerEvaluator) {
         this.integerList = integerList;

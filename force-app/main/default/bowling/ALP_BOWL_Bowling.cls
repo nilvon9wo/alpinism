@@ -1,6 +1,6 @@
 public with sharing class ALP_BOWL_Bowling {
-    ALP_BOWL_GameContext gameContext;
-    ALP_BOWL_ScoreCalculator scoreCalculator;
+    final ALP_BOWL_GameContext gameContext;
+    final ALP_BOWL_ScoreCalculator scoreCalculator;
 
     private ALP_BOWL_Bowling(ALP_BOWL_GameContext gameContext, ALP_BOWL_ScoreCalculator scoreCalculator) {
         this.gameContext = gameContext;

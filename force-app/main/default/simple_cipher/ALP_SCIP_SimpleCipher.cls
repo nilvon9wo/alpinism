@@ -1,6 +1,6 @@
 public with sharing class ALP_SCIP_SimpleCipher {
-    ALP_SCIP_TransformationInterpreterIntf decodingInterpreter;
-    ALP_SCIP_TransformationInterpreterIntf encodingInterpreter;
+    final ALP_SCIP_TransformationInterpreterIntf decodingInterpreter;
+    final ALP_SCIP_TransformationInterpreterIntf encodingInterpreter;
 
     private ALP_SCIP_SimpleCipher(
             ALP_SCIP_TransformationInterpreterIntf decodingInterpreter,
@@ -56,7 +56,7 @@ public with sharing class ALP_SCIP_SimpleCipher {
       "abcabca". If the key is longer than the text, only use as many letters of it
       as are necessary.
       */
-    public String encode(String plainText, String Key) {
+    public String encode(String plainText, String key) {
         return this.transform(plainText, key, this.encodingInterpreter);
     }
 
@@ -70,7 +70,7 @@ public with sharing class ALP_SCIP_SimpleCipher {
       but you will go the opposite way, so "d" becomes "a", "w" becomes "t",
       etc..., depending on how much you shift the alphabet.
      */
-    public String decode(String cipherText, String Key) {
+    public String decode(String cipherText, String key) {
         return this.transform(cipherText, key, this.decodingInterpreter);
     }
 

@@ -1,14 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerProviderIntf.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_DefaultCharacterMatcher.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_DefaultCharacterMatcher.cls-meta.xml" afterDir="false" />
+    <list default="true" id="1337e56e-2f32-4385-8fb9-d550938194a1" name="Default Changelist" comment="Added new fields to Cell for Minesweeper.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_Definitions.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_Definitions.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerProviderIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alpinism.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Alpinism.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/applications/Alpinism.app-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/applications/Alpinism.app-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/applications/Alpinism_Lightning.app-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/applications/Alpinism_Lightning.app-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/layouts/ALP_Cell__c-ALP Cell Layout.layout-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/layouts/ALP_Cell__c-ALP Cell Layout.layout-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/ALP_Cell__c.object-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/ALP_Cell__c.object-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Annotation__c.field-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Annotation__c.field-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Column__c.field-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Column__c.field-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Contains_Mine__c.field-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Contains_Mine__c.field-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Rank__c.field-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Rank__c.field-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Row__c.field-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Row__c.field-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Stone_Colour__c.field-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Stone_Colour__c.field-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Z__c.field-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/fields/Z__c.field-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/listViews/All.listView-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/objects/ALP_Cell__c/listViews/All.listView-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_metadata/tabs/ALP_Cell__c.tab-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_metadata/tabs/ALP_Cell__c.tab-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/enums/XAP_ENUM_EnumConverter.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/enums/XAP_ENUM_EnumConverter.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/enums/XAP_ENUM_EnumWrapper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/enums/XAP_ENUM_EnumWrapper.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/enums/XAP_ENUM_EnumWrapper.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/enums/XAP_ENUM_EnumWrapper.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/XAP_INT_IntegerList.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_2IntegersToIntegerInterpIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_2IntegersToIntegerInterpIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerEvaluator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerEvaluator.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerEvaluator.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_IntegerEvaluator.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaximumCalculator.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_MaximumCalculator.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_ProductCalculator.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_ProductCalculator.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_SumCalculator.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_solution_helpers/integers/expressions/XAP_INT_SumCalculator.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/TEST_DummyAccountFactoryOutlet.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/TEST_DummyAccountFactoryOutlet.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/TEST_DummyContactFactoryOutlet.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/TEST_DummyContactFactoryOutlet.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/TEST_DummyUserFactoryOutlet.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/TEST_DummyUserFactoryOutlet.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/TEST_DummyUserFactoryOutlet.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/TEST_DummyUserFactoryOutlet.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultIncrementingDecimal.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultIncrementingDecimal.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipOptional.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipOptional.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipOptional.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipOptional.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipRequired.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipRequired.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipRequired.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultRelationshipRequired.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueExact.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueExact.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueExact.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueExact.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueIncrementingString.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueIncrementingString.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueIncrementingString.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueIncrementingString.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueEmail.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueEmail.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueEmail.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueEmail.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueString.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueString.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueString.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueString.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueStringLength.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyDefaultValueUniqueStringLength.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyQueueSobjectFactoryOutletIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummyQueueSobjectFactoryOutletIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectBundle.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectBundle.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectBundle.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectBundle.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectFactory.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectFactory.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectFactoryOutletLookup.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectFactoryOutletLookup.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectMasterTemplate.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectMasterTemplate.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectSupplier.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectSupplier.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectSupplier.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectSupplier.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectSupplierTests.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectSupplierTests.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectSupplierTests.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_DummySObjectSupplierTests.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_IdMocker.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_IdMocker.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_InsertInclusivityEnum.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_InsertInclusivityEnum.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_InsertModeEnum.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/_test_helpers/XFTY_InsertModeEnum.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_Allergies.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_Allergies.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_Allergies.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_Allergies.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_AllergiesTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_AllergiesTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_AllergiesTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/ALP_ALG_AllergiesTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_Allergen.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_Allergen.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_Allergen.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_Allergen.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_AllergenHelper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_AllergenHelper.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_AllergenHelper.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/allergies/enums/ALP_ALG_AllergenHelper.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_Bowling.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_BowlingTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_BowlingTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_BowlingTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/ALP_BOWL_BowlingTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_GameContext.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_RollException.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/entities/ALP_BOWL_RollException.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreCalculator.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreCalculator.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreCalculator.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreCalculator.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreException.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/bowling/services/ALP_BOWL_ScoreException.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/ALP_CONX_Connect.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/ALP_CONX_Connect.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/ALP_CONX_ConnectTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/ALP_CONX_ConnectTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCell.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCell.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCell.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCell.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCellFactory.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCellFactory.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCellFactory.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCellFactory.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCellList.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexCellList.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexGrid.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexGrid.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexGrid.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/entities/ALP_CONX_HexGrid.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/enums/ALP_CONX_Colour.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/enums/ALP_CONX_Colour.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/enums/ALP_CONX_ColourHelper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/enums/ALP_CONX_ColourHelper.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/enums/ALP_CONX_ColourHelper.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/enums/ALP_CONX_ColourHelper.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/enums/ALP_CONX_Orientation.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/enums/ALP_CONX_Orientation.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_CellDisconnectedFilter.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_CellDisconnectedFilter.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_CellDisconnectedFilter.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_CellDisconnectedFilter.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_CellNeighbourFilter.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_CellNeighbourFilter.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_CellNeighbourFilter.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_CellNeighbourFilter.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_HexCellPredicateIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_HexCellPredicateIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_MatchingColourFilter.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_MatchingColourFilter.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_MatchingColourFilter.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/connect/filters/ALP_CONX_MatchingColourFilter.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquare.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquareTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquareTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquareTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/crypto_square/ALP_CSQ_CryptoSquareTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/custom_set/ALP_CSET_CustomSet.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/custom_set/ALP_CSET_CustomSet.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/custom_set/ALP_CSET_CustomSet.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/custom_set/ALP_CSET_CustomSet.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_CustomSetPredicateIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_CustomSetPredicateIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_ExcludedNumberFilter.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_ExcludedNumberFilter.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_ExcludedNumberFilter.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_ExcludedNumberFilter.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_IncludedNumberFilter.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_IncludedNumberFilter.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_IncludedNumberFilter.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/custom_set/filters/ALP_CSET_IncludedNumberFilter.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/largest_series_product/ALP_LSP_LargestSeriesProduct.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/largest_series_product/ALP_LSP_LargestSeriesProduct.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/largest_series_product/ALP_LSP_LargestSeriesProduct.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/largest_series_product/ALP_LSP_LargestSeriesProduct.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/largest_series_product/ALP_LSP_LargestSeriesProductTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/largest_series_product/ALP_LSP_LargestSeriesProductTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/largest_series_product/exceptions/ALP_LSP_IllegalArgumentException.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/largest_series_product/exceptions/ALP_LSP_IllegalArgumentException.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBrackets.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBrackets.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBrackets.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBrackets.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBracketsTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBracketsTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBracketsTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/ALP_MBKT_MatchingBracketsTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/exceptions/ALP_MBKT_UnexpectedCloserException.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/exceptions/ALP_MBKT_UnexpectedCloserException.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/exceptions/ALP_MBKT_UnexpectedCloserException.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/exceptions/ALP_MBKT_UnexpectedCloserException.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerIntf.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerIntf.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerProviderIntf.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerProviderIntf.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerProviderIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CharacterHandlerProviderIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CloserHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CloserHandler.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CloserHandler.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_CloserHandler.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_DefaultCharacterMatcher.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_DefaultCharacterMatcher.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_DefaultCharacterMatcher.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_DefaultCharacterMatcher.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_OpenerHandler.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_OpenerHandler.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_OpenerHandler.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/matching_brackets/handlers/ALP_MBKT_OpenerHandler.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_Minesweeper.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/ALP_MNSP_MinesweeperTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCell.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCell.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellList.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellList.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellListFactory.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareCellListFactory.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareGrid.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareGrid.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareGrid.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/entities/ALP_MNSP_SquareGrid.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/services/ALP_MNSP_SquareCellListPublisher.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/services/ALP_MNSP_SquareCellListPublisher.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_ApplyAnnotationStrategy.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_ApplyAnnotationStrategy.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_SquareCellStrategyIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/minesweeper/strategies/ALP_MNSP_SquareCellStrategyIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_Poker.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_Poker.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_Poker.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_Poker.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_PokerTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_PokerTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_PokerTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/ALP_POKR_PokerTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Card.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Card.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Hand.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Hand.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Hand.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_Hand.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandGroupShape.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandGroupShape.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandGroupShape.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandGroupShape.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandList.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandList.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandList.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/entities/ALP_POKR_HandList.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_Rank.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_Rank.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_Rank.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_Rank.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_RankHelper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_RankHelper.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_RankHelper.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_RankHelper.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_Suit.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_Suit.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_SuitHelper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_SuitHelper.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_SuitHelper.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/enums/ALP_POKR_SuitHelper.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasExactlyTwoRanks.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasExactlyTwoRanks.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasExactlyTwoRanks.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasExactlyTwoRanks.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankAtIndex.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankAtIndex.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankAtIndex.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankAtIndex.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankGroups.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankGroups.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankGroups.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandHasRankGroups.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsFlush.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsFlush.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsHighStraight.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsHighStraight.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsHighStraight.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsHighStraight.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsLowStraight.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsLowStraight.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsLowStraight.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsLowStraight.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraight.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraight.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraightFlush.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraightFlush.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraightFlush.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandIsStraightFlush.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandPredicateIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/poker/filters/ALP_POKR_HandPredicateIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/sieve/ALP_SIVE_Sieve.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/sieve/ALP_SIVE_Sieve.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/sieve/ALP_SIVE_Sieve.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/sieve/ALP_SIVE_Sieve.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/sieve/ALP_SIVE_SieveTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/sieve/ALP_SIVE_SieveTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/sieve/ALP_SIVE_SieveTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/sieve/ALP_SIVE_SieveTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipher.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipher.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/ALP_SCIP_SimpleCipherTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/simple_cipher/interpreters/ALP_SCIP_DecodingInterpreter.cls" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/interpreters/ALP_SCIP_DecodingInterpreter.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/simple_cipher/interpreters/ALP_SCIP_DecodingInterpreter.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/interpreters/ALP_SCIP_DecodingInterpreter.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/simple_cipher/interpreters/ALP_SCIP_EncodingInterpreter.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/interpreters/ALP_SCIP_EncodingInterpreter.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/simple_cipher/interpreters/ALP_SCIP_TransformationInterpreterIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/simple_cipher/interpreters/ALP_SCIP_TransformationInterpreterIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/ALP_SMTX_Spiral.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/ALP_SMTX_Spiral.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/ALP_SMTX_SpiralTest.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/ALP_SMTX_SpiralTest.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/ALP_SMTX_SpiralGrid.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/ALP_SMTX_SpiralGrid.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/ALP_SMTX_SpiralGridIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/ALP_SMTX_SpiralGridIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_FirstRowFiller.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_FirstRowFiller.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_LastRowFiller.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_LastRowFiller.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_MiddleRowFiller.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_MiddleRowFiller.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_RowFillerIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_RowFillerIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_RowFillerLookup.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/fillers/ALP_SMTX_RowFillerLookup.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellDownSupplier.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellDownSupplier.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellLeftSupplier.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellLeftSupplier.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellLookup.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellLookup.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellRightSupplier.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellRightSupplier.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellSupplierIntf.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellSupplierIntf.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellUpSupplier.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/entities/suppliers/ALP_SMTX_NextCellUpSupplier.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/enums/ALP_SMTX_Direction.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/enums/ALP_SMTX_Direction.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/enums/ALP_SMTX_DirectionHelper.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/spiral_matrix/enums/ALP_SMTX_DirectionHelper.cls-meta.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +273,7 @@
                       <entry key="APEXCLASS:ALP" value="1592673953000" />
                       <entry key="APEXCLASS:ALP_ALG_ALLERGEN" value="1591478270893" />
                       <entry key="APEXCLASS:ALP_ALG_ALLERGENHELPER" value="1591530731188" />
-                      <entry key="APEXCLASS:ALP_ALG_ALLERGIES" value="1591532185916" />
+                      <entry key="APEXCLASS:ALP_ALG_ALLERGIES" value="1709574865000" />
                       <entry key="APEXCLASS:ALP_ALG_ALLERGIESTEST" value="1591531767598" />
                       <entry key="APEXCLASS:ALP_BKT_CHARACTERHANDLERINTF" value="1616435351833" />
                       <entry key="APEXCLASS:ALP_BKT_CLOSERHANDLER" value="1616435660000" />
@@ -113,9 +309,9 @@
                       <entry key="APEXCLASS:ALP_MBKT_CHARACTERHANDLERPROVIDERINTF" value="1616436615000" />
                       <entry key="APEXCLASS:ALP_MBKT_CLOSERHANDLER" value="1616436152011" />
                       <entry key="APEXCLASS:ALP_MBKT_DEFAULTCHARACTERHANDLER" value="1616436911216" />
-                      <entry key="APEXCLASS:ALP_MBKT_DEFAULTCHARACTERMATCHER" value="1616437004000" />
+                      <entry key="APEXCLASS:ALP_MBKT_DEFAULTCHARACTERMATCHER" value="1616437021721" />
                       <entry key="APEXCLASS:ALP_MBKT_DEFINITIONS" value="1616436616000" />
-                      <entry key="APEXCLASS:ALP_MBKT_MATCHINGBRACKETS" value="1616437004000" />
+                      <entry key="APEXCLASS:ALP_MBKT_MATCHINGBRACKETS" value="1616437021721" />
                       <entry key="APEXCLASS:ALP_MBKT_MATCHINGBRACKETSTEST" value="1616436152011" />
                       <entry key="APEXCLASS:ALP_MBKT_OPENERHANDLER" value="1616436152011" />
                       <entry key="APEXCLASS:ALP_MBKT_UNEXPECTEDCLOSEREXCEPTION" value="1616436152011" />
@@ -171,16 +367,37 @@
                       <entry key="APEXCLASS:ALP_SIVE_SIEVETEST" value="1591124213000" />
                       <entry key="APEXCLASS:POKER" value="1592600990000" />
                       <entry key="APEXCLASS:POKERTEST" value="1592601000000" />
+                      <entry key="APEXCLASS:TEST_DUMMYACCOUNTFACTORYOUTLET" value="1709575165000" />
+                      <entry key="APEXCLASS:TEST_DUMMYCONTACTFACTORYOUTLET" value="1709575166000" />
+                      <entry key="APEXCLASS:TEST_DUMMYUSERFACTORYOUTLET" value="1709575166000" />
+                      <entry key="APEXCLASS:XAP_ENUM_ENUMCONVERTER" value="1709574866000" />
+                      <entry key="APEXCLASS:XAP_ENUM_ENUMWRAPPER" value="1709574866000" />
                       <entry key="APEXCLASS:XAP_INT_2INTEGERSTOINTEGERINTERPINTF" value="1591337259000" />
-                      <entry key="APEXCLASS:XAP_INT_INTEGEREVALUATOR" value="1591337259000" />
-                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1591530707523" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGEREVALUATOR" value="1709574866000" />
+                      <entry key="APEXCLASS:XAP_INT_INTEGERLIST" value="1709575166000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGERLISTTOINTEGERINTERPINTF" value="1591306852000" />
                       <entry key="APEXCLASS:XAP_INT_INTEGERTOINTEGERINTERPINTF" value="1591312077000" />
-                      <entry key="APEXCLASS:XAP_INT_MAXIMUMCALCULATOR" value="1591337259000" />
+                      <entry key="APEXCLASS:XAP_INT_MAXIMUMCALCULATOR" value="1709575166000" />
                       <entry key="APEXCLASS:XAP_INT_MAXIUMCALCULATOR" value="1591311950511" />
                       <entry key="APEXCLASS:XAP_INT_MAXIUMFINDER" value="1591307075000" />
-                      <entry key="APEXCLASS:XAP_INT_PRODUCTCALCULATOR" value="1591337259000" />
-                      <entry key="APEXCLASS:XAP_INT_SUMCALCULATOR" value="1591478496000" />
+                      <entry key="APEXCLASS:XAP_INT_PRODUCTCALCULATOR" value="1709575166000" />
+                      <entry key="APEXCLASS:XAP_INT_SUMCALCULATOR" value="1709575166000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTINCREMENTINGDECIMAL" value="1709575166000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTRELATIONSHIPINTF" value="1709575166000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTRELATIONSHIPOPTIONAL" value="1709575166000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTRELATIONSHIPREQUIRED" value="1709575166000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTVALUEEXACT" value="1709575166000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTVALUEINCREMENTINGSTRING" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTVALUEINTF" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTVALUEUNIQUEEMAIL" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTVALUEUNIQUESTRING" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYDEFAULTVALUEUNIQUESTRINGLENGTH" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYQUEUESOBJECTFACTORYOUTLETINTF" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYSOBJECTBUNDLE" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYSOBJECTFACTORY" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYSOBJECTFACTORYOUTLETLOOKUP" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYSOBJECTMASTERTEMPLATE" value="1709575327000" />
+                      <entry key="APEXCLASS:XFTY_DUMMYSOBJECTSUPPLIER" value="1709575327000" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CONTEXT" />
@@ -202,8 +419,154 @@
                 </ConnectionWorkspaceSettings>
               </value>
             </entry>
+            <entry key="ApexRecipes">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="August2023">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="Autumn2022">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="DreamHub">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="FlowOrchestration">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="FlowOrchestration2">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="HowWeRoll2020">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="November2018">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="PkgOrg">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="Raccoon">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="Water4Plants">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="YourPBO">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="bear-tracking">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="conference">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="cunning-unicorn">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="dtc-de">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="einstein-prediction">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="enpal-production">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="enpal-staging">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="feb2019">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="jan2019">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="kessler.bm@brave-goat-w1uc5g.com">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="kessler.bm@brave-panda-w43hp3.com">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="kessler.bm@creative-moose-a9pxyy.com">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="kessler.bm@creative-moose-bj43tz.com">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="kessler.bm@playful-fox-s53sp1.com">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="kessler.bm@trailhead.com">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="my-hub-org">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
+            <entry key="mydevorg">
+              <value>
+                <ConnectionWorkspaceSettings />
+              </value>
+            </entry>
           </map>
         </option>
+        <option name="retrieveAndMergeDefault" value="false" />
         <option name="soqlQuerySettings">
           <SoqlQuerySettings>
             <option name="savedDocuments">
@@ -218,9 +581,19 @@
       </ProjectWorkspaceSettings>
     </option>
   </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="1cicl4Lq7qUak132s3CjVK0gEwu" />
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
@@ -230,22 +603,17 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/force-app/main/default/matching_brackets" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/SFDC/Alpinism&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\SFDC\Alpinism\force-app\main\default\matching_brackets" />
@@ -272,6 +640,7 @@
       <option name="connectionType" value="OAUTH" />
       <option name="contextConfiguration" value="true" />
       <option name="databaseLogLevel" value="INFO" />
+      <option name="directoryPath" />
       <option name="logLevelsInitialized" value="false" />
       <option name="moduleToTestClassNames">
         <map>
@@ -286,6 +655,7 @@
       </option>
       <option name="nbaLogLevel" value="INFO" />
       <option name="profilingLogLevel" value="INFO" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -309,6 +679,7 @@
       <option name="connectionType" value="OAUTH" />
       <option name="contextConfiguration" value="true" />
       <option name="databaseLogLevel" value="INFO" />
+      <option name="directoryPath" />
       <option name="logLevelsInitialized" value="false" />
       <option name="moduleToTestClassNames">
         <map>
@@ -323,6 +694,7 @@
       </option>
       <option name="nbaLogLevel" value="INFO" />
       <option name="profilingLogLevel" value="INFO" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -346,6 +718,7 @@
       <option name="connectionType" value="OAUTH" />
       <option name="contextConfiguration" value="true" />
       <option name="databaseLogLevel" value="INFO" />
+      <option name="directoryPath" />
       <option name="logLevelsInitialized" value="false" />
       <option name="moduleToTestClassNames">
         <map>
@@ -360,6 +733,7 @@
       </option>
       <option name="nbaLogLevel" value="INFO" />
       <option name="profilingLogLevel" value="INFO" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -383,6 +757,7 @@
       <option name="connectionType" value="OAUTH" />
       <option name="contextConfiguration" value="true" />
       <option name="databaseLogLevel" value="INFO" />
+      <option name="directoryPath" />
       <option name="logLevelsInitialized" value="false" />
       <option name="moduleToTestClassNames">
         <map>
@@ -397,6 +772,7 @@
       </option>
       <option name="nbaLogLevel" value="INFO" />
       <option name="profilingLogLevel" value="INFO" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -428,6 +804,7 @@
       <option name="connectionType" value="OAUTH" />
       <option name="contextConfiguration" value="true" />
       <option name="databaseLogLevel" value="INFO" />
+      <option name="directoryPath" />
       <option name="logLevelsInitialized" value="false" />
       <option name="moduleToTestClassNames">
         <map>
@@ -442,6 +819,7 @@
       </option>
       <option name="nbaLogLevel" value="INFO" />
       <option name="profilingLogLevel" value="INFO" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -466,11 +844,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Apex Unit Tests.ALP_MBKT_MatchingBracketsTest" />
-        <item itemvalue="Apex Unit Tests.ALP_BKT_MatchingBracketsTest" />
-        <item itemvalue="Apex Unit Tests.ALP_POKR_PokerTest" />
         <item itemvalue="Apex Unit Tests.ALP_POKR_PokerTest.testBestHandTwoPairsBeatsOnePair" />
         <item itemvalue="Apex Unit Tests.ALP_POKR_PokerTest.testBestHandBothHandsHaveTwoPairsWithTheSameHighestRankedPairTieGoesToLowPair" />
+        <item itemvalue="Apex Unit Tests.ALP_POKR_PokerTest" />
+        <item itemvalue="Apex Unit Tests.ALP_MBKT_MatchingBracketsTest" />
+        <item itemvalue="Apex Unit Tests.ALP_BKT_MatchingBracketsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -486,6 +864,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added new fields to Cell for Minesweeper." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Alpinism_iml$ALP_MBKT_MatchingBracketsTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1616436959194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism.iml" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
+    <SUITE FILE_PATH="coverage/Alpinism_iml$ALP_MBKT_MatchingBracketsTest.ic2" NAME="Alpinism Coverage Results" MODIFIED="1616437268138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="Alpinism.iml" CONNECTION_NAME="Alpinism" CONNECTION_TYPE="OAUTH" />
   </component>
 </project>

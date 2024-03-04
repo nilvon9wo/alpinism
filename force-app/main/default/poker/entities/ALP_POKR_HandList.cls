@@ -1,5 +1,5 @@
 public with sharing class ALP_POKR_HandList {
-    private List<ALP_POKR_Hand> handList;
+    private final List<ALP_POKR_Hand> handList;
 
     private ALP_POKR_HandList(List<ALP_POKR_Hand> handList) {
         this.handList = handList;
@@ -16,7 +16,7 @@ public with sharing class ALP_POKR_HandList {
     private static final Map<Type, ALP_POKR_HandPredicateIntf> PREDICATE_BY_TYPE_MAP
             = new Map<Type, ALP_POKR_HandPredicateIntf>();
 
-    private Integer handSize {
+    private final Integer handSize {
         get {
             if (this.handSize == null) {
                 this.handSize = this.handList[0].size;

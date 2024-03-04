@@ -1,6 +1,6 @@
 public with sharing class ALP_ALG_Allergies {
-    ALP_ALG_AllergenHelper allergenHelper;
-    Integer highestAssignedPowerOf2;
+    final ALP_ALG_AllergenHelper allergenHelper;
+    final Integer highestAssignedPowerOf2;
 
         private ALP_ALG_Allergies(ALP_ALG_AllergenHelper allergenHelper) {
         this.allergenHelper = allergenHelper;
