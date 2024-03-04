@@ -13,18 +13,19 @@ accessing by SObjectField, and potentially other properties and methods which ma
 
 | Exercism Name | Other Names | Project Prefix |
 |---------------|-------------|----------------|
-| [Allergies](https://exercism.io/my/solutions/c3a9418b940e443ca1042ffb0d544dba) | | ALP_ALG_ |
-| [Bowling](https://exercism.io/my/solutions/594e2a57d9014c61b53587f4a73a574b) | | ALP_BOWL_ |
-| [Connect](https://exercism.io/my/solutions/d1a4151ec4c84d2fb3d8aedbc0a63795) | [Hex](https://en.wikipedia.org/wiki/Hex_%28board_game%29) / Polygon / CON-TAC-TIX | ALP_CONX_ |
-| [Custom Set](https://exercism.io/my/solutions/a660b002e1c14679895063781fb4dd16) |   | ALP_CSET_ |
-| [Crypto Square](https://exercism.io/my/solutions/1ab1e10566f7451e8bf3153774764f68) | | ALP_CSQ_ |
-| [Largest Series Product](https://exercism.io/my/solutions/1c9b756be40f41cbb9f223ef288f83b3) | | ALP_LSP_ |
-| [Matching Brackets](https://exercism.io/my/solutions/c1cb14350bd3413c8c09c403f3ff42be) | | ALP_MBKT_ |
-| [Minesweeper](https://exercism.io/my/solutions/e51061d187544c768322562a45359b09) | | ALP_MNSP_ |
-| [Poker](https://exercism.io/my/solutions/715f6ec1017b44ebab705155979db0c9) | | ALP_POKR_ |
-| [Simple Cipher](https://exercism.io/my/solutions/4faeaede7a874e8db4696d3b336f49e3) | [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher) | ALP_SCIP_ |
-| [Sieve](https://exercism.io/my/solutions/1a8c99b313e346a59e30190d642b9547) | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | ALP_SIVE_ |
-| [Spiral Matrix](https://exercism.io/my/solutions/17c85d91725648abb399fe7b85552d7d) | | ALP_SMTX_ |
+| [Allergies](https://exercism.org/tracks/elixir/exercises/allergies) | | ALP_ALG_ |
+| [Bowling](https://exercism.org/tracks/elixir/exercises/bowling) | | ALP_BOWL_ |
+| [Connect](https://exercism.org/tracks/elixir/exercises/connect) | [Hex](https://en.wikipedia.org/wiki/Hex_%28board_game%29) / Polygon / CON-TAC-TIX | ALP_CONX_ |
+| [Custom Set](https://exercism.org/tracks/elixir/exercises/custom-set) |   | ALP_CSET_ |
+| [Crypto Square](https://exercism.org/tracks/elixir/exercises/crypto-square) | | ALP_CSQ_ |
+| [Hello World](https://exercism.org/tracks/java/exercises/hello-world) | | ALP_HW_ |
+| [Largest Series Product](https://exercism.org/tracks/elixir/exercises/largest-series-product) | | ALP_LSP_ |
+| [Matching Brackets](https://exercism.org/tracks/scala/exercises/matching-brackets) | | ALP_MBKT_ |
+| [Minesweeper](https://exercism.org/tracks/scala/exercises/minesweeper) | | ALP_MNSP_ |
+| [Poker](https://exercism.org/tracks/elixir/exercises/poker) | | ALP_POKR_ |
+| [Simple Cipher](https://exercism.org/tracks/elixir/exercises/simple-cipher) | [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher) | ALP_SCIP_ |
+| [Sieve](https://exercism.org/tracks/elixir/exercises/sieve) | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | ALP_SIVE_ |
+| [Spiral Matrix](https://exercism.org/tracks/elixir/exercises/spiral-matrix) | | ALP_SMTX_ |
 
 ## Testing Notes
 
