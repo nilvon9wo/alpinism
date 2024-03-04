@@ -35,6 +35,9 @@
         <members>ALP_Cell__c.Row__c</members>
         <members>ALP_Cell__c.Stone_Colour__c</members>
         <members>ALP_Cell__c.Z__c</members>
+        <members>CaseComment.CommentBody</members>
+        <members>Goal.OrigGoalId__c</members>
+        <members>Metric.OrigMetricId__c</members>
         <members>Account.Active__c</members>
         <members>Account.CustomerPriority__c</members>
         <members>Account.NumberofLocations__c</members>
@@ -46,17 +49,14 @@
         <members>Case.PotentialLiability__c</members>
         <members>Case.Product__c</members>
         <members>Case.SLAViolation__c</members>
-        <members>CaseComment.CommentBody</members>
         <members>CaseComment.ParentOrigin</members>
         <members>Contact.Languages__c</members>
         <members>Contact.Level__c</members>
-        <members>Goal.OrigGoalId__c</members>
         <members>Lead.CurrentGenerators__c</members>
         <members>Lead.NumberofLocations__c</members>
         <members>Lead.Primary__c</members>
         <members>Lead.ProductInterest__c</members>
         <members>Lead.SICCode__c</members>
-        <members>Metric.OrigMetricId__c</members>
         <members>Opportunity.CurrentGenerators__c</members>
         <members>Opportunity.DeliveryInstallationStatus__c</members>
         <members>Opportunity.MainCompetitors__c</members>
