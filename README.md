@@ -15,6 +15,7 @@ accessing by SObjectField, and potentially other properties and methods which ma
 |---------------|-------------|----------------|
 | [Allergies](https://exercism.org/tracks/elixir/exercises/allergies) | | ALP_ALG_ |
 | [Annalyn's Infiltration](https://exercism.org/tracks/java/exercises/annalyns-infiltration) | | ALP_AINF_ |
+| [Bird Watcher](https://exercism.org/tracks/java/exercises/bird-watcher) | | ALP_BWTCH_ |
 | [Bowling](https://exercism.org/tracks/elixir/exercises/bowling) | | ALP_BOWL_ |
 | [Connect](https://exercism.org/tracks/elixir/exercises/connect) | [Hex](https://en.wikipedia.org/wiki/Hex_%28board_game%29) / Polygon / CON-TAC-TIX | ALP_CONX_ |
 | [Custom Set](https://exercism.org/tracks/elixir/exercises/custom-set) |   | ALP_CSET_ |
