@@ -1,6 +1,8 @@
 public with sharing class ALP_KLNG_LanguageList {
 
-    private static final Set<String> EXCITING_LANGUAGES = new Set<String>{'Java', 'Kotlin'};
+    private static final Set<String> EXCITING_LANGUAGES = new Set<String>{
+            'Java', 'Kotlin'
+    };
 
     private final List<String> languages = new List<String>();
 

@@ -10,7 +10,9 @@ private class ALP_BWTCH_BirdWatcherTest {
     private static final Integer DAY6 = 8;
     private static final Integer TODAY = 4;
 
-    private static final Integer[] lastWeek = new Integer[]{DAY1, DAY2, DAY3, DAY4, DAY5, DAY6, TODAY};
+    private static final Integer[] lastWeek = new Integer[]{
+            DAY1, DAY2, DAY3, DAY4, DAY5, DAY6, TODAY
+    };
     private static final ALP_BWTCH_BirdWatcher WATCHER_UNDER_TEST = new ALP_BWTCH_BirdWatcher(lastWeek);
 
     // The getLastWeek method correctly returns last week's counts
@@ -88,7 +90,9 @@ private class ALP_BWTCH_BirdWatcherTest {
     @IsTest
     public static void itShouldNotHaveDaysWithoutBirds() {
         // Arrange
-        ALP_BWTCH_BirdWatcher watcherUnderTest = new ALP_BWTCH_BirdWatcher(new Integer[]{1, 2, 5, 3, 7, 8, 4});
+        ALP_BWTCH_BirdWatcher watcherUnderTest = new ALP_BWTCH_BirdWatcher(new Integer[]{
+                1, 2, 5, 3, 7, 8, 4
+        });
 
         // Act
         Boolean result;
@@ -162,7 +166,9 @@ private class ALP_BWTCH_BirdWatcherTest {
     @IsTest
     public static void itShouldNotHaveBusyDays() {
         // Arrange
-        ALP_BWTCH_BirdWatcher watcherUnderTest = new ALP_BWTCH_BirdWatcher(new Integer[]{1, 2, 3, 3, 2, 1, 4});
+        ALP_BWTCH_BirdWatcher watcherUnderTest = new ALP_BWTCH_BirdWatcher(new Integer[]{
+                1, 2, 3, 3, 2, 1, 4
+        });
 
         // Act
         Integer result;

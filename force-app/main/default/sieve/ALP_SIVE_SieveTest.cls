@@ -6,7 +6,9 @@ public with sharing class ALP_SIVE_SieveTest {
     @IsTest
     public static void testPrimesToUnderTenShouldReturnTwoThreeFiveSeven() {
         Integer testUpperLimit = 10;
-        List<Integer> expectedResultList = new List<Integer>{2, 3, 5, 7};
+        List<Integer> expectedResultList = new List<Integer>{
+                2, 3, 5, 7
+        };
         testPrimesTo(testUpperLimit, expectedResultList);
     }
 

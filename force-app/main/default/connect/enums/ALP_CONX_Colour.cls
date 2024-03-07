@@ -1,5 +1,5 @@
 public enum ALP_CONX_Colour {
-	BLACK,
-	WHITE,
-	NONE
+    BLACK,
+    WHITE,
+    NONE
 }

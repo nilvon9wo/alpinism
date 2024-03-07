@@ -31,6 +31,7 @@ accessing by SObjectField, and potentially other properties and methods which ma
 | [Simple Cipher](https://exercism.org/tracks/elixir/exercises/simple-cipher) | [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher) | ALP_SCIP_ |
 | [Sieve](https://exercism.org/tracks/elixir/exercises/sieve) | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | ALP_SIVE_ |
 | [Spiral Matrix](https://exercism.org/tracks/elixir/exercises/spiral-matrix) | | ALP_SMTX_ |
+| [Squeaky Clean](https://exercism.org/tracks/java/exercises/squeaky-clean) | | ALP_SCLN_ |
 
 ## Testing Notes
 

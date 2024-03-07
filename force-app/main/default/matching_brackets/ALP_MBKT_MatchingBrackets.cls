@@ -24,8 +24,7 @@ public with sharing class ALP_MBKT_MatchingBrackets {
             if (handler != null) {
                 try {
                     unclosedOpenerList = handler.handle(character, unclosedOpenerList);
-                }
-                catch (ALP_MBKT_UnexpectedCloserException ex) {
+                } catch (ALP_MBKT_UnexpectedCloserException ex) {
                     return false;
                 }
             }

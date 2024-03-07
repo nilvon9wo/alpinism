@@ -18,21 +18,27 @@ public with sharing class ALP_ALG_AllergiesTest {
     @IsTest
     public static void testList1ReturnsJustEggs() {
         Integer testCode = 1;
-        Set<ALP_ALG_Allergen> expectedResultSet = new Set<ALP_ALG_Allergen>{ALP_ALG_Allergen.EGGS};
+        Set<ALP_ALG_Allergen> expectedResultSet = new Set<ALP_ALG_Allergen>{
+                ALP_ALG_Allergen.EGGS
+        };
         testList(testCode, expectedResultSet);
     }
 
     @IsTest
     public static void testList2ReturnsJustPeanuts() {
         Integer testCode = 2;
-        Set<ALP_ALG_Allergen> expectedResultSet = new Set<ALP_ALG_Allergen>{ALP_ALG_Allergen.PEANUTS};
+        Set<ALP_ALG_Allergen> expectedResultSet = new Set<ALP_ALG_Allergen>{
+                ALP_ALG_Allergen.PEANUTS
+        };
         testList(testCode, expectedResultSet);
     }
 
     @IsTest
     public static void testList8ReturnsJustPeanuts() {
         Integer testCode = 8;
-        Set<ALP_ALG_Allergen> expectedResultSet = new Set<ALP_ALG_Allergen>{ALP_ALG_Allergen.STRAWBERRIES};
+        Set<ALP_ALG_Allergen> expectedResultSet = new Set<ALP_ALG_Allergen>{
+                ALP_ALG_Allergen.STRAWBERRIES
+        };
         testList(testCode, expectedResultSet);
     }
 
@@ -113,14 +119,14 @@ public with sharing class ALP_ALG_AllergiesTest {
         assertIsASetContaining(expectedResultSet, actualResultList);
     }
 
-    private static void  assertIsASetContaining(
+    private static void assertIsASetContaining(
             Set<ALP_ALG_Allergen> expectedAllergenSet,
             List<ALP_ALG_Allergen> actualAllergenList
     ) {
         assertIsASetContaining(expectedAllergenSet, new Set<ALP_ALG_Allergen>(actualAllergenList));
     }
 
-    private static void  assertIsASetContaining(
+    private static void assertIsASetContaining(
             Set<ALP_ALG_Allergen> expectedAllergenSet,
             Set<ALP_ALG_Allergen> actualAllergenSet
     ) {

@@ -123,8 +123,7 @@ private class ALP_CALC_CalculatorConundrumTest {
         System.runAs(TEST_USER) {
             try {
                 CALCULATOR_UNDER_TEST.calculate(3, 78, invalidOperation);
-            }
-            catch (IllegalArgumentException ex) {
+            } catch (IllegalArgumentException ex) {
                 caughtException = ex;
             }
         }
@@ -148,8 +147,7 @@ private class ALP_CALC_CalculatorConundrumTest {
         System.runAs(TEST_USER) {
             try {
                 CALCULATOR_UNDER_TEST.calculate(66, 65, invalidOperation);
-            }
-            catch (IllegalArgumentException ex) {
+            } catch (IllegalArgumentException ex) {
                 caughtException = ex;
             }
         }
@@ -173,8 +171,7 @@ private class ALP_CALC_CalculatorConundrumTest {
         System.runAs(TEST_USER) {
             try {
                 CALCULATOR_UNDER_TEST.calculate(34, 324, invalidOperation);
-            }
-            catch (IllegalArgumentException ex) {
+            } catch (IllegalArgumentException ex) {
                 caughtException = ex;
             }
         }
@@ -199,8 +196,7 @@ private class ALP_CALC_CalculatorConundrumTest {
         System.runAs(TEST_USER) {
             try {
                 CALCULATOR_UNDER_TEST.calculate(33, 0, invalidOperation);
-            }
-            catch (ALP_CALC_IllegalOperationException ex) {
+            } catch (ALP_CALC_IllegalOperationException ex) {
                 caughtException = ex;
             }
         }

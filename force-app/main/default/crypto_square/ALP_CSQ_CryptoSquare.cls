@@ -51,8 +51,7 @@ public with sharing class ALP_CSQ_CryptoSquare {
         if (textLength <= columns) {
             accumulatorList.add(text.rightPad(columns).trim());
             return accumulatorList;
-        }
-        else {
+        } else {
             accumulatorList.add(text.substring(0, columns));
             return this.makeRows(
                     text.substring(columns, textLength),

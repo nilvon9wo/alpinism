@@ -124,8 +124,7 @@ public with sharing class ALP_BOWL_BowlingTest {
         System.runAs(TEST_USER) {
             try {
                 bowlingUnderTest.roll(nextPinsKnockedDown);
-            }
-            catch (ALP_BOWL_RollException ex) {
+            } catch (ALP_BOWL_RollException ex) {
                 resultException = ex;
             }
         }
@@ -355,8 +354,7 @@ public with sharing class ALP_BOWL_BowlingTest {
         System.runAs(TEST_USER) {
             try {
                 bowlingUnderTest.score();
-            }
-            catch (ALP_BOWL_ScoreException ex) {
+            } catch (ALP_BOWL_ScoreException ex) {
                 resultException = ex;
             }
         }

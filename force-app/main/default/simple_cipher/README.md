@@ -29,7 +29,8 @@ This image is a great example of the Caesar Cipher:
 
 For example:
 
-Giving "iamapandabear" as input to the encode function returns the cipher "ldpdsdqgdehdu". Obscure enough to keep our message secret in transit.
+Giving "iamapandabear" as input to the encode function returns the cipher "ldpdsdqgdehdu". Obscure enough to keep our
+message secret in transit.
 
 When "ldpdsdqgdehdu" is put into the decode function it would return
 the original "iamapandabear" letting your friend read your original
@@ -79,5 +80,6 @@ how we can exchange keys in a secure way. Take a look at [Diffie-Hellman
 on Wikipedia][dh] for one of the first implementations of this scheme.
 
 [1]: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caesar_cipher_left_shift_of_3.svg/320px-Caesar_cipher_left_shift_of_3.svg.png
+
 [dh]: http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
 
