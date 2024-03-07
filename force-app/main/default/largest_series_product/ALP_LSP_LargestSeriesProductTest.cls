@@ -148,8 +148,7 @@ public with sharing class ALP_LSP_LargestSeriesProductTest {
         System.runAs(TEST_USER) {
             try {
                 PRODUCT_UNDER_TEST.largestProduct(testSeries, testSize);
-            }
-            catch (ALP_LSP_IllegalArgumentException ex) {
+            } catch (ALP_LSP_IllegalArgumentException ex) {
                 caughtException = ex;
             }
         }

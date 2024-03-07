@@ -22,12 +22,10 @@ public with sharing class ALP_BOWL_ScoreCalculator {
             Integer nextRoll = allKnockDowns[i + 1];
             if (gameContext.isStrike(thisRoll)) {
                 runningTotal += 10 + nextRoll + allKnockDowns[i + 2];
-            }
-            else if (gameContext.isSpare(thisRoll, nextRoll)) {
+            } else if (gameContext.isSpare(thisRoll, nextRoll)) {
                 runningTotal += 10 + allKnockDowns[i + 2];
                 i++;
-            }
-            else {
+            } else {
                 runningTotal += thisRoll + nextRoll;
                 i++;
             }
@@ -35,7 +33,7 @@ public with sharing class ALP_BOWL_ScoreCalculator {
         return runningTotal;
     }
 
-    public ALP_BOWL_ScoreCalculator validateScorable(ALP_BOWL_GameContext gameContext){
+    public ALP_BOWL_ScoreCalculator validateScorable(ALP_BOWL_GameContext gameContext) {
         if (gameContext.hasMoreRolls()) {
             throw new ALP_BOWL_ScoreException('Score cannot be taken until the end of the game');
         }

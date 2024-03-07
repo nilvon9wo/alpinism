@@ -18,7 +18,7 @@ public with sharing class ALP_MNSP_SquareCell {
             if (
                     cellWrapper.cell.Contains_Mine__c
                             && this.isNeighbourTo(cellWrapper)
-                    ) {
+            ) {
                 surroundingMineCount++;
             }
         }
@@ -29,8 +29,8 @@ public with sharing class ALP_MNSP_SquareCell {
         return mineCount > 0
                 ? String.valueOf(mineCount)
                 : !this.cell.Contains_Mine__c
-                    ? ' '
-                    : '';
+                        ? ' '
+                        : '';
     }
 
     public Boolean isNeighbourTo(ALP_MNSP_SquareCell that) {

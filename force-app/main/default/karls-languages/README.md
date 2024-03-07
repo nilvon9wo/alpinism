@@ -18,7 +18,8 @@ if (languageList.isEmpty()) {
 ## 2. Define a function to add a language to the list
 
 Karl is looking forward to learning Kotlin and Python!
-Help Karl get started by defining a method called `addLanguage` which takes the language he wants to learn and adds it to the list.
+Help Karl get started by defining a method called `addLanguage` which takes the language he wants to learn and adds it
+to the list.
 
 ```java
 languageList.addLanguage("Kotlin");
@@ -28,7 +29,8 @@ languageList.addLanguage("Python");
 ## 3. Define a function to remove a language from the list
 
 Karl decided he does not want to learn Scala right now.
-Help Karl remove it from the list by defining a method called `removeLanguage` which takes the language he is removing and removes it from the list.
+Help Karl remove it from the list by defining a method called `removeLanguage` which takes the language he is removing
+and removes it from the list.
 
 ```java
 languageList.removeLanguage("Scala");

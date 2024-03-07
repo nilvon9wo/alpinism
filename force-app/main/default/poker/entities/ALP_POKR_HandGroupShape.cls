@@ -38,7 +38,7 @@ public with sharing class ALP_POKR_HandGroupShape implements Comparable {
                     if (
                             this.rankHelper.isHigherFirst(rank, this.largestGroupRank)
                                     && this.cardsByRankMap.get(rank).size() == this.largestGroupSize
-                            ) {
+                    ) {
                         this.largestGroupRank = rank;
                     }
                 }

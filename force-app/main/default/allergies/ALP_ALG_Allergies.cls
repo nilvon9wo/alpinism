@@ -2,7 +2,7 @@ public with sharing class ALP_ALG_Allergies {
     final ALP_ALG_AllergenHelper allergenHelper;
     final Integer highestAssignedPowerOf2;
 
-        private ALP_ALG_Allergies(ALP_ALG_AllergenHelper allergenHelper) {
+    private ALP_ALG_Allergies(ALP_ALG_AllergenHelper allergenHelper) {
         this.allergenHelper = allergenHelper;
         this.highestAssignedPowerOf2 = allergenHelper.getHighestAssignedCode();
     }

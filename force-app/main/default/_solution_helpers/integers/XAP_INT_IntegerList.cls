@@ -29,7 +29,7 @@ public with sharing class XAP_INT_IntegerList {
         return this;
     }
 
-    public Integer max(){
+    public Integer max() {
         Integer initialValue = 0;
         return this.integerEvaluator.evaluate(XAP_INT_MaximumCalculator.class, this.integerList, initialValue);
     }

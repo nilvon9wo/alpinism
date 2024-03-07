@@ -108,7 +108,7 @@ public class XFTY_DummySObjectSupplier {
     }
 
     //noinspection ApexUnusedDeclaration
-    public XFTY_DummySObjectSupplier removeFromMasterTemplate(SObjectField sObjectField){
+    public XFTY_DummySObjectSupplier removeFromMasterTemplate(SObjectField sObjectField) {
         this.masterTemplate.remove(sObjectField);
         return this;
     }
@@ -162,7 +162,7 @@ public class XFTY_DummySObjectSupplier {
         if (
                 this.overrideTemplateList != null
                         && !this.overrideTemplateList.isEmpty()
-                ) {
+        ) {
             for (SObject overrideTemplate : overrideTemplateList) {
                 if (overrideTemplate.getSObjectType() != sObjectType) {
                     throw new ConflictException('SObjectType ' + sObjectType + ' is not matched by template: ' + overrideTemplate);

@@ -14,8 +14,12 @@ public with sharing class ALP_MNSP_MinesweeperTest {
     @IsTest
     public static void testAnnotatingShouldReturnEmptyStringForNoColumns() {
         // Arrange
-        List<String> testMineList = new List<String>{''};
-        List<String> expectedResultList = new List<String>{''};
+        List<String> testMineList = new List<String>{
+                ''
+        };
+        List<String> expectedResultList = new List<String>{
+                ''
+        };
         testAnnotate(testMineList, expectedResultList);
     }
 
@@ -86,8 +90,12 @@ public with sharing class ALP_MNSP_MinesweeperTest {
     @IsTest
     public static void testAnnotatingShouldCorrectlyEvaluateHorizontalLine() {
         // Arrange
-        List<String> testMineList = new List<String>{' * * '};
-        List<String> expectedResultList = new List<String>{'1*2*1'};
+        List<String> testMineList = new List<String>{
+                ' * * '
+        };
+        List<String> expectedResultList = new List<String>{
+                '1*2*1'
+        };
         testAnnotate(testMineList, expectedResultList);
     }
 

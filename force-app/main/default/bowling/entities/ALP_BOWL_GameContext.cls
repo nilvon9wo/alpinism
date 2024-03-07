@@ -110,8 +110,7 @@ public with sharing class ALP_BOWL_GameContext {
             Integer lastRoll = this.getLastRoll();
             if (this.isStrike(lastRoll)) {
                 this.untakenBonusRounds = 2;
-            }
-            else if (this.isSpare(lastRoll, this.getPenultimateRoll())) {
+            } else if (this.isSpare(lastRoll, this.getPenultimateRoll())) {
                 this.untakenBonusRounds = 1;
             }
             this.hasBonusStarted = this.untakenBonusRounds != 0;

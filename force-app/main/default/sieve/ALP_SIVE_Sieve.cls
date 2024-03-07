@@ -53,9 +53,9 @@ public with sharing class ALP_SIVE_Sieve {
         for (Integer key : markByNumberMap.keySet()) {
             if (
                     key > currentValue
-                    && markByNumberMap.get(key)
-                    && nextValue == null || key < nextValue
-                    ) {
+                            && markByNumberMap.get(key)
+                            && nextValue == null || key < nextValue
+            ) {
                 nextValue = key;
             }
         }
