@@ -19,10 +19,11 @@ accessing by SObjectField, and potentially other properties and methods which ma
 | [Bowling](https://exercism.org/tracks/elixir/exercises/bowling) | | ALP_BOWL_ |
 | [Calculator Conundrum](https://exercism.org/tracks/java/exercises/calculator-conundrum) | | ALP_CALC_ |
 | [Connect](https://exercism.org/tracks/elixir/exercises/connect) | [Hex](https://en.wikipedia.org/wiki/Hex_%28board_game%29) / Polygon / CON-TAC-TIX | ALP_CONX_ |
+| [Cook your lasagna](https://exercism.org/tracks/java/exercises/lasagna) | | ALP_LSGN_ |
 | [Custom Set](https://exercism.org/tracks/elixir/exercises/custom-set) |   | ALP_CSET_ |
 | [Crypto Square](https://exercism.org/tracks/elixir/exercises/crypto-square) | | ALP_CSQ_ |
+| [Elon's Toy Car](https://exercism.org/tracks/java/exercises/elons-toy-car) | | ALP_ETC_ |
 | [Hello World](https://exercism.org/tracks/java/exercises/hello-world) | | ALP_HW_ |
-| [Cook your lasagna](https://exercism.org/tracks/java/exercises/lasagna) | | ALP_LSGN_ |
 | [Karl's Languages](https://exercism.org/tracks/java/exercises/karls-languages) | | ALP_KLNG_ |
 | [Largest Series Product](https://exercism.org/tracks/elixir/exercises/largest-series-product) | | ALP_LSP_ |
 | [Matching Brackets](https://exercism.org/tracks/scala/exercises/matching-brackets) | | ALP_MBKT_ |
